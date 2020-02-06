@@ -1,0 +1,652 @@
+Analysis & Synthesis report for RCC_Test
+Sun Dec 02 20:55:47 2018
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register3|1bit_Register:inst3|BUSMUX:inst1
+ 12. Parameter Settings for User Entity Instance: RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register3|1bit_Register:inst2|BUSMUX:inst1
+ 13. Parameter Settings for User Entity Instance: RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register3|1bit_Register:inst1|BUSMUX:inst1
+ 14. Parameter Settings for User Entity Instance: RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register3|1bit_Register:inst|BUSMUX:inst1
+ 15. Parameter Settings for User Entity Instance: RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register2|1bit_Register:inst3|BUSMUX:inst1
+ 16. Parameter Settings for User Entity Instance: RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register2|1bit_Register:inst2|BUSMUX:inst1
+ 17. Parameter Settings for User Entity Instance: RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register2|1bit_Register:inst1|BUSMUX:inst1
+ 18. Parameter Settings for User Entity Instance: RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register2|1bit_Register:inst|BUSMUX:inst1
+ 19. Parameter Settings for User Entity Instance: RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register1|1bit_Register:inst3|BUSMUX:inst1
+ 20. Parameter Settings for User Entity Instance: RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register1|1bit_Register:inst2|BUSMUX:inst1
+ 21. Parameter Settings for User Entity Instance: RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register1|1bit_Register:inst1|BUSMUX:inst1
+ 22. Parameter Settings for User Entity Instance: RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register1|1bit_Register:inst|BUSMUX:inst1
+ 23. Parameter Settings for User Entity Instance: RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register0|1bit_Register:inst3|BUSMUX:inst1
+ 24. Parameter Settings for User Entity Instance: RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register0|1bit_Register:inst2|BUSMUX:inst1
+ 25. Parameter Settings for User Entity Instance: RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register0|1bit_Register:inst1|BUSMUX:inst1
+ 26. Parameter Settings for User Entity Instance: RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register0|1bit_Register:inst|BUSMUX:inst1
+ 27. Post-Synthesis Netlist Statistics for Top Partition
+ 28. Elapsed Time Per Partition
+ 29. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun Dec 02 20:55:47 2018           ;
+; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Standard Edition ;
+; Revision Name                      ; RCC_Test                                        ;
+; Top-level Entity Name              ; RCC_Test                                        ;
+; Family                             ; Cyclone IV E                                    ;
+; Total logic elements               ; 162                                             ;
+;     Total combinational functions  ; 149                                             ;
+;     Dedicated logic registers      ; 53                                              ;
+; Total registers                    ; 53                                              ;
+; Total pins                         ; 15                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; RCC_Test           ; RCC_Test           ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                 ;
++----------------------------------+-----------------+------------------------------------------+----------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                                                 ; Library ;
++----------------------------------+-----------------+------------------------------------------+----------------------------------------------------------------------------------------------+---------+
+; RCC_Test.bdf                     ; yes             ; User Block Diagram/Schematic File        ; U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/RCC_Test.bdf             ;         ;
+; seven_seg_decoder.v              ; yes             ; Auto-Found Verilog HDL File              ; U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/seven_seg_decoder.v      ;         ;
+; rcc.bdf                          ; yes             ; Auto-Found Block Diagram/Schematic File  ; U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/rcc.bdf                  ;         ;
+; 4_4bit_register_file.bdf         ; yes             ; Auto-Found Block Diagram/Schematic File  ; U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/4_4bit_register_file.bdf ;         ;
+; mux_4to1.v                       ; yes             ; Auto-Found Verilog HDL File              ; U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/mux_4to1.v               ;         ;
+; 4bit_register.bdf                ; yes             ; Auto-Found Block Diagram/Schematic File  ; U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/4bit_register.bdf        ;         ;
+; 1bit_register.bdf                ; yes             ; Auto-Found Block Diagram/Schematic File  ; U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/1bit_register.bdf        ;         ;
+; busmux.tdf                       ; yes             ; Megafunction                             ; c:/altera/intelfpga/18.0/quartus/libraries/megafunctions/busmux.tdf                          ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                             ; c:/altera/intelfpga/18.0/quartus/libraries/megafunctions/lpm_mux.inc                         ;         ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                             ; c:/altera/intelfpga/18.0/quartus/libraries/megafunctions/lpm_mux.tdf                         ;         ;
+; aglobal180.inc                   ; yes             ; Megafunction                             ; c:/altera/intelfpga/18.0/quartus/libraries/megafunctions/aglobal180.inc                      ;         ;
+; muxlut.inc                       ; yes             ; Megafunction                             ; c:/altera/intelfpga/18.0/quartus/libraries/megafunctions/muxlut.inc                          ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                             ; c:/altera/intelfpga/18.0/quartus/libraries/megafunctions/bypassff.inc                        ;         ;
+; altshift.inc                     ; yes             ; Megafunction                             ; c:/altera/intelfpga/18.0/quartus/libraries/megafunctions/altshift.inc                        ;         ;
+; db/mux_7rc.tdf                   ; yes             ; Auto-Generated Megafunction              ; U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/db/mux_7rc.tdf           ;         ;
+; decoder_2to4.v                   ; yes             ; Auto-Found Verilog HDL File              ; U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/decoder_2to4.v           ;         ;
+; tlcf.bdf                         ; yes             ; Auto-Found Block Diagram/Schematic File  ; U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/tlcf.bdf                 ;         ;
+; tlc_mk3.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/tlc_mk3.bdf              ;         ;
+; output_logic_tlc_mk3.v           ; yes             ; Auto-Found Verilog HDL File              ; U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/output_logic_tlc_mk3.v   ;         ;
+; input_logic_tlc_mk3.v            ; yes             ; Auto-Found Verilog HDL File              ; U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/input_logic_tlc_mk3.v    ;         ;
+; bus_combiner_tlc_mk3.v           ; yes             ; Auto-Found Verilog HDL File              ; U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/bus_combiner_tlc_mk3.v   ;         ;
+; switch_debouncer.bdf             ; yes             ; Auto-Found Block Diagram/Schematic File  ; U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/switch_debouncer.bdf     ;         ;
+; clock_divider_1024.bdf           ; yes             ; Auto-Found Block Diagram/Schematic File  ; U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/clock_divider_1024.bdf   ;         ;
++----------------------------------+-----------------+------------------------------------------+----------------------------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                ;
++---------------------------------------------+------------------------------+
+; Resource                                    ; Usage                        ;
++---------------------------------------------+------------------------------+
+; Estimated Total logic elements              ; 162                          ;
+;                                             ;                              ;
+; Total combinational functions               ; 149                          ;
+; Logic element usage by number of LUT inputs ;                              ;
+;     -- 4 input functions                    ; 94                           ;
+;     -- 3 input functions                    ; 45                           ;
+;     -- <=2 input functions                  ; 10                           ;
+;                                             ;                              ;
+; Logic elements by mode                      ;                              ;
+;     -- normal mode                          ; 149                          ;
+;     -- arithmetic mode                      ; 0                            ;
+;                                             ;                              ;
+; Total registers                             ; 53                           ;
+;     -- Dedicated logic registers            ; 53                           ;
+;     -- I/O registers                        ; 0                            ;
+;                                             ;                              ;
+; I/O pins                                    ; 15                           ;
+;                                             ;                              ;
+; Embedded Multiplier 9-bit elements          ; 0                            ;
+;                                             ;                              ;
+; Maximum fan-out node                        ; switch_debouncer:inst4|inst2 ;
+; Maximum fan-out                             ; 32                           ;
+; Total fan-out                               ; 689                          ;
+; Average fan-out                             ; 2.97                         ;
++---------------------------------------------+------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                  ;
++-----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------+----------------------+--------------+
+; Compilation Hierarchy Node              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                       ; Entity Name          ; Library Name ;
++-----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------+----------------------+--------------+
+; |RCC_Test                               ; 149 (0)             ; 53 (0)                    ; 0           ; 0            ; 0       ; 0         ; 15   ; 0            ; |RCC_Test                                                                                 ; RCC_Test             ; work         ;
+;    |RCC:inst|                           ; 116 (0)             ; 32 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|RCC:inst                                                                        ; RCC                  ; work         ;
+;       |4_4bit_Register_File:inst2|      ; 9 (0)               ; 16 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|RCC:inst|4_4bit_Register_File:inst2                                             ; 4_4bit_Register_File ; work         ;
+;          |4bit_Register:Register0|      ; 0 (0)               ; 4 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register0                     ; 4bit_Register        ; work         ;
+;             |1bit_Register:inst1|       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register0|1bit_Register:inst1 ; 1bit_Register        ; work         ;
+;             |1bit_Register:inst2|       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register0|1bit_Register:inst2 ; 1bit_Register        ; work         ;
+;             |1bit_Register:inst3|       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register0|1bit_Register:inst3 ; 1bit_Register        ; work         ;
+;             |1bit_Register:inst|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register0|1bit_Register:inst  ; 1bit_Register        ; work         ;
+;          |4bit_Register:Register1|      ; 0 (0)               ; 4 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register1                     ; 4bit_Register        ; work         ;
+;             |1bit_Register:inst1|       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register1|1bit_Register:inst1 ; 1bit_Register        ; work         ;
+;             |1bit_Register:inst2|       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register1|1bit_Register:inst2 ; 1bit_Register        ; work         ;
+;             |1bit_Register:inst3|       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register1|1bit_Register:inst3 ; 1bit_Register        ; work         ;
+;             |1bit_Register:inst|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register1|1bit_Register:inst  ; 1bit_Register        ; work         ;
+;          |4bit_Register:Register2|      ; 0 (0)               ; 4 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register2                     ; 4bit_Register        ; work         ;
+;             |1bit_Register:inst1|       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register2|1bit_Register:inst1 ; 1bit_Register        ; work         ;
+;             |1bit_Register:inst2|       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register2|1bit_Register:inst2 ; 1bit_Register        ; work         ;
+;             |1bit_Register:inst3|       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register2|1bit_Register:inst3 ; 1bit_Register        ; work         ;
+;             |1bit_Register:inst|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register2|1bit_Register:inst  ; 1bit_Register        ; work         ;
+;          |4bit_Register:Register3|      ; 0 (0)               ; 4 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register3                     ; 4bit_Register        ; work         ;
+;             |1bit_Register:inst1|       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register3|1bit_Register:inst1 ; 1bit_Register        ; work         ;
+;             |1bit_Register:inst2|       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register3|1bit_Register:inst2 ; 1bit_Register        ; work         ;
+;             |1bit_Register:inst3|       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register3|1bit_Register:inst3 ; 1bit_Register        ; work         ;
+;             |1bit_Register:inst|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register3|1bit_Register:inst  ; 1bit_Register        ; work         ;
+;          |Decoder_2to4:inst|            ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|RCC:inst|4_4bit_Register_File:inst2|Decoder_2to4:inst                           ; Decoder_2to4         ; work         ;
+;          |Mux_4to1:inst1|               ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|RCC:inst|4_4bit_Register_File:inst2|Mux_4to1:inst1                              ; Mux_4to1             ; work         ;
+;       |TLCF:inst|                       ; 107 (0)             ; 16 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|RCC:inst|TLCF:inst                                                              ; TLCF                 ; work         ;
+;          |Decoder_2to4:inst12|          ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|RCC:inst|TLCF:inst|Decoder_2to4:inst12                                          ; Decoder_2to4         ; work         ;
+;          |Mux_4to1:inst7|               ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|RCC:inst|TLCF:inst|Mux_4to1:inst7                                               ; Mux_4to1             ; work         ;
+;          |TLC_Mk3:inst10|               ; 22 (0)              ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|RCC:inst|TLCF:inst|TLC_Mk3:inst10                                               ; TLC_Mk3              ; work         ;
+;             |Input_Logic_TLC_Mk3:inst1| ; 22 (22)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|RCC:inst|TLCF:inst|TLC_Mk3:inst10|Input_Logic_TLC_Mk3:inst1                     ; Input_Logic_TLC_Mk3  ; work         ;
+;          |TLC_Mk3:inst11|               ; 24 (0)              ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|RCC:inst|TLCF:inst|TLC_Mk3:inst11                                               ; TLC_Mk3              ; work         ;
+;             |Input_Logic_TLC_Mk3:inst1| ; 24 (24)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|RCC:inst|TLCF:inst|TLC_Mk3:inst11|Input_Logic_TLC_Mk3:inst1                     ; Input_Logic_TLC_Mk3  ; work         ;
+;          |TLC_Mk3:inst9|                ; 23 (0)              ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|RCC:inst|TLCF:inst|TLC_Mk3:inst9                                                ; TLC_Mk3              ; work         ;
+;             |Input_Logic_TLC_Mk3:inst1| ; 23 (23)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|RCC:inst|TLCF:inst|TLC_Mk3:inst9|Input_Logic_TLC_Mk3:inst1                      ; Input_Logic_TLC_Mk3  ; work         ;
+;          |TLC_Mk3:inst|                 ; 27 (0)              ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|RCC:inst|TLCF:inst|TLC_Mk3:inst                                                 ; TLC_Mk3              ; work         ;
+;             |Input_Logic_TLC_Mk3:inst1| ; 27 (27)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|RCC:inst|TLCF:inst|TLC_Mk3:inst|Input_Logic_TLC_Mk3:inst1                       ; Input_Logic_TLC_Mk3  ; work         ;
+;    |seven_seg_decoder:inst3|            ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|seven_seg_decoder:inst3                                                         ; seven_seg_decoder    ; work         ;
+;    |switch_debouncer:inst4|             ; 26 (0)              ; 21 (1)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|switch_debouncer:inst4                                                          ; switch_debouncer     ; work         ;
+;       |clock_divider_1024:inst1|        ; 13 (13)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|switch_debouncer:inst4|clock_divider_1024:inst1                                 ; clock_divider_1024   ; work         ;
+;       |clock_divider_1024:inst|         ; 13 (13)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RCC_Test|switch_debouncer:inst4|clock_divider_1024:inst                                  ; clock_divider_1024   ; work         ;
++-----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------+----------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                                              ;
++------------------------------------------------------------------+----------------------------------------------------------------------+------------------------+
+; Latch Name                                                       ; Latch Enable Signal                                                  ; Free of Timing Hazards ;
++------------------------------------------------------------------+----------------------------------------------------------------------+------------------------+
+; RCC:inst|TLCF:inst|TLC_Mk3:inst10|Input_Logic_TLC_Mk3:inst1|X[0] ; RCC:inst|TLCF:inst|TLC_Mk3:inst10|Input_Logic_TLC_Mk3:inst1|Decoder0 ; yes                    ;
+; RCC:inst|TLCF:inst|TLC_Mk3:inst9|Input_Logic_TLC_Mk3:inst1|X[0]  ; RCC:inst|TLCF:inst|TLC_Mk3:inst9|Input_Logic_TLC_Mk3:inst1|Decoder0  ; yes                    ;
+; RCC:inst|TLCF:inst|TLC_Mk3:inst|Input_Logic_TLC_Mk3:inst1|X[0]   ; RCC:inst|TLCF:inst|TLC_Mk3:inst|Input_Logic_TLC_Mk3:inst1|Decoder0   ; yes                    ;
+; RCC:inst|TLCF:inst|TLC_Mk3:inst11|Input_Logic_TLC_Mk3:inst1|X[0] ; RCC:inst|TLCF:inst|TLC_Mk3:inst11|Input_Logic_TLC_Mk3:inst1|Decoder0 ; yes                    ;
+; RCC:inst|TLCF:inst|TLC_Mk3:inst9|Input_Logic_TLC_Mk3:inst1|X[1]  ; RCC:inst|TLCF:inst|TLC_Mk3:inst9|Input_Logic_TLC_Mk3:inst1|Decoder0  ; yes                    ;
+; RCC:inst|TLCF:inst|TLC_Mk3:inst10|Input_Logic_TLC_Mk3:inst1|X[1] ; RCC:inst|TLCF:inst|TLC_Mk3:inst10|Input_Logic_TLC_Mk3:inst1|Decoder0 ; yes                    ;
+; RCC:inst|TLCF:inst|TLC_Mk3:inst|Input_Logic_TLC_Mk3:inst1|X[1]   ; RCC:inst|TLCF:inst|TLC_Mk3:inst|Input_Logic_TLC_Mk3:inst1|Decoder0   ; yes                    ;
+; RCC:inst|TLCF:inst|TLC_Mk3:inst11|Input_Logic_TLC_Mk3:inst1|X[1] ; RCC:inst|TLCF:inst|TLC_Mk3:inst11|Input_Logic_TLC_Mk3:inst1|Decoder0 ; yes                    ;
+; RCC:inst|TLCF:inst|TLC_Mk3:inst10|Input_Logic_TLC_Mk3:inst1|X[2] ; RCC:inst|TLCF:inst|TLC_Mk3:inst10|Input_Logic_TLC_Mk3:inst1|Decoder0 ; yes                    ;
+; RCC:inst|TLCF:inst|TLC_Mk3:inst9|Input_Logic_TLC_Mk3:inst1|X[2]  ; RCC:inst|TLCF:inst|TLC_Mk3:inst9|Input_Logic_TLC_Mk3:inst1|Decoder0  ; yes                    ;
+; RCC:inst|TLCF:inst|TLC_Mk3:inst|Input_Logic_TLC_Mk3:inst1|X[2]   ; RCC:inst|TLCF:inst|TLC_Mk3:inst|Input_Logic_TLC_Mk3:inst1|Decoder0   ; yes                    ;
+; RCC:inst|TLCF:inst|TLC_Mk3:inst11|Input_Logic_TLC_Mk3:inst1|X[2] ; RCC:inst|TLCF:inst|TLC_Mk3:inst11|Input_Logic_TLC_Mk3:inst1|Decoder0 ; yes                    ;
+; RCC:inst|TLCF:inst|TLC_Mk3:inst9|Input_Logic_TLC_Mk3:inst1|X[3]  ; RCC:inst|TLCF:inst|TLC_Mk3:inst9|Input_Logic_TLC_Mk3:inst1|Decoder0  ; yes                    ;
+; RCC:inst|TLCF:inst|TLC_Mk3:inst10|Input_Logic_TLC_Mk3:inst1|X[3] ; RCC:inst|TLCF:inst|TLC_Mk3:inst10|Input_Logic_TLC_Mk3:inst1|Decoder0 ; yes                    ;
+; RCC:inst|TLCF:inst|TLC_Mk3:inst|Input_Logic_TLC_Mk3:inst1|X[3]   ; RCC:inst|TLCF:inst|TLC_Mk3:inst|Input_Logic_TLC_Mk3:inst1|Decoder0   ; yes                    ;
+; RCC:inst|TLCF:inst|TLC_Mk3:inst11|Input_Logic_TLC_Mk3:inst1|X[3] ; RCC:inst|TLCF:inst|TLC_Mk3:inst11|Input_Logic_TLC_Mk3:inst1|Decoder0 ; yes                    ;
+; Number of user-specified and inferred latches = 16               ;                                                                      ;                        ;
++------------------------------------------------------------------+----------------------------------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 53    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 16    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 16    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |RCC_Test|RCC:inst|4_4bit_Register_File:inst2|Mux_4to1:inst1|Mux0 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register3|1bit_Register:inst3|BUSMUX:inst1 ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                             ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                                                          ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register3|1bit_Register:inst2|BUSMUX:inst1 ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                             ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                                                          ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register3|1bit_Register:inst1|BUSMUX:inst1 ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                             ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                                                          ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register3|1bit_Register:inst|BUSMUX:inst1 ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                            ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                                                         ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register2|1bit_Register:inst3|BUSMUX:inst1 ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                             ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                                                          ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register2|1bit_Register:inst2|BUSMUX:inst1 ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                             ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                                                          ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register2|1bit_Register:inst1|BUSMUX:inst1 ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                             ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                                                          ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register2|1bit_Register:inst|BUSMUX:inst1 ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                            ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                                                         ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register1|1bit_Register:inst3|BUSMUX:inst1 ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                             ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                                                          ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register1|1bit_Register:inst2|BUSMUX:inst1 ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                             ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                                                          ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register1|1bit_Register:inst1|BUSMUX:inst1 ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                             ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                                                          ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register1|1bit_Register:inst|BUSMUX:inst1 ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                            ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                                                         ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register0|1bit_Register:inst3|BUSMUX:inst1 ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                             ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                                                          ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register0|1bit_Register:inst2|BUSMUX:inst1 ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                             ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                                                          ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register0|1bit_Register:inst1|BUSMUX:inst1 ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                             ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                                                          ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register0|1bit_Register:inst|BUSMUX:inst1 ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                            ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                                                         ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 15                          ;
+; cycloneiii_ff         ; 53                          ;
+;     ENA CLR           ; 16                          ;
+;     plain             ; 37                          ;
+; cycloneiii_lcell_comb ; 150                         ;
+;     normal            ; 150                         ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 8                           ;
+;         3 data inputs ; 45                          ;
+;         4 data inputs ; 94                          ;
+;                       ;                             ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 3.40                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+    Info: Processing started: Sun Dec 02 20:55:32 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RCC_Test -c RCC_Test
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file rcc_test.bdf
+    Info (12023): Found entity 1: RCC_Test
+Info (12127): Elaborating entity "RCC_Test" for the top level hierarchy
+Warning (12125): Using design file seven_seg_decoder.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: seven_seg_decoder File: U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/seven_seg_decoder.v Line: 1
+Info (12128): Elaborating entity "seven_seg_decoder" for hierarchy "seven_seg_decoder:inst3"
+Warning (12125): Using design file rcc.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: RCC
+Info (12128): Elaborating entity "RCC" for hierarchy "RCC:inst"
+Warning (12125): Using design file 4_4bit_register_file.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: 4_4bit_Register_File
+Info (12128): Elaborating entity "4_4bit_Register_File" for hierarchy "RCC:inst|4_4bit_Register_File:inst2"
+Warning (12125): Using design file mux_4to1.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Mux_4to1 File: U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/mux_4to1.v Line: 1
+Info (12128): Elaborating entity "Mux_4to1" for hierarchy "RCC:inst|4_4bit_Register_File:inst2|Mux_4to1:inst1"
+Warning (12125): Using design file 4bit_register.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: 4bit_Register
+Info (12128): Elaborating entity "4bit_Register" for hierarchy "RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register3"
+Warning (12125): Using design file 1bit_register.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: 1bit_Register
+Info (12128): Elaborating entity "1bit_Register" for hierarchy "RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register3|1bit_Register:inst3"
+Info (12128): Elaborating entity "BUSMUX" for hierarchy "RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register3|1bit_Register:inst3|BUSMUX:inst1"
+Info (12130): Elaborated megafunction instantiation "RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register3|1bit_Register:inst3|BUSMUX:inst1"
+Info (12133): Instantiated megafunction "RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register3|1bit_Register:inst3|BUSMUX:inst1" with the following parameter:
+    Info (12134): Parameter "WIDTH" = "1"
+Info (12128): Elaborating entity "lpm_mux" for hierarchy "RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register3|1bit_Register:inst3|BUSMUX:inst1|lpm_mux:$00000" File: c:/altera/intelfpga/18.0/quartus/libraries/megafunctions/busmux.tdf Line: 43
+Info (12131): Elaborated megafunction instantiation "RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register3|1bit_Register:inst3|BUSMUX:inst1|lpm_mux:$00000", which is child of megafunction instantiation "RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register3|1bit_Register:inst3|BUSMUX:inst1" File: c:/altera/intelfpga/18.0/quartus/libraries/megafunctions/busmux.tdf Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_7rc.tdf
+    Info (12023): Found entity 1: mux_7rc File: U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/db/mux_7rc.tdf Line: 22
+Info (12128): Elaborating entity "mux_7rc" for hierarchy "RCC:inst|4_4bit_Register_File:inst2|4bit_Register:Register3|1bit_Register:inst3|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated" File: c:/altera/intelfpga/18.0/quartus/libraries/megafunctions/lpm_mux.tdf Line: 86
+Warning (12125): Using design file decoder_2to4.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Decoder_2to4 File: U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/decoder_2to4.v Line: 1
+Info (12128): Elaborating entity "Decoder_2to4" for hierarchy "RCC:inst|4_4bit_Register_File:inst2|Decoder_2to4:inst"
+Warning (12125): Using design file tlcf.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: TLCF
+Info (12128): Elaborating entity "TLCF" for hierarchy "RCC:inst|TLCF:inst"
+Warning (12125): Using design file tlc_mk3.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: TLC_Mk3
+Info (12128): Elaborating entity "TLC_Mk3" for hierarchy "RCC:inst|TLCF:inst|TLC_Mk3:inst"
+Warning (12125): Using design file output_logic_tlc_mk3.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Output_Logic_TLC_Mk3 File: U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/output_logic_tlc_mk3.v Line: 1
+Info (12128): Elaborating entity "Output_Logic_TLC_Mk3" for hierarchy "RCC:inst|TLCF:inst|TLC_Mk3:inst|Output_Logic_TLC_Mk3:inst"
+Warning (12125): Using design file input_logic_tlc_mk3.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Input_Logic_TLC_Mk3 File: U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/input_logic_tlc_mk3.v Line: 1
+Info (12128): Elaborating entity "Input_Logic_TLC_Mk3" for hierarchy "RCC:inst|TLCF:inst|TLC_Mk3:inst|Input_Logic_TLC_Mk3:inst1"
+Warning (10272): Verilog HDL Case Statement warning at input_logic_tlc_mk3.v(69): case item expression covers a value already covered by a previous case item File: U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/input_logic_tlc_mk3.v Line: 69
+Warning (10270): Verilog HDL Case Statement warning at input_logic_tlc_mk3.v(10): incomplete case statement has no default case item File: U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/input_logic_tlc_mk3.v Line: 10
+Warning (10240): Verilog HDL Always Construct warning at input_logic_tlc_mk3.v(8): inferring latch(es) for variable "X", which holds its previous value in one or more paths through the always construct File: U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/input_logic_tlc_mk3.v Line: 8
+Info (10041): Inferred latch for "X[0]" at input_logic_tlc_mk3.v(8) File: U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/input_logic_tlc_mk3.v Line: 8
+Info (10041): Inferred latch for "X[1]" at input_logic_tlc_mk3.v(8) File: U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/input_logic_tlc_mk3.v Line: 8
+Info (10041): Inferred latch for "X[2]" at input_logic_tlc_mk3.v(8) File: U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/input_logic_tlc_mk3.v Line: 8
+Info (10041): Inferred latch for "X[3]" at input_logic_tlc_mk3.v(8) File: U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/input_logic_tlc_mk3.v Line: 8
+Warning (12125): Using design file bus_combiner_tlc_mk3.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: bus_combiner_TLC_Mk3 File: U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/bus_combiner_tlc_mk3.v Line: 1
+Info (12128): Elaborating entity "bus_combiner_TLC_Mk3" for hierarchy "RCC:inst|TLCF:inst|TLC_Mk3:inst|bus_combiner_TLC_Mk3:inst3"
+Warning (12125): Using design file switch_debouncer.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: switch_debouncer
+Info (12128): Elaborating entity "switch_debouncer" for hierarchy "switch_debouncer:inst4"
+Warning (12125): Using design file clock_divider_1024.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: clock_divider_1024
+Info (12128): Elaborating entity "clock_divider_1024" for hierarchy "switch_debouncer:inst4|clock_divider_1024:inst1"
+Warning (13012): Latch RCC:inst|TLCF:inst|TLC_Mk3:inst10|Input_Logic_TLC_Mk3:inst1|X[0] has unsafe behavior File: U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/input_logic_tlc_mk3.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RCC:inst|TLCF:inst|TLC_Mk3:inst10|DFF3
+Warning (13012): Latch RCC:inst|TLCF:inst|TLC_Mk3:inst9|Input_Logic_TLC_Mk3:inst1|X[0] has unsafe behavior File: U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/input_logic_tlc_mk3.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RCC:inst|TLCF:inst|TLC_Mk3:inst9|DFF3
+Warning (13012): Latch RCC:inst|TLCF:inst|TLC_Mk3:inst|Input_Logic_TLC_Mk3:inst1|X[0] has unsafe behavior File: U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/input_logic_tlc_mk3.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RCC:inst|TLCF:inst|TLC_Mk3:inst|DFF3
+Warning (13012): Latch RCC:inst|TLCF:inst|TLC_Mk3:inst11|Input_Logic_TLC_Mk3:inst1|X[0] has unsafe behavior File: U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/input_logic_tlc_mk3.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RCC:inst|TLCF:inst|TLC_Mk3:inst11|DFF3
+Warning (13012): Latch RCC:inst|TLCF:inst|TLC_Mk3:inst9|Input_Logic_TLC_Mk3:inst1|X[1] has unsafe behavior File: U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/input_logic_tlc_mk3.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RCC:inst|TLCF:inst|TLC_Mk3:inst9|DFF2
+Warning (13012): Latch RCC:inst|TLCF:inst|TLC_Mk3:inst10|Input_Logic_TLC_Mk3:inst1|X[1] has unsafe behavior File: U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/input_logic_tlc_mk3.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RCC:inst|TLCF:inst|TLC_Mk3:inst10|DFF2
+Warning (13012): Latch RCC:inst|TLCF:inst|TLC_Mk3:inst|Input_Logic_TLC_Mk3:inst1|X[1] has unsafe behavior File: U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/input_logic_tlc_mk3.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RCC:inst|TLCF:inst|TLC_Mk3:inst|DFF2
+Warning (13012): Latch RCC:inst|TLCF:inst|TLC_Mk3:inst11|Input_Logic_TLC_Mk3:inst1|X[1] has unsafe behavior File: U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/input_logic_tlc_mk3.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RCC:inst|TLCF:inst|TLC_Mk3:inst11|DFF2
+Warning (13012): Latch RCC:inst|TLCF:inst|TLC_Mk3:inst10|Input_Logic_TLC_Mk3:inst1|X[2] has unsafe behavior File: U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/input_logic_tlc_mk3.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RCC:inst|TLCF:inst|TLC_Mk3:inst10|DFF1
+Warning (13012): Latch RCC:inst|TLCF:inst|TLC_Mk3:inst9|Input_Logic_TLC_Mk3:inst1|X[2] has unsafe behavior File: U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/input_logic_tlc_mk3.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RCC:inst|TLCF:inst|TLC_Mk3:inst9|DFF1
+Warning (13012): Latch RCC:inst|TLCF:inst|TLC_Mk3:inst|Input_Logic_TLC_Mk3:inst1|X[2] has unsafe behavior File: U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/input_logic_tlc_mk3.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RCC:inst|TLCF:inst|TLC_Mk3:inst|DFF1
+Warning (13012): Latch RCC:inst|TLCF:inst|TLC_Mk3:inst11|Input_Logic_TLC_Mk3:inst1|X[2] has unsafe behavior File: U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/input_logic_tlc_mk3.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RCC:inst|TLCF:inst|TLC_Mk3:inst11|DFF1
+Warning (13012): Latch RCC:inst|TLCF:inst|TLC_Mk3:inst9|Input_Logic_TLC_Mk3:inst1|X[3] has unsafe behavior File: U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/input_logic_tlc_mk3.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RCC:inst|TLCF:inst|TLC_Mk3:inst9|DFF0
+Warning (13012): Latch RCC:inst|TLCF:inst|TLC_Mk3:inst10|Input_Logic_TLC_Mk3:inst1|X[3] has unsafe behavior File: U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/input_logic_tlc_mk3.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RCC:inst|TLCF:inst|TLC_Mk3:inst10|DFF0
+Warning (13012): Latch RCC:inst|TLCF:inst|TLC_Mk3:inst|Input_Logic_TLC_Mk3:inst1|X[3] has unsafe behavior File: U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/input_logic_tlc_mk3.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RCC:inst|TLCF:inst|TLC_Mk3:inst|DFF0
+Warning (13012): Latch RCC:inst|TLCF:inst|TLC_Mk3:inst11|Input_Logic_TLC_Mk3:inst1|X[3] has unsafe behavior File: U:/Classes/CPRE281/finalProj/Test_Files/Register_Counter_Combo_Test/input_logic_tlc_mk3.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RCC:inst|TLCF:inst|TLC_Mk3:inst11|DFF0
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 197 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 8 input pins
+    Info (21059): Implemented 7 output pins
+    Info (21061): Implemented 182 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 50 warnings
+    Info: Peak virtual memory: 668 megabytes
+    Info: Processing ended: Sun Dec 02 20:55:47 2018
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:21
+
+

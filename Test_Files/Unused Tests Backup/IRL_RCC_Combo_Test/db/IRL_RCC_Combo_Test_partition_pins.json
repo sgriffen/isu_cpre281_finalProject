@@ -1,0 +1,125 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Load_Done",
+					"strict" : false
+				},
+				{
+					"name" : "Out6",
+					"strict" : false
+				},
+				{
+					"name" : "Out5",
+					"strict" : false
+				},
+				{
+					"name" : "Out4",
+					"strict" : false
+				},
+				{
+					"name" : "Out3",
+					"strict" : false
+				},
+				{
+					"name" : "Out2",
+					"strict" : false
+				},
+				{
+					"name" : "Out1",
+					"strict" : false
+				},
+				{
+					"name" : "Out0",
+					"strict" : false
+				},
+				{
+					"name" : "Out16",
+					"strict" : false
+				},
+				{
+					"name" : "Out15",
+					"strict" : false
+				},
+				{
+					"name" : "Out14",
+					"strict" : false
+				},
+				{
+					"name" : "Out13",
+					"strict" : false
+				},
+				{
+					"name" : "Out12",
+					"strict" : false
+				},
+				{
+					"name" : "Out11",
+					"strict" : false
+				},
+				{
+					"name" : "Out10",
+					"strict" : false
+				},
+				{
+					"name" : "Register_Selected[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Register_Selected[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter_Select[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter_Select[0]",
+					"strict" : false
+				},
+				{
+					"name" : "In[0]",
+					"strict" : false
+				},
+				{
+					"name" : "In[1]",
+					"strict" : false
+				},
+				{
+					"name" : "In[2]",
+					"strict" : false
+				},
+				{
+					"name" : "In[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Clock",
+					"strict" : false
+				},
+				{
+					"name" : "CLRN",
+					"strict" : false
+				},
+				{
+					"name" : "Enable",
+					"strict" : false
+				},
+				{
+					"name" : "Input_Select",
+					"strict" : false
+				},
+				{
+					"name" : "Counter_Control[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter_Control[1]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

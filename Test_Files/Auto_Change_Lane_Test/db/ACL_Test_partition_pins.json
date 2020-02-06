@@ -1,0 +1,61 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Lane_Switch_Ex",
+					"strict" : false
+				},
+				{
+					"name" : "Lane_Switch_Ac",
+					"strict" : false
+				},
+				{
+					"name" : "ACL_Lanes[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ACL_Lanes[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ACL_Lanes[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ACL_Lanes[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Select[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Select[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Select[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Clock",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

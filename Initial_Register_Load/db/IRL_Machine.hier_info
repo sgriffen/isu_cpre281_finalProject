@@ -1,0 +1,88 @@
+|IRL_Machine
+All_Registers_Loaded <= Output_Logic_IRL:sadfsdaf.Loaded
+Clock => inst7.CLK
+Clock => inst8.CLK
+Clock => inst9.CLK
+User_In[0] => LR_Machine:klasdjf.In[0]
+User_In[1] => LR_Machine:klasdjf.In[1]
+User_In[2] => LR_Machine:klasdjf.In[2]
+User_In[3] => LR_Machine:klasdjf.In[3]
+Input_Select => Input_Logic_IRL:inst.select
+Register_Input[0] <= LR_Machine:klasdjf.User_Input[0]
+Register_Input[1] <= LR_Machine:klasdjf.User_Input[1]
+Register_Input[2] <= LR_Machine:klasdjf.User_Input[2]
+Register_Input[3] <= LR_Machine:klasdjf.User_Input[3]
+Register_Selected[0] <= Output_Logic_IRL:sadfsdaf.Select[0]
+Register_Selected[1] <= Output_Logic_IRL:sadfsdaf.Select[1]
+Register_Selected[2] <= Output_Logic_IRL:sadfsdaf.Select[2]
+Register_Selected[3] <= Output_Logic_IRL:sadfsdaf.Select[3]
+
+
+|IRL_Machine|Output_Logic_IRL:sadfsdaf
+y[0] => Decoder0.IN2
+y[1] => Decoder0.IN1
+y[2] => Decoder0.IN0
+Loaded <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+Select[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Select[1] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Select[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Select[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_Machine|Input_Logic_IRL:inst
+accepted => X.OUTPUTSELECT
+accepted => X.OUTPUTSELECT
+accepted => X.OUTPUTSELECT
+select => X.OUTPUTSELECT
+select => X.OUTPUTSELECT
+select => X.OUTPUTSELECT
+y[0] => Decoder0.IN2
+y[0] => Decoder1.IN1
+y[0] => X.DATAA
+y[0] => X.DATAA
+y[0] => X.DATAA
+y[1] => Decoder0.IN1
+y[1] => X.DATAA
+y[1] => X.DATAA
+y[1] => X.DATAA
+y[2] => Decoder0.IN0
+y[2] => Decoder1.IN0
+y[2] => X.DATAA
+y[2] => X.DATAA
+y[2] => X.DATAA
+d => X.OUTPUTSELECT
+d => X.OUTPUTSELECT
+d => X.OUTPUTSELECT
+X[0] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[1] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[2] <= X.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_Machine|LR_Machine:klasdjf
+Accepted <= Logic_LR:inst.W
+In[0] => Logic_LR:inst.x[0]
+In[1] => Logic_LR:inst.x[1]
+In[2] => Logic_LR:inst.x[2]
+In[3] => Logic_LR:inst.x[3]
+User_Input[0] <= Logic_LR:inst.In[0]
+User_Input[1] <= Logic_LR:inst.In[1]
+User_Input[2] <= Logic_LR:inst.In[2]
+User_Input[3] <= Logic_LR:inst.In[3]
+
+
+|IRL_Machine|LR_Machine:klasdjf|Logic_LR:inst
+x[0] => W.IN1
+x[0] => In.IN1
+x[1] => W.IN1
+x[1] => In.IN1
+x[2] => W.IN0
+x[2] => In.IN1
+x[3] => W.IN1
+x[3] => In.IN1
+W <= W.DB_MAX_OUTPUT_PORT_TYPE
+In[0] <= In.DB_MAX_OUTPUT_PORT_TYPE
+In[1] <= In.DB_MAX_OUTPUT_PORT_TYPE
+In[2] <= In.DB_MAX_OUTPUT_PORT_TYPE
+In[3] <= In.DB_MAX_OUTPUT_PORT_TYPE
+
+

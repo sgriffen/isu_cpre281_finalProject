@@ -1,0 +1,87 @@
+|TLC_Mk3
+Out[0] <= Output_Logic_TLC_Mk3:inst.Z[0]
+Out[1] <= Output_Logic_TLC_Mk3:inst.Z[1]
+Out[2] <= Output_Logic_TLC_Mk3:inst.Z[2]
+Out[3] <= Output_Logic_TLC_Mk3:inst.Z[3]
+Clock => DFF0.CLK
+Clock => DFF1.CLK
+Clock => DFF2.CLK
+Clock => DFF3.CLK
+Enable => bus_combiner_TLC_Mk3:inst2.x
+In[0] => bus_combiner_TLC_Mk3:inst2.y[0]
+In[1] => bus_combiner_TLC_Mk3:inst2.y[1]
+
+
+|TLC_Mk3|Output_Logic_TLC_Mk3:inst
+y[0] => Z[0].DATAIN
+y[1] => Z[1].DATAIN
+y[2] => Z[2].DATAIN
+y[3] => Z[3].DATAIN
+Z[0] <= y[0].DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= y[1].DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= y[2].DB_MAX_OUTPUT_PORT_TYPE
+Z[3] <= y[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLC_Mk3|Input_Logic_TLC_Mk3:sdfgsdfg
+w[0] => Equal0.IN5
+w[0] => Equal1.IN5
+w[1] => Equal0.IN4
+w[1] => Equal1.IN4
+w[2] => Equal0.IN3
+w[2] => Equal1.IN3
+y[0] => X.IN0
+y[0] => X.IN1
+y[0] => X.IN1
+y[0] => X.IN1
+y[0] => X.IN1
+y[0] => X.IN0
+y[0] => X.IN1
+y[0] => X.IN0
+y[0] => X.IN1
+y[0] => X.IN1
+y[0] => X.IN0
+y[0] => X.IN1
+y[0] => X.IN1
+y[0] => X.IN0
+y[0] => X.IN0
+y[0] => X.IN0
+y[1] => X.IN0
+y[1] => X.IN0
+y[1] => X.IN0
+y[1] => X.IN1
+y[1] => X.IN1
+y[1] => X.IN1
+y[1] => X.IN0
+y[1] => X.IN1
+y[1] => X.IN1
+y[1] => X.IN0
+y[2] => X.IN0
+y[2] => X.IN1
+y[2] => X.IN1
+y[2] => X.IN1
+y[2] => X.IN1
+y[2] => X.IN0
+y[3] => X.IN1
+y[3] => X.IN1
+y[3] => X.IN1
+y[3] => X.IN1
+y[3] => X.IN1
+y[3] => X.IN1
+y[3] => X.IN1
+y[3] => X.IN1
+X[0] <= X[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+X[1] <= X[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+X[2] <= X[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+X[3] <= X[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLC_Mk3|bus_combiner_TLC_Mk3:inst2
+x => Z[2].DATAIN
+y[0] => Z[0].DATAIN
+y[1] => Z[1].DATAIN
+Z[0] <= y[0].DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= y[1].DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+

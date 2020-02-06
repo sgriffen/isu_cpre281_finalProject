@@ -1,0 +1,717 @@
+|4_4bit_Register_File
+Register_Selected[0] <= Mux_4to1:inst1.Y[0]
+Register_Selected[1] <= Mux_4to1:inst1.Y[1]
+Register_Selected[2] <= Mux_4to1:inst1.Y[2]
+Register_Selected[3] <= Mux_4to1:inst1.Y[3]
+Register_Select[0] => Priority_Encoder_4to2_4bRL:inst2.w[0]
+Register_Select[1] => Priority_Encoder_4to2_4bRL:inst2.w[1]
+Register_Select[2] => Priority_Encoder_4to2_4bRL:inst2.w[2]
+Register_Select[3] => Priority_Encoder_4to2_4bRL:inst2.w[3]
+Register_Load_Enable => Decoder_2to4:inst.En
+Clock => 4bit_Register:Register3.Clock
+Clock => 4bit_Register:Register2.Clock
+Clock => 4bit_Register:Register1.Clock
+Clock => 4bit_Register:Register0.Clock
+CLRN => 4bit_Register:Register3.CLRN
+CLRN => 4bit_Register:Register2.CLRN
+CLRN => 4bit_Register:Register1.CLRN
+CLRN => 4bit_Register:Register0.CLRN
+Register_Input[0] => 4bit_Register:Register3.In[0]
+Register_Input[0] => 4bit_Register:Register2.In[0]
+Register_Input[0] => 4bit_Register:Register1.In[0]
+Register_Input[0] => 4bit_Register:Register0.In[0]
+Register_Input[1] => 4bit_Register:Register3.In[1]
+Register_Input[1] => 4bit_Register:Register2.In[1]
+Register_Input[1] => 4bit_Register:Register1.In[1]
+Register_Input[1] => 4bit_Register:Register0.In[1]
+Register_Input[2] => 4bit_Register:Register3.In[2]
+Register_Input[2] => 4bit_Register:Register2.In[2]
+Register_Input[2] => 4bit_Register:Register1.In[2]
+Register_Input[2] => 4bit_Register:Register0.In[2]
+Register_Input[3] => 4bit_Register:Register3.In[3]
+Register_Input[3] => 4bit_Register:Register2.In[3]
+Register_Input[3] => 4bit_Register:Register1.In[3]
+Register_Input[3] => 4bit_Register:Register0.In[3]
+
+
+|4_4bit_Register_File|Mux_4to1:inst1
+x0[0] => Mux3.IN2
+x0[1] => Mux2.IN2
+x0[2] => Mux1.IN2
+x0[3] => Mux0.IN2
+x1[0] => Mux3.IN3
+x1[1] => Mux2.IN3
+x1[2] => Mux1.IN3
+x1[3] => Mux0.IN3
+x2[0] => Mux3.IN4
+x2[1] => Mux2.IN4
+x2[2] => Mux1.IN4
+x2[3] => Mux0.IN4
+x3[0] => Mux3.IN5
+x3[1] => Mux2.IN5
+x3[2] => Mux1.IN5
+x3[3] => Mux0.IN5
+s[0] => Mux0.IN1
+s[0] => Mux1.IN1
+s[0] => Mux2.IN1
+s[0] => Mux3.IN1
+s[1] => Mux0.IN0
+s[1] => Mux1.IN0
+s[1] => Mux2.IN0
+s[1] => Mux3.IN0
+Y[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|4_4bit_Register_File|Priority_Encoder_4to2_4bRL:inst2
+w[0] => ~NO_FANOUT~
+w[1] => Z.IN0
+w[2] => Z.IN0
+w[2] => Z.IN1
+w[3] => Z.IN1
+w[3] => Z.IN1
+Z[0] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|4_4bit_Register_File|4bit_Register:Register3
+Out[0] <= 1bit_Register:inst3.Out
+Out[1] <= 1bit_Register:inst2.Out
+Out[2] <= 1bit_Register:inst1.Out
+Out[3] <= 1bit_Register:inst.Out
+In[0] => 1bit_Register:inst3.In
+In[1] => 1bit_Register:inst2.In
+In[2] => 1bit_Register:inst1.In
+In[3] => 1bit_Register:inst.In
+Load => 1bit_Register:inst3.Load
+Load => 1bit_Register:inst2.Load
+Load => 1bit_Register:inst1.Load
+Load => 1bit_Register:inst.Load
+Clock => 1bit_Register:inst3.Clock
+Clock => 1bit_Register:inst2.Clock
+Clock => 1bit_Register:inst1.Clock
+Clock => 1bit_Register:inst.Clock
+CLRN => 1bit_Register:inst3.CLRN
+CLRN => 1bit_Register:inst2.CLRN
+CLRN => 1bit_Register:inst1.CLRN
+CLRN => 1bit_Register:inst.CLRN
+
+
+|4_4bit_Register_File|4bit_Register:Register3|1bit_Register:inst3
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register3|1bit_Register:inst3|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register3|1bit_Register:inst3|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register3|1bit_Register:inst3|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|4_4bit_Register_File|4bit_Register:Register3|1bit_Register:inst2
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register3|1bit_Register:inst2|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register3|1bit_Register:inst2|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register3|1bit_Register:inst2|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|4_4bit_Register_File|4bit_Register:Register3|1bit_Register:inst1
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register3|1bit_Register:inst1|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register3|1bit_Register:inst1|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register3|1bit_Register:inst1|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|4_4bit_Register_File|4bit_Register:Register3|1bit_Register:inst
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register3|1bit_Register:inst|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register3|1bit_Register:inst|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register3|1bit_Register:inst|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|4_4bit_Register_File|Decoder_2to4:inst
+En => Y.IN1
+En => Y.IN1
+En => Y.IN1
+En => Y.IN1
+w[0] => Y.IN0
+w[0] => Y.IN0
+w[0] => Y.IN0
+w[0] => Y.IN0
+w[1] => Y.IN1
+w[1] => Y.IN1
+w[1] => Y.IN1
+w[1] => Y.IN1
+Y[0] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|4_4bit_Register_File|4bit_Register:Register2
+Out[0] <= 1bit_Register:inst3.Out
+Out[1] <= 1bit_Register:inst2.Out
+Out[2] <= 1bit_Register:inst1.Out
+Out[3] <= 1bit_Register:inst.Out
+In[0] => 1bit_Register:inst3.In
+In[1] => 1bit_Register:inst2.In
+In[2] => 1bit_Register:inst1.In
+In[3] => 1bit_Register:inst.In
+Load => 1bit_Register:inst3.Load
+Load => 1bit_Register:inst2.Load
+Load => 1bit_Register:inst1.Load
+Load => 1bit_Register:inst.Load
+Clock => 1bit_Register:inst3.Clock
+Clock => 1bit_Register:inst2.Clock
+Clock => 1bit_Register:inst1.Clock
+Clock => 1bit_Register:inst.Clock
+CLRN => 1bit_Register:inst3.CLRN
+CLRN => 1bit_Register:inst2.CLRN
+CLRN => 1bit_Register:inst1.CLRN
+CLRN => 1bit_Register:inst.CLRN
+
+
+|4_4bit_Register_File|4bit_Register:Register2|1bit_Register:inst3
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register2|1bit_Register:inst3|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register2|1bit_Register:inst3|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register2|1bit_Register:inst3|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|4_4bit_Register_File|4bit_Register:Register2|1bit_Register:inst2
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register2|1bit_Register:inst2|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register2|1bit_Register:inst2|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register2|1bit_Register:inst2|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|4_4bit_Register_File|4bit_Register:Register2|1bit_Register:inst1
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register2|1bit_Register:inst1|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register2|1bit_Register:inst1|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register2|1bit_Register:inst1|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|4_4bit_Register_File|4bit_Register:Register2|1bit_Register:inst
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register2|1bit_Register:inst|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register2|1bit_Register:inst|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register2|1bit_Register:inst|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|4_4bit_Register_File|4bit_Register:Register1
+Out[0] <= 1bit_Register:inst3.Out
+Out[1] <= 1bit_Register:inst2.Out
+Out[2] <= 1bit_Register:inst1.Out
+Out[3] <= 1bit_Register:inst.Out
+In[0] => 1bit_Register:inst3.In
+In[1] => 1bit_Register:inst2.In
+In[2] => 1bit_Register:inst1.In
+In[3] => 1bit_Register:inst.In
+Load => 1bit_Register:inst3.Load
+Load => 1bit_Register:inst2.Load
+Load => 1bit_Register:inst1.Load
+Load => 1bit_Register:inst.Load
+Clock => 1bit_Register:inst3.Clock
+Clock => 1bit_Register:inst2.Clock
+Clock => 1bit_Register:inst1.Clock
+Clock => 1bit_Register:inst.Clock
+CLRN => 1bit_Register:inst3.CLRN
+CLRN => 1bit_Register:inst2.CLRN
+CLRN => 1bit_Register:inst1.CLRN
+CLRN => 1bit_Register:inst.CLRN
+
+
+|4_4bit_Register_File|4bit_Register:Register1|1bit_Register:inst3
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register1|1bit_Register:inst3|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register1|1bit_Register:inst3|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register1|1bit_Register:inst3|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|4_4bit_Register_File|4bit_Register:Register1|1bit_Register:inst2
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register1|1bit_Register:inst2|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register1|1bit_Register:inst2|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register1|1bit_Register:inst2|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|4_4bit_Register_File|4bit_Register:Register1|1bit_Register:inst1
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register1|1bit_Register:inst1|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register1|1bit_Register:inst1|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register1|1bit_Register:inst1|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|4_4bit_Register_File|4bit_Register:Register1|1bit_Register:inst
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register1|1bit_Register:inst|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register1|1bit_Register:inst|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register1|1bit_Register:inst|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|4_4bit_Register_File|4bit_Register:Register0
+Out[0] <= 1bit_Register:inst3.Out
+Out[1] <= 1bit_Register:inst2.Out
+Out[2] <= 1bit_Register:inst1.Out
+Out[3] <= 1bit_Register:inst.Out
+In[0] => 1bit_Register:inst3.In
+In[1] => 1bit_Register:inst2.In
+In[2] => 1bit_Register:inst1.In
+In[3] => 1bit_Register:inst.In
+Load => 1bit_Register:inst3.Load
+Load => 1bit_Register:inst2.Load
+Load => 1bit_Register:inst1.Load
+Load => 1bit_Register:inst.Load
+Clock => 1bit_Register:inst3.Clock
+Clock => 1bit_Register:inst2.Clock
+Clock => 1bit_Register:inst1.Clock
+Clock => 1bit_Register:inst.Clock
+CLRN => 1bit_Register:inst3.CLRN
+CLRN => 1bit_Register:inst2.CLRN
+CLRN => 1bit_Register:inst1.CLRN
+CLRN => 1bit_Register:inst.CLRN
+
+
+|4_4bit_Register_File|4bit_Register:Register0|1bit_Register:inst3
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register0|1bit_Register:inst3|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register0|1bit_Register:inst3|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register0|1bit_Register:inst3|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|4_4bit_Register_File|4bit_Register:Register0|1bit_Register:inst2
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register0|1bit_Register:inst2|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register0|1bit_Register:inst2|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register0|1bit_Register:inst2|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|4_4bit_Register_File|4bit_Register:Register0|1bit_Register:inst1
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register0|1bit_Register:inst1|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register0|1bit_Register:inst1|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register0|1bit_Register:inst1|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|4_4bit_Register_File|4bit_Register:Register0|1bit_Register:inst
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register0|1bit_Register:inst|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register0|1bit_Register:inst|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|4_4bit_Register_File|4bit_Register:Register0|1bit_Register:inst|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+

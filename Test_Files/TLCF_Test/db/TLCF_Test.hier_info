@@ -1,0 +1,641 @@
+|TLCF_Test
+Out0[0] <= seven_seg_decoder:inst5.Y[0]
+Out0[1] <= seven_seg_decoder:inst5.Y[1]
+Out0[2] <= seven_seg_decoder:inst5.Y[2]
+Out0[3] <= seven_seg_decoder:inst5.Y[3]
+Out0[4] <= seven_seg_decoder:inst5.Y[4]
+Out0[5] <= seven_seg_decoder:inst5.Y[5]
+Out0[6] <= seven_seg_decoder:inst5.Y[6]
+Counter_Control => TLCF:inst.Counter_Control
+Clock => TLCF:inst.Clock
+ACL_Selection[0] => TLCF:inst.ACL_Select[0]
+ACL_Selection[1] => TLCF:inst.ACL_Select[1]
+ACL_Selection[2] => TLCF:inst.ACL_Select[2]
+ACL_Selection[3] => TLCF:inst.ACL_Select[3]
+Counter_Capacity[0] => TLCF:inst.Counter_Capacity[0]
+Counter_Capacity[0] => seven_seg_decoder:inst1.x[0]
+Counter_Capacity[1] => TLCF:inst.Counter_Capacity[1]
+Counter_Capacity[1] => seven_seg_decoder:inst1.x[1]
+Counter_Capacity[2] => TLCF:inst.Counter_Capacity[2]
+Counter_Capacity[2] => seven_seg_decoder:inst1.x[2]
+Counter_Capacity[3] => TLCF:inst.Counter_Capacity[3]
+Counter_Capacity[3] => seven_seg_decoder:inst1.x[3]
+Counter_Select[0] => TLCF:inst.Counter_Select[0]
+Counter_Select[1] => TLCF:inst.Counter_Select[1]
+Counter_Select[2] => TLCF:inst.Counter_Select[2]
+Counter_Select[3] => TLCF:inst.Counter_Select[3]
+Out1[0] <= seven_seg_decoder:inst4.Y[0]
+Out1[1] <= seven_seg_decoder:inst4.Y[1]
+Out1[2] <= seven_seg_decoder:inst4.Y[2]
+Out1[3] <= seven_seg_decoder:inst4.Y[3]
+Out1[4] <= seven_seg_decoder:inst4.Y[4]
+Out1[5] <= seven_seg_decoder:inst4.Y[5]
+Out1[6] <= seven_seg_decoder:inst4.Y[6]
+Out2[0] <= seven_seg_decoder:inst3.Y[0]
+Out2[1] <= seven_seg_decoder:inst3.Y[1]
+Out2[2] <= seven_seg_decoder:inst3.Y[2]
+Out2[3] <= seven_seg_decoder:inst3.Y[3]
+Out2[4] <= seven_seg_decoder:inst3.Y[4]
+Out2[5] <= seven_seg_decoder:inst3.Y[5]
+Out2[6] <= seven_seg_decoder:inst3.Y[6]
+Out3[0] <= seven_seg_decoder:inst2.Y[0]
+Out3[1] <= seven_seg_decoder:inst2.Y[1]
+Out3[2] <= seven_seg_decoder:inst2.Y[2]
+Out3[3] <= seven_seg_decoder:inst2.Y[3]
+Out3[4] <= seven_seg_decoder:inst2.Y[4]
+Out3[5] <= seven_seg_decoder:inst2.Y[5]
+Out3[6] <= seven_seg_decoder:inst2.Y[6]
+Out4[0] <= seven_seg_decoder:inst1.Y[0]
+Out4[1] <= seven_seg_decoder:inst1.Y[1]
+Out4[2] <= seven_seg_decoder:inst1.Y[2]
+Out4[3] <= seven_seg_decoder:inst1.Y[3]
+Out4[4] <= seven_seg_decoder:inst1.Y[4]
+Out4[5] <= seven_seg_decoder:inst1.Y[5]
+Out4[6] <= seven_seg_decoder:inst1.Y[6]
+
+
+|TLCF_Test|seven_seg_decoder:inst5
+x[0] => Decoder0.IN3
+x[1] => Decoder0.IN2
+x[2] => Decoder0.IN1
+x[3] => Decoder0.IN0
+Y[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLCF_Test|TLCF:inst
+Counter_0[0] <= TLC_Mk3:inst31.Out[0]
+Counter_0[1] <= TLC_Mk3:inst31.Out[1]
+Counter_0[2] <= TLC_Mk3:inst31.Out[2]
+Counter_0[3] <= TLC_Mk3:inst31.Out[3]
+Clock => TLC_Mk3:inst31.Clock
+Clock => TLC_Mk3:inst30.Clock
+Clock => TLC_Mk3:inst29.Clock
+Clock => TLC_Mk3:inst9.Clock
+Enable => Decoder_TLCF:inst15.En
+Counter_Select[0] => Priority_Encoder_TLCF:inst.w[0]
+Counter_Select[1] => Priority_Encoder_TLCF:inst.w[1]
+Counter_Select[2] => Priority_Encoder_TLCF:inst.w[2]
+Counter_Select[3] => Priority_Encoder_TLCF:inst.w[3]
+Counter_Control => Decoder_TLCF:inst14.En
+Counter_Control => Counter_Control_Maker_TLCF:inst8.counter_control
+Counter_Control => Counter_Control_Maker_TLCF:inst7.counter_control
+Counter_Control => Counter_Control_Maker_TLCF:inst6.counter_control
+Counter_Control => Counter_Control_Maker_TLCF:inst5.counter_control
+ACL_Select[0] => Priority_Encoder_TLCF:inst11.w[0]
+ACL_Select[1] => Priority_Encoder_TLCF:inst11.w[1]
+ACL_Select[2] => Priority_Encoder_TLCF:inst11.w[2]
+ACL_Select[3] => Priority_Encoder_TLCF:inst11.w[3]
+Counter_Capacity[0] => TLC_Mk3:inst31.Counter_Capacity[0]
+Counter_Capacity[0] => TLC_Mk3:inst30.Counter_Capacity[0]
+Counter_Capacity[0] => TLC_Mk3:inst29.Counter_Capacity[0]
+Counter_Capacity[0] => TLC_Mk3:inst9.Counter_Capacity[0]
+Counter_Capacity[1] => TLC_Mk3:inst31.Counter_Capacity[1]
+Counter_Capacity[1] => TLC_Mk3:inst30.Counter_Capacity[1]
+Counter_Capacity[1] => TLC_Mk3:inst29.Counter_Capacity[1]
+Counter_Capacity[1] => TLC_Mk3:inst9.Counter_Capacity[1]
+Counter_Capacity[2] => TLC_Mk3:inst31.Counter_Capacity[2]
+Counter_Capacity[2] => TLC_Mk3:inst30.Counter_Capacity[2]
+Counter_Capacity[2] => TLC_Mk3:inst29.Counter_Capacity[2]
+Counter_Capacity[2] => TLC_Mk3:inst9.Counter_Capacity[2]
+Counter_Capacity[3] => TLC_Mk3:inst31.Counter_Capacity[3]
+Counter_Capacity[3] => TLC_Mk3:inst30.Counter_Capacity[3]
+Counter_Capacity[3] => TLC_Mk3:inst29.Counter_Capacity[3]
+Counter_Capacity[3] => TLC_Mk3:inst9.Counter_Capacity[3]
+Counter_1[0] <= TLC_Mk3:inst30.Out[0]
+Counter_1[1] <= TLC_Mk3:inst30.Out[1]
+Counter_1[2] <= TLC_Mk3:inst30.Out[2]
+Counter_1[3] <= TLC_Mk3:inst30.Out[3]
+Counter_2[0] <= TLC_Mk3:inst29.Out[0]
+Counter_2[1] <= TLC_Mk3:inst29.Out[1]
+Counter_2[2] <= TLC_Mk3:inst29.Out[2]
+Counter_2[3] <= TLC_Mk3:inst29.Out[3]
+Counter_3[0] <= TLC_Mk3:inst9.Out[0]
+Counter_3[1] <= TLC_Mk3:inst9.Out[1]
+Counter_3[2] <= TLC_Mk3:inst9.Out[2]
+Counter_3[3] <= TLC_Mk3:inst9.Out[3]
+
+
+|TLCF_Test|TLCF:inst|TLC_Mk3:inst31
+Out[0] <= Output_Logic_TLC_Mk3:inst.Z[0]
+Out[1] <= Output_Logic_TLC_Mk3:inst.Z[1]
+Out[2] <= Output_Logic_TLC_Mk3:inst.Z[2]
+Out[3] <= Output_Logic_TLC_Mk3:inst.Z[3]
+Clock => DFF3.CLK
+Clock => DFF1.CLK
+Clock => DFF0.CLK
+Clock => DFF2.CLK
+Enable => Capacity_Check_TLC_Mk3:inst2.en
+Enable => Input_Logic_TLC_Mk3:inst1.en
+acl_enable => Input_Logic_TLC_Mk3:inst1.acl_en
+In[0] => Input_Logic_TLC_Mk3:inst1.w[0]
+In[1] => Input_Logic_TLC_Mk3:inst1.w[1]
+Counter_Capacity[0] => Capacity_Check_TLC_Mk3:inst2.cap_max[0]
+Counter_Capacity[1] => Capacity_Check_TLC_Mk3:inst2.cap_max[1]
+Counter_Capacity[2] => Capacity_Check_TLC_Mk3:inst2.cap_max[2]
+Counter_Capacity[3] => Capacity_Check_TLC_Mk3:inst2.cap_max[3]
+
+
+|TLCF_Test|TLCF:inst|TLC_Mk3:inst31|Output_Logic_TLC_Mk3:inst
+y[0] => Z[0].DATAIN
+y[1] => Z[1].DATAIN
+y[2] => Z[2].DATAIN
+y[3] => Z[3].DATAIN
+Z[0] <= y[0].DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= y[1].DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= y[2].DB_MAX_OUTPUT_PORT_TYPE
+Z[3] <= y[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLCF_Test|TLCF:inst|TLC_Mk3:inst31|Capacity_Check_TLC_Mk3:inst2
+en => ~NO_FANOUT~
+cap_max[0] => LessThan0.IN4
+cap_max[1] => LessThan0.IN3
+cap_max[2] => LessThan0.IN2
+cap_max[3] => LessThan0.IN1
+cap_curr[0] => Next_State.DATAA
+cap_curr[1] => Next_State.DATAA
+cap_curr[2] => Next_State.DATAA
+cap_curr[3] => Next_State.DATAA
+cap_des[0] => LessThan0.IN8
+cap_des[0] => Next_State.DATAB
+cap_des[1] => LessThan0.IN7
+cap_des[1] => Next_State.DATAB
+cap_des[2] => LessThan0.IN6
+cap_des[2] => Next_State.DATAB
+cap_des[3] => LessThan0.IN5
+cap_des[3] => Next_State.DATAB
+Next_State[0] <= Next_State.DB_MAX_OUTPUT_PORT_TYPE
+Next_State[1] <= Next_State.DB_MAX_OUTPUT_PORT_TYPE
+Next_State[2] <= Next_State.DB_MAX_OUTPUT_PORT_TYPE
+Next_State[3] <= Next_State.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLCF_Test|TLCF:inst|TLC_Mk3:inst31|Input_Logic_TLC_Mk3:inst1
+en => X.OUTPUTSELECT
+en => X.OUTPUTSELECT
+en => X.OUTPUTSELECT
+en => X.OUTPUTSELECT
+acl_en => X.OUTPUTSELECT
+acl_en => X.OUTPUTSELECT
+acl_en => X.OUTPUTSELECT
+acl_en => X.OUTPUTSELECT
+w[0] => Equal0.IN3
+w[0] => Equal1.IN3
+w[1] => Equal0.IN2
+w[1] => Equal1.IN2
+y[0] => Selector3.IN5
+y[0] => Decoder0.IN3
+y[0] => X.DATAA
+y[0] => X.DATAA
+y[1] => Selector2.IN5
+y[1] => Decoder0.IN2
+y[1] => X.DATAA
+y[1] => X.DATAA
+y[2] => Selector1.IN5
+y[2] => Decoder0.IN1
+y[2] => X.DATAA
+y[2] => X.DATAA
+y[3] => Selector0.IN5
+y[3] => Decoder0.IN0
+y[3] => X.DATAA
+y[3] => X.DATAA
+X[0] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[1] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[2] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[3] <= X.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLCF_Test|TLCF:inst|Decoder_TLCF:inst15
+En => Y.IN1
+En => Y.IN1
+En => Y.IN1
+En => Y.IN1
+w[0] => Y.IN1
+w[0] => Y.IN1
+w[0] => Y.IN1
+w[0] => Y.IN1
+w[1] => Y.IN0
+w[1] => Y.IN0
+w[1] => Y.IN0
+w[2] => Y.IN1
+w[2] => Y.IN1
+w[2] => Y.IN1
+Y[0] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLCF_Test|TLCF:inst|Priority_Encoder_TLCF:inst
+w[0] => Z.DATAA
+w[1] => Z.OUTPUTSELECT
+w[1] => Z.DATAA
+w[2] => Z.OUTPUTSELECT
+w[2] => Z.OUTPUTSELECT
+w[3] => Z.OUTPUTSELECT
+w[3] => Z.OUTPUTSELECT
+w[3] => Z[2].DATAIN
+Z[0] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= w[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLCF_Test|TLCF:inst|Decoder_TLCF:inst14
+En => Y.IN1
+En => Y.IN1
+En => Y.IN1
+En => Y.IN1
+w[0] => Y.IN1
+w[0] => Y.IN1
+w[0] => Y.IN1
+w[0] => Y.IN1
+w[1] => Y.IN0
+w[1] => Y.IN0
+w[1] => Y.IN0
+w[2] => Y.IN1
+w[2] => Y.IN1
+w[2] => Y.IN1
+Y[0] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLCF_Test|TLCF:inst|Priority_Encoder_TLCF:inst11
+w[0] => Z.DATAA
+w[1] => Z.OUTPUTSELECT
+w[1] => Z.DATAA
+w[2] => Z.OUTPUTSELECT
+w[2] => Z.OUTPUTSELECT
+w[3] => Z.OUTPUTSELECT
+w[3] => Z.OUTPUTSELECT
+w[3] => Z[2].DATAIN
+Z[0] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= w[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLCF_Test|TLCF:inst|Counter_Control_Maker_TLCF:inst8
+counter_control => Result.OUTPUTSELECT
+select => Result[0].DATAIN
+acl_select => Result.DATAB
+Result[0] <= select.DB_MAX_OUTPUT_PORT_TYPE
+Result[1] <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLCF_Test|TLCF:inst|TLC_Mk3:inst30
+Out[0] <= Output_Logic_TLC_Mk3:inst.Z[0]
+Out[1] <= Output_Logic_TLC_Mk3:inst.Z[1]
+Out[2] <= Output_Logic_TLC_Mk3:inst.Z[2]
+Out[3] <= Output_Logic_TLC_Mk3:inst.Z[3]
+Clock => DFF3.CLK
+Clock => DFF1.CLK
+Clock => DFF0.CLK
+Clock => DFF2.CLK
+Enable => Capacity_Check_TLC_Mk3:inst2.en
+Enable => Input_Logic_TLC_Mk3:inst1.en
+acl_enable => Input_Logic_TLC_Mk3:inst1.acl_en
+In[0] => Input_Logic_TLC_Mk3:inst1.w[0]
+In[1] => Input_Logic_TLC_Mk3:inst1.w[1]
+Counter_Capacity[0] => Capacity_Check_TLC_Mk3:inst2.cap_max[0]
+Counter_Capacity[1] => Capacity_Check_TLC_Mk3:inst2.cap_max[1]
+Counter_Capacity[2] => Capacity_Check_TLC_Mk3:inst2.cap_max[2]
+Counter_Capacity[3] => Capacity_Check_TLC_Mk3:inst2.cap_max[3]
+
+
+|TLCF_Test|TLCF:inst|TLC_Mk3:inst30|Output_Logic_TLC_Mk3:inst
+y[0] => Z[0].DATAIN
+y[1] => Z[1].DATAIN
+y[2] => Z[2].DATAIN
+y[3] => Z[3].DATAIN
+Z[0] <= y[0].DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= y[1].DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= y[2].DB_MAX_OUTPUT_PORT_TYPE
+Z[3] <= y[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLCF_Test|TLCF:inst|TLC_Mk3:inst30|Capacity_Check_TLC_Mk3:inst2
+en => ~NO_FANOUT~
+cap_max[0] => LessThan0.IN4
+cap_max[1] => LessThan0.IN3
+cap_max[2] => LessThan0.IN2
+cap_max[3] => LessThan0.IN1
+cap_curr[0] => Next_State.DATAA
+cap_curr[1] => Next_State.DATAA
+cap_curr[2] => Next_State.DATAA
+cap_curr[3] => Next_State.DATAA
+cap_des[0] => LessThan0.IN8
+cap_des[0] => Next_State.DATAB
+cap_des[1] => LessThan0.IN7
+cap_des[1] => Next_State.DATAB
+cap_des[2] => LessThan0.IN6
+cap_des[2] => Next_State.DATAB
+cap_des[3] => LessThan0.IN5
+cap_des[3] => Next_State.DATAB
+Next_State[0] <= Next_State.DB_MAX_OUTPUT_PORT_TYPE
+Next_State[1] <= Next_State.DB_MAX_OUTPUT_PORT_TYPE
+Next_State[2] <= Next_State.DB_MAX_OUTPUT_PORT_TYPE
+Next_State[3] <= Next_State.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLCF_Test|TLCF:inst|TLC_Mk3:inst30|Input_Logic_TLC_Mk3:inst1
+en => X.OUTPUTSELECT
+en => X.OUTPUTSELECT
+en => X.OUTPUTSELECT
+en => X.OUTPUTSELECT
+acl_en => X.OUTPUTSELECT
+acl_en => X.OUTPUTSELECT
+acl_en => X.OUTPUTSELECT
+acl_en => X.OUTPUTSELECT
+w[0] => Equal0.IN3
+w[0] => Equal1.IN3
+w[1] => Equal0.IN2
+w[1] => Equal1.IN2
+y[0] => Selector3.IN5
+y[0] => Decoder0.IN3
+y[0] => X.DATAA
+y[0] => X.DATAA
+y[1] => Selector2.IN5
+y[1] => Decoder0.IN2
+y[1] => X.DATAA
+y[1] => X.DATAA
+y[2] => Selector1.IN5
+y[2] => Decoder0.IN1
+y[2] => X.DATAA
+y[2] => X.DATAA
+y[3] => Selector0.IN5
+y[3] => Decoder0.IN0
+y[3] => X.DATAA
+y[3] => X.DATAA
+X[0] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[1] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[2] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[3] <= X.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLCF_Test|TLCF:inst|Counter_Control_Maker_TLCF:inst7
+counter_control => Result.OUTPUTSELECT
+select => Result[0].DATAIN
+acl_select => Result.DATAB
+Result[0] <= select.DB_MAX_OUTPUT_PORT_TYPE
+Result[1] <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLCF_Test|TLCF:inst|TLC_Mk3:inst29
+Out[0] <= Output_Logic_TLC_Mk3:inst.Z[0]
+Out[1] <= Output_Logic_TLC_Mk3:inst.Z[1]
+Out[2] <= Output_Logic_TLC_Mk3:inst.Z[2]
+Out[3] <= Output_Logic_TLC_Mk3:inst.Z[3]
+Clock => DFF3.CLK
+Clock => DFF1.CLK
+Clock => DFF0.CLK
+Clock => DFF2.CLK
+Enable => Capacity_Check_TLC_Mk3:inst2.en
+Enable => Input_Logic_TLC_Mk3:inst1.en
+acl_enable => Input_Logic_TLC_Mk3:inst1.acl_en
+In[0] => Input_Logic_TLC_Mk3:inst1.w[0]
+In[1] => Input_Logic_TLC_Mk3:inst1.w[1]
+Counter_Capacity[0] => Capacity_Check_TLC_Mk3:inst2.cap_max[0]
+Counter_Capacity[1] => Capacity_Check_TLC_Mk3:inst2.cap_max[1]
+Counter_Capacity[2] => Capacity_Check_TLC_Mk3:inst2.cap_max[2]
+Counter_Capacity[3] => Capacity_Check_TLC_Mk3:inst2.cap_max[3]
+
+
+|TLCF_Test|TLCF:inst|TLC_Mk3:inst29|Output_Logic_TLC_Mk3:inst
+y[0] => Z[0].DATAIN
+y[1] => Z[1].DATAIN
+y[2] => Z[2].DATAIN
+y[3] => Z[3].DATAIN
+Z[0] <= y[0].DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= y[1].DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= y[2].DB_MAX_OUTPUT_PORT_TYPE
+Z[3] <= y[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLCF_Test|TLCF:inst|TLC_Mk3:inst29|Capacity_Check_TLC_Mk3:inst2
+en => ~NO_FANOUT~
+cap_max[0] => LessThan0.IN4
+cap_max[1] => LessThan0.IN3
+cap_max[2] => LessThan0.IN2
+cap_max[3] => LessThan0.IN1
+cap_curr[0] => Next_State.DATAA
+cap_curr[1] => Next_State.DATAA
+cap_curr[2] => Next_State.DATAA
+cap_curr[3] => Next_State.DATAA
+cap_des[0] => LessThan0.IN8
+cap_des[0] => Next_State.DATAB
+cap_des[1] => LessThan0.IN7
+cap_des[1] => Next_State.DATAB
+cap_des[2] => LessThan0.IN6
+cap_des[2] => Next_State.DATAB
+cap_des[3] => LessThan0.IN5
+cap_des[3] => Next_State.DATAB
+Next_State[0] <= Next_State.DB_MAX_OUTPUT_PORT_TYPE
+Next_State[1] <= Next_State.DB_MAX_OUTPUT_PORT_TYPE
+Next_State[2] <= Next_State.DB_MAX_OUTPUT_PORT_TYPE
+Next_State[3] <= Next_State.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLCF_Test|TLCF:inst|TLC_Mk3:inst29|Input_Logic_TLC_Mk3:inst1
+en => X.OUTPUTSELECT
+en => X.OUTPUTSELECT
+en => X.OUTPUTSELECT
+en => X.OUTPUTSELECT
+acl_en => X.OUTPUTSELECT
+acl_en => X.OUTPUTSELECT
+acl_en => X.OUTPUTSELECT
+acl_en => X.OUTPUTSELECT
+w[0] => Equal0.IN3
+w[0] => Equal1.IN3
+w[1] => Equal0.IN2
+w[1] => Equal1.IN2
+y[0] => Selector3.IN5
+y[0] => Decoder0.IN3
+y[0] => X.DATAA
+y[0] => X.DATAA
+y[1] => Selector2.IN5
+y[1] => Decoder0.IN2
+y[1] => X.DATAA
+y[1] => X.DATAA
+y[2] => Selector1.IN5
+y[2] => Decoder0.IN1
+y[2] => X.DATAA
+y[2] => X.DATAA
+y[3] => Selector0.IN5
+y[3] => Decoder0.IN0
+y[3] => X.DATAA
+y[3] => X.DATAA
+X[0] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[1] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[2] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[3] <= X.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLCF_Test|TLCF:inst|Counter_Control_Maker_TLCF:inst6
+counter_control => Result.OUTPUTSELECT
+select => Result[0].DATAIN
+acl_select => Result.DATAB
+Result[0] <= select.DB_MAX_OUTPUT_PORT_TYPE
+Result[1] <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLCF_Test|TLCF:inst|TLC_Mk3:inst9
+Out[0] <= Output_Logic_TLC_Mk3:inst.Z[0]
+Out[1] <= Output_Logic_TLC_Mk3:inst.Z[1]
+Out[2] <= Output_Logic_TLC_Mk3:inst.Z[2]
+Out[3] <= Output_Logic_TLC_Mk3:inst.Z[3]
+Clock => DFF3.CLK
+Clock => DFF1.CLK
+Clock => DFF0.CLK
+Clock => DFF2.CLK
+Enable => Capacity_Check_TLC_Mk3:inst2.en
+Enable => Input_Logic_TLC_Mk3:inst1.en
+acl_enable => Input_Logic_TLC_Mk3:inst1.acl_en
+In[0] => Input_Logic_TLC_Mk3:inst1.w[0]
+In[1] => Input_Logic_TLC_Mk3:inst1.w[1]
+Counter_Capacity[0] => Capacity_Check_TLC_Mk3:inst2.cap_max[0]
+Counter_Capacity[1] => Capacity_Check_TLC_Mk3:inst2.cap_max[1]
+Counter_Capacity[2] => Capacity_Check_TLC_Mk3:inst2.cap_max[2]
+Counter_Capacity[3] => Capacity_Check_TLC_Mk3:inst2.cap_max[3]
+
+
+|TLCF_Test|TLCF:inst|TLC_Mk3:inst9|Output_Logic_TLC_Mk3:inst
+y[0] => Z[0].DATAIN
+y[1] => Z[1].DATAIN
+y[2] => Z[2].DATAIN
+y[3] => Z[3].DATAIN
+Z[0] <= y[0].DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= y[1].DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= y[2].DB_MAX_OUTPUT_PORT_TYPE
+Z[3] <= y[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLCF_Test|TLCF:inst|TLC_Mk3:inst9|Capacity_Check_TLC_Mk3:inst2
+en => ~NO_FANOUT~
+cap_max[0] => LessThan0.IN4
+cap_max[1] => LessThan0.IN3
+cap_max[2] => LessThan0.IN2
+cap_max[3] => LessThan0.IN1
+cap_curr[0] => Next_State.DATAA
+cap_curr[1] => Next_State.DATAA
+cap_curr[2] => Next_State.DATAA
+cap_curr[3] => Next_State.DATAA
+cap_des[0] => LessThan0.IN8
+cap_des[0] => Next_State.DATAB
+cap_des[1] => LessThan0.IN7
+cap_des[1] => Next_State.DATAB
+cap_des[2] => LessThan0.IN6
+cap_des[2] => Next_State.DATAB
+cap_des[3] => LessThan0.IN5
+cap_des[3] => Next_State.DATAB
+Next_State[0] <= Next_State.DB_MAX_OUTPUT_PORT_TYPE
+Next_State[1] <= Next_State.DB_MAX_OUTPUT_PORT_TYPE
+Next_State[2] <= Next_State.DB_MAX_OUTPUT_PORT_TYPE
+Next_State[3] <= Next_State.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLCF_Test|TLCF:inst|TLC_Mk3:inst9|Input_Logic_TLC_Mk3:inst1
+en => X.OUTPUTSELECT
+en => X.OUTPUTSELECT
+en => X.OUTPUTSELECT
+en => X.OUTPUTSELECT
+acl_en => X.OUTPUTSELECT
+acl_en => X.OUTPUTSELECT
+acl_en => X.OUTPUTSELECT
+acl_en => X.OUTPUTSELECT
+w[0] => Equal0.IN3
+w[0] => Equal1.IN3
+w[1] => Equal0.IN2
+w[1] => Equal1.IN2
+y[0] => Selector3.IN5
+y[0] => Decoder0.IN3
+y[0] => X.DATAA
+y[0] => X.DATAA
+y[1] => Selector2.IN5
+y[1] => Decoder0.IN2
+y[1] => X.DATAA
+y[1] => X.DATAA
+y[2] => Selector1.IN5
+y[2] => Decoder0.IN1
+y[2] => X.DATAA
+y[2] => X.DATAA
+y[3] => Selector0.IN5
+y[3] => Decoder0.IN0
+y[3] => X.DATAA
+y[3] => X.DATAA
+X[0] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[1] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[2] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[3] <= X.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLCF_Test|TLCF:inst|Counter_Control_Maker_TLCF:inst5
+counter_control => Result.OUTPUTSELECT
+select => Result[0].DATAIN
+acl_select => Result.DATAB
+Result[0] <= select.DB_MAX_OUTPUT_PORT_TYPE
+Result[1] <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLCF_Test|seven_seg_decoder:inst4
+x[0] => Decoder0.IN3
+x[1] => Decoder0.IN2
+x[2] => Decoder0.IN1
+x[3] => Decoder0.IN0
+Y[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLCF_Test|seven_seg_decoder:inst3
+x[0] => Decoder0.IN3
+x[1] => Decoder0.IN2
+x[2] => Decoder0.IN1
+x[3] => Decoder0.IN0
+Y[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLCF_Test|seven_seg_decoder:inst2
+x[0] => Decoder0.IN3
+x[1] => Decoder0.IN2
+x[2] => Decoder0.IN1
+x[3] => Decoder0.IN0
+Y[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLCF_Test|seven_seg_decoder:inst1
+x[0] => Decoder0.IN3
+x[1] => Decoder0.IN2
+x[2] => Decoder0.IN1
+x[3] => Decoder0.IN0
+Y[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

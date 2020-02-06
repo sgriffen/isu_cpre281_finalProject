@@ -1,0 +1,293 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+*/
+(header "graphic" (version "1.4"))
+(pin
+	(input)
+	(rect 208 304 376 320)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "Lane[3..0]" (rect 5 0 54 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 136 320 208 344))
+)
+(pin
+	(input)
+	(rect 200 360 376 376)
+	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
+	(text "Lane_Info[3..0]" (rect 5 0 80 12)(font "Arial" ))
+	(pt 176 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12))
+		(line (pt 92 4)(pt 117 4))
+		(line (pt 121 8)(pt 176 8))
+		(line (pt 92 12)(pt 92 4))
+		(line (pt 117 4)(pt 121 8))
+		(line (pt 117 12)(pt 121 8))
+	)
+	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 128 376 200 400))
+)
+(pin
+	(input)
+	(rect 208 376 376 392)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "Clock" (rect 5 0 33 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 144 392 208 416))
+)
+(pin
+	(output)
+	(rect 1048 400 1224 416)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "Counter[2..0]" (rect 90 0 154 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+	(annotation_block (location)(rect 1224 416 1288 440))
+)
+(pin
+	(output)
+	(rect 1048 344 1224 360)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "Out0[6..0]" (rect 90 0 137 17)(font "Intel Clear" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+	(annotation_block (location)(rect 1224 360 1288 384))
+)
+(pin
+	(output)
+	(rect 896 304 1091 320)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "Lane_Has_Car[3..0]" (rect 90 0 189 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(symbol
+	(rect 896 320 1048 400)
+	(text "seven_seg_decoder" (rect 5 0 104 12)(font "Arial" ))
+	(text "inst2" (rect 8 64 30 81)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "x[3..0]" (rect 0 0 31 12)(font "Arial" ))
+		(text "x[3..0]" (rect 21 27 52 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 152 32)
+		(output)
+		(text "Y[6..0]" (rect 0 0 34 12)(font "Arial" ))
+		(text "Y[6..0]" (rect 103 27 137 39)(font "Arial" ))
+		(line (pt 152 32)(pt 136 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 136 64))
+	)
+)
+(symbol
+	(rect 376 280 528 360)
+	(text "Priority_Encoder_4to2_ACL_Mk2" (rect 5 0 166 12)(font "Arial" ))
+	(text "dfsdfaf" (rect 8 64 45 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "w[3..0]" (rect 0 0 33 12)(font "Arial" ))
+		(text "w[3..0]" (rect 21 27 54 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 152 32)
+		(output)
+		(text "Z[1..0]" (rect 0 0 33 12)(font "Arial" ))
+		(text "Z[1..0]" (rect 104 27 137 39)(font "Arial" ))
+		(line (pt 152 32)(pt 136 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 136 64))
+	)
+)
+(symbol
+	(rect 544 304 880 400)
+	(text "ACL_Machine_Mk2" (rect 5 0 117 19)(font "Intel Clear" (font_size 8)))
+	(text "inst" (rect 8 75 24 92)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "Lane_To_Be_Checked[1..0]" (rect 0 0 161 19)(font "Intel Clear" (font_size 8)))
+		(text "Lane_To_Be_Checked[1..0]" (rect 21 27 182 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "Lane_Capacity[3..0]" (rect 0 0 118 19)(font "Intel Clear" (font_size 8)))
+		(text "Lane_Capacity[3..0]" (rect 21 43 139 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "Clock" (rect 0 0 31 19)(font "Intel Clear" (font_size 8)))
+		(text "Clock" (rect 21 59 52 78)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 336 32)
+		(output)
+		(text "Lane_Has_Car[3..0]" (rect 0 0 115 19)(font "Intel Clear" (font_size 8)))
+		(text "Lane_Has_Car[3..0]" (rect 200 27 315 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 336 32)(pt 320 32)(line_width 3))
+	)
+	(port
+		(pt 336 48)
+		(output)
+		(text "Lane_Selected[3..0]" (rect 0 0 118 19)(font "Intel Clear" (font_size 8)))
+		(text "Lane_Selected[3..0]" (rect 197 43 315 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 336 48)(pt 320 48)(line_width 3))
+	)
+	(port
+		(pt 336 64)
+		(output)
+		(text "Counter[2..0]" (rect 0 0 76 19)(font "Intel Clear" (font_size 8)))
+		(text "Counter[2..0]" (rect 239 59 315 78)(font "Intel Clear" (font_size 8)))
+		(line (pt 336 64)(pt 320 64)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 320 80))
+	)
+)
+(connector
+	(pt 880 352)
+	(pt 896 352)
+	(bus)
+)
+(connector
+	(pt 528 312)
+	(pt 536 312)
+	(bus)
+)
+(connector
+	(pt 880 368)
+	(pt 888 368)
+	(bus)
+)
+(connector
+	(pt 888 368)
+	(pt 888 408)
+	(bus)
+)
+(connector
+	(pt 888 408)
+	(pt 1048 408)
+	(bus)
+)
+(connector
+	(pt 536 336)
+	(pt 536 312)
+	(bus)
+)
+(connector
+	(pt 536 336)
+	(pt 544 336)
+	(bus)
+)
+(connector
+	(pt 376 384)
+	(pt 536 384)
+)
+(connector
+	(pt 376 368)
+	(pt 528 368)
+	(bus)
+)
+(connector
+	(pt 528 368)
+	(pt 528 352)
+	(bus)
+)
+(connector
+	(pt 544 352)
+	(pt 528 352)
+	(bus)
+)
+(connector
+	(pt 536 368)
+	(pt 536 384)
+)
+(connector
+	(pt 536 368)
+	(pt 544 368)
+)
+(connector
+	(pt 880 336)
+	(pt 888 336)
+	(bus)
+)
+(connector
+	(pt 888 336)
+	(pt 888 312)
+	(bus)
+)
+(connector
+	(pt 888 312)
+	(pt 896 312)
+	(bus)
+)

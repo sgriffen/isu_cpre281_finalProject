@@ -1,0 +1,1410 @@
+|IRL_4bRL_TLCF_C_Test
+Initial_Load_Done <= IRL_4bRL_TLCF_C:inst.Loading_Done
+Input_Select => IRL_4bRL_TLCF_C:inst.Input_Select
+Clock => IRL_4bRL_TLCF_C:inst.Clock
+Counter_Control[0] => IRL_4bRL_TLCF_C:inst.Counter_Control[0]
+Counter_Control[1] => IRL_4bRL_TLCF_C:inst.Counter_Control[1]
+Select_Switches[0] => IRL_4bRL_TLCF_C:inst.Dual_Mode_Switches[0]
+Select_Switches[1] => IRL_4bRL_TLCF_C:inst.Dual_Mode_Switches[1]
+Select_Switches[2] => IRL_4bRL_TLCF_C:inst.Dual_Mode_Switches[2]
+Select_Switches[3] => IRL_4bRL_TLCF_C:inst.Dual_Mode_Switches[3]
+Counter_Selected[0] <= IRL_4bRL_TLCF_C:inst.TLCF_Selection[0]
+Counter_Selected[1] <= IRL_4bRL_TLCF_C:inst.TLCF_Selection[1]
+Counter_Selected[2] <= IRL_4bRL_TLCF_C:inst.TLCF_Selection[2]
+Counter_Selected[3] <= IRL_4bRL_TLCF_C:inst.TLCF_Selection[3]
+Out0[0] <= seven_seg_decoder:inst6.Y[0]
+Out0[1] <= seven_seg_decoder:inst6.Y[1]
+Out0[2] <= seven_seg_decoder:inst6.Y[2]
+Out0[3] <= seven_seg_decoder:inst6.Y[3]
+Out0[4] <= seven_seg_decoder:inst6.Y[4]
+Out0[5] <= seven_seg_decoder:inst6.Y[5]
+Out0[6] <= seven_seg_decoder:inst6.Y[6]
+Out1[0] <= seven_seg_decoder:inst5.Y[0]
+Out1[1] <= seven_seg_decoder:inst5.Y[1]
+Out1[2] <= seven_seg_decoder:inst5.Y[2]
+Out1[3] <= seven_seg_decoder:inst5.Y[3]
+Out1[4] <= seven_seg_decoder:inst5.Y[4]
+Out1[5] <= seven_seg_decoder:inst5.Y[5]
+Out1[6] <= seven_seg_decoder:inst5.Y[6]
+Out2[0] <= seven_seg_decoder:inst4.Y[0]
+Out2[1] <= seven_seg_decoder:inst4.Y[1]
+Out2[2] <= seven_seg_decoder:inst4.Y[2]
+Out2[3] <= seven_seg_decoder:inst4.Y[3]
+Out2[4] <= seven_seg_decoder:inst4.Y[4]
+Out2[5] <= seven_seg_decoder:inst4.Y[5]
+Out2[6] <= seven_seg_decoder:inst4.Y[6]
+Out3[0] <= seven_seg_decoder:inst3.Y[0]
+Out3[1] <= seven_seg_decoder:inst3.Y[1]
+Out3[2] <= seven_seg_decoder:inst3.Y[2]
+Out3[3] <= seven_seg_decoder:inst3.Y[3]
+Out3[4] <= seven_seg_decoder:inst3.Y[4]
+Out3[5] <= seven_seg_decoder:inst3.Y[5]
+Out3[6] <= seven_seg_decoder:inst3.Y[6]
+Out4[0] <= seven_seg_decoder:inst11.Y[0]
+Out4[1] <= seven_seg_decoder:inst11.Y[1]
+Out4[2] <= seven_seg_decoder:inst11.Y[2]
+Out4[3] <= seven_seg_decoder:inst11.Y[3]
+Out4[4] <= seven_seg_decoder:inst11.Y[4]
+Out4[5] <= seven_seg_decoder:inst11.Y[5]
+Out4[6] <= seven_seg_decoder:inst11.Y[6]
+Register_Selected[0] <= IRL_4bRL_TLCF_C:inst.Register_Selection[0]
+Register_Selected[1] <= IRL_4bRL_TLCF_C:inst.Register_Selection[1]
+Register_Selected[2] <= IRL_4bRL_TLCF_C:inst.Register_Selection[2]
+Register_Selected[3] <= IRL_4bRL_TLCF_C:inst.Register_Selection[3]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst
+Loading_Done <= IRL_Machine:inst.All_Registers_Loaded
+Clock => Control_Mux_IRL_4bRL_TLCF_C:inst3.clock
+Dual_Mode_Switches[0] => Control_Mux_IRL_4bRL_TLCF_C:inst3.dual_switches[0]
+Dual_Mode_Switches[1] => Control_Mux_IRL_4bRL_TLCF_C:inst3.dual_switches[1]
+Dual_Mode_Switches[2] => Control_Mux_IRL_4bRL_TLCF_C:inst3.dual_switches[2]
+Dual_Mode_Switches[3] => Control_Mux_IRL_4bRL_TLCF_C:inst3.dual_switches[3]
+Input_Select => IRL_Machine:inst.Input_Select
+Capacity[0] <= 4_4bit_Register_File:inst6.Register_Selected[0]
+Capacity[1] <= 4_4bit_Register_File:inst6.Register_Selected[1]
+Capacity[2] <= 4_4bit_Register_File:inst6.Register_Selected[2]
+Capacity[3] <= 4_4bit_Register_File:inst6.Register_Selected[3]
+CLRN => 4_4bit_Register_File:inst6.CLRN
+Counter_0[0] <= TLCF:inst2.Counter_0[0]
+Counter_0[1] <= TLCF:inst2.Counter_0[1]
+Counter_0[2] <= TLCF:inst2.Counter_0[2]
+Counter_0[3] <= TLCF:inst2.Counter_0[3]
+Counter_Control[0] => TLCF:inst2.Counter_Control[0]
+Counter_Control[1] => TLCF:inst2.Counter_Control[1]
+Counter_1[0] <= TLCF:inst2.Counter_1[0]
+Counter_1[1] <= TLCF:inst2.Counter_1[1]
+Counter_1[2] <= TLCF:inst2.Counter_1[2]
+Counter_1[3] <= TLCF:inst2.Counter_1[3]
+Counter_2[0] <= TLCF:inst2.Counter_2[0]
+Counter_2[1] <= TLCF:inst2.Counter_2[1]
+Counter_2[2] <= TLCF:inst2.Counter_2[2]
+Counter_2[3] <= TLCF:inst2.Counter_2[3]
+Counter_3[0] <= TLCF:inst2.Counter_3[0]
+Counter_3[1] <= TLCF:inst2.Counter_3[1]
+Counter_3[2] <= TLCF:inst2.Counter_3[2]
+Counter_3[3] <= TLCF:inst2.Counter_3[3]
+Register_Selection[0] <= Control_Mux_IRL_4bRL_TLCF_C:inst3.RL_Selection[0]
+Register_Selection[1] <= Control_Mux_IRL_4bRL_TLCF_C:inst3.RL_Selection[1]
+Register_Selection[2] <= Control_Mux_IRL_4bRL_TLCF_C:inst3.RL_Selection[2]
+Register_Selection[3] <= Control_Mux_IRL_4bRL_TLCF_C:inst3.RL_Selection[3]
+TLCF_Selection[0] <= Control_Mux_IRL_4bRL_TLCF_C:inst3.TLCF_Select[0]
+TLCF_Selection[1] <= Control_Mux_IRL_4bRL_TLCF_C:inst3.TLCF_Select[1]
+TLCF_Selection[2] <= Control_Mux_IRL_4bRL_TLCF_C:inst3.TLCF_Select[2]
+TLCF_Selection[3] <= Control_Mux_IRL_4bRL_TLCF_C:inst3.TLCF_Select[3]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|IRL_Machine:inst
+All_Registers_Loaded <= bus_split_3bit:inst2.Z
+Clock => inst7.CLK
+Clock => inst8.CLK
+Clock => inst9.CLK
+Input_Select => w_IRL:inst12.a
+User_In[0] => LR_Machine:klasdjf.In[0]
+User_In[1] => LR_Machine:klasdjf.In[1]
+User_In[2] => LR_Machine:klasdjf.In[2]
+User_In[3] => LR_Machine:klasdjf.In[3]
+Register_Input[0] <= LR_Machine:klasdjf.User_Input[0]
+Register_Input[1] <= LR_Machine:klasdjf.User_Input[1]
+Register_Input[2] <= LR_Machine:klasdjf.User_Input[2]
+Register_Input[3] <= LR_Machine:klasdjf.User_Input[3]
+Register_Selected[0] <= bus_split_3bit:inst2.Y[0]
+Register_Selected[1] <= bus_split_3bit:inst2.Y[1]
+Register_Selected[2] <= bus_split_3bit:inst2.Y[2]
+Register_Selected[3] <= bus_split_3bit:inst2.Y[3]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|IRL_Machine:inst|bus_split_3bit:inst2
+x[0] => Y[0].DATAIN
+x[1] => Y[1].DATAIN
+x[2] => Y[2].DATAIN
+x[3] => Y[3].DATAIN
+x[4] => Z.DATAIN
+Y[0] <= x[0].DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= x[1].DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= x[2].DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= x[3].DB_MAX_OUTPUT_PORT_TYPE
+Z <= x[4].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|IRL_Machine:inst|Output_Logic_IRL:inst
+y[0] => Decoder0.IN2
+y[1] => Decoder0.IN1
+y[2] => Decoder0.IN0
+y[2] => Z[4].DATAIN
+Z[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Z[3] <= <GND>
+Z[4] <= y[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|IRL_Machine:inst|Input_Logic_IRL:inst13
+w[0] => X.OUTPUTSELECT
+w[0] => X.OUTPUTSELECT
+w[0] => X.OUTPUTSELECT
+w[1] => X.OUTPUTSELECT
+w[1] => X.OUTPUTSELECT
+w[1] => X.OUTPUTSELECT
+y[0] => Decoder0.IN2
+y[0] => Decoder1.IN1
+y[0] => X.DATAA
+y[0] => X.DATAA
+y[0] => X.DATAA
+y[1] => Decoder0.IN1
+y[1] => X.DATAA
+y[1] => X.DATAA
+y[1] => X.DATAA
+y[2] => Decoder0.IN0
+y[2] => Decoder1.IN0
+y[2] => X.DATAA
+y[2] => X.DATAA
+y[2] => X.DATAA
+d => X.OUTPUTSELECT
+d => X.OUTPUTSELECT
+d => X.OUTPUTSELECT
+X[0] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[1] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[2] <= X.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|IRL_Machine:inst|w_IRL:inst12
+a => W[0].DATAIN
+b => W[1].DATAIN
+W[0] <= a.DB_MAX_OUTPUT_PORT_TYPE
+W[1] <= b.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|IRL_Machine:inst|LR_Machine:klasdjf
+Accepted <= Logic_LR:inst.W
+In[0] => Logic_LR:inst.x[0]
+In[1] => Logic_LR:inst.x[1]
+In[2] => Logic_LR:inst.x[2]
+In[3] => Logic_LR:inst.x[3]
+User_Input[0] <= Logic_LR:inst.In[0]
+User_Input[1] <= Logic_LR:inst.In[1]
+User_Input[2] <= Logic_LR:inst.In[2]
+User_Input[3] <= Logic_LR:inst.In[3]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|IRL_Machine:inst|LR_Machine:klasdjf|Logic_LR:inst
+x[0] => W.IN1
+x[0] => In.IN1
+x[1] => W.IN1
+x[1] => In.IN1
+x[2] => W.IN0
+x[2] => In.IN1
+x[3] => W.IN1
+x[3] => In.IN1
+W <= W.DB_MAX_OUTPUT_PORT_TYPE
+In[0] <= In.DB_MAX_OUTPUT_PORT_TYPE
+In[1] <= In.DB_MAX_OUTPUT_PORT_TYPE
+In[2] <= In.DB_MAX_OUTPUT_PORT_TYPE
+In[3] <= In.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|Control_Mux_IRL_4bRL_TLCF_C:inst3
+mode => IRL_Selection.OUTPUTSELECT
+mode => IRL_Selection.OUTPUTSELECT
+mode => IRL_Selection.OUTPUTSELECT
+mode => IRL_Selection.OUTPUTSELECT
+mode => IRL_Clock.OUTPUTSELECT
+mode => RL_Selection.OUTPUTSELECT
+mode => RL_Selection.OUTPUTSELECT
+mode => RL_Selection.OUTPUTSELECT
+mode => RL_Selection.OUTPUTSELECT
+mode => RL_Clock.OUTPUTSELECT
+mode => TLCF_Select.OUTPUTSELECT
+mode => TLCF_Select.OUTPUTSELECT
+mode => TLCF_Select.OUTPUTSELECT
+mode => TLCF_Select.OUTPUTSELECT
+mode => TLCF_Clock.OUTPUTSELECT
+mode => RL_Load_En.DATAIN
+mode => TLCF_En.DATAIN
+dual_switches[0] => IRL_Selection.DATAB
+dual_switches[0] => RL_Selection.DATAA
+dual_switches[0] => TLCF_Select.DATAA
+dual_switches[1] => IRL_Selection.DATAB
+dual_switches[1] => RL_Selection.DATAA
+dual_switches[1] => TLCF_Select.DATAA
+dual_switches[2] => IRL_Selection.DATAB
+dual_switches[2] => RL_Selection.DATAA
+dual_switches[2] => TLCF_Select.DATAA
+dual_switches[3] => IRL_Selection.DATAB
+dual_switches[3] => RL_Selection.DATAA
+dual_switches[3] => TLCF_Select.DATAA
+irl_reg_select[0] => RL_Selection.DATAB
+irl_reg_select[1] => RL_Selection.DATAB
+irl_reg_select[2] => RL_Selection.DATAB
+irl_reg_select[3] => RL_Selection.DATAB
+clock => IRL_Clock.DATAB
+clock => RL_Clock.DATAB
+clock => TLCF_Clock.DATAA
+IRL_Selection[0] <= IRL_Selection.DB_MAX_OUTPUT_PORT_TYPE
+IRL_Selection[1] <= IRL_Selection.DB_MAX_OUTPUT_PORT_TYPE
+IRL_Selection[2] <= IRL_Selection.DB_MAX_OUTPUT_PORT_TYPE
+IRL_Selection[3] <= IRL_Selection.DB_MAX_OUTPUT_PORT_TYPE
+IRL_Clock <= IRL_Clock.DB_MAX_OUTPUT_PORT_TYPE
+RL_Selection[0] <= RL_Selection.DB_MAX_OUTPUT_PORT_TYPE
+RL_Selection[1] <= RL_Selection.DB_MAX_OUTPUT_PORT_TYPE
+RL_Selection[2] <= RL_Selection.DB_MAX_OUTPUT_PORT_TYPE
+RL_Selection[3] <= RL_Selection.DB_MAX_OUTPUT_PORT_TYPE
+RL_Load_En <= mode.DB_MAX_OUTPUT_PORT_TYPE
+RL_Clock <= RL_Clock.DB_MAX_OUTPUT_PORT_TYPE
+TLCF_En <= mode.DB_MAX_OUTPUT_PORT_TYPE
+TLCF_Select[0] <= TLCF_Select.DB_MAX_OUTPUT_PORT_TYPE
+TLCF_Select[1] <= TLCF_Select.DB_MAX_OUTPUT_PORT_TYPE
+TLCF_Select[2] <= TLCF_Select.DB_MAX_OUTPUT_PORT_TYPE
+TLCF_Select[3] <= TLCF_Select.DB_MAX_OUTPUT_PORT_TYPE
+TLCF_Clock <= TLCF_Clock.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6
+Register_Selected[0] <= Mux_4to1:inst1.Y[0]
+Register_Selected[1] <= Mux_4to1:inst1.Y[1]
+Register_Selected[2] <= Mux_4to1:inst1.Y[2]
+Register_Selected[3] <= Mux_4to1:inst1.Y[3]
+Register_Select[0] => Priority_Encoder_4to2_4bRL:inst2.w[0]
+Register_Select[1] => Priority_Encoder_4to2_4bRL:inst2.w[1]
+Register_Select[2] => Priority_Encoder_4to2_4bRL:inst2.w[2]
+Register_Select[3] => Priority_Encoder_4to2_4bRL:inst2.w[3]
+Register_Load_Enable => Decoder_2to4:inst.En
+Clock => 4bit_Register:Register3.Clock
+Clock => 4bit_Register:Register2.Clock
+Clock => 4bit_Register:Register1.Clock
+Clock => 4bit_Register:Register0.Clock
+CLRN => 4bit_Register:Register3.CLRN
+CLRN => 4bit_Register:Register2.CLRN
+CLRN => 4bit_Register:Register1.CLRN
+CLRN => 4bit_Register:Register0.CLRN
+Register_Input[0] => 4bit_Register:Register3.In[0]
+Register_Input[0] => 4bit_Register:Register2.In[0]
+Register_Input[0] => 4bit_Register:Register1.In[0]
+Register_Input[0] => 4bit_Register:Register0.In[0]
+Register_Input[1] => 4bit_Register:Register3.In[1]
+Register_Input[1] => 4bit_Register:Register2.In[1]
+Register_Input[1] => 4bit_Register:Register1.In[1]
+Register_Input[1] => 4bit_Register:Register0.In[1]
+Register_Input[2] => 4bit_Register:Register3.In[2]
+Register_Input[2] => 4bit_Register:Register2.In[2]
+Register_Input[2] => 4bit_Register:Register1.In[2]
+Register_Input[2] => 4bit_Register:Register0.In[2]
+Register_Input[3] => 4bit_Register:Register3.In[3]
+Register_Input[3] => 4bit_Register:Register2.In[3]
+Register_Input[3] => 4bit_Register:Register1.In[3]
+Register_Input[3] => 4bit_Register:Register0.In[3]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|Mux_4to1:inst1
+x0[0] => Mux3.IN2
+x0[1] => Mux2.IN2
+x0[2] => Mux1.IN2
+x0[3] => Mux0.IN2
+x1[0] => Mux3.IN3
+x1[1] => Mux2.IN3
+x1[2] => Mux1.IN3
+x1[3] => Mux0.IN3
+x2[0] => Mux3.IN4
+x2[1] => Mux2.IN4
+x2[2] => Mux1.IN4
+x2[3] => Mux0.IN4
+x3[0] => Mux3.IN5
+x3[1] => Mux2.IN5
+x3[2] => Mux1.IN5
+x3[3] => Mux0.IN5
+s[0] => Mux0.IN1
+s[0] => Mux1.IN1
+s[0] => Mux2.IN1
+s[0] => Mux3.IN1
+s[1] => Mux0.IN0
+s[1] => Mux1.IN0
+s[1] => Mux2.IN0
+s[1] => Mux3.IN0
+Y[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|Priority_Encoder_4to2_4bRL:inst2
+w[0] => ~NO_FANOUT~
+w[1] => Z.IN0
+w[2] => Z.IN0
+w[2] => Z.IN1
+w[3] => Z.IN1
+w[3] => Z.IN1
+Z[0] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register3
+Out[0] <= 1bit_Register:inst3.Out
+Out[1] <= 1bit_Register:inst2.Out
+Out[2] <= 1bit_Register:inst1.Out
+Out[3] <= 1bit_Register:inst.Out
+In[0] => 1bit_Register:inst3.In
+In[1] => 1bit_Register:inst2.In
+In[2] => 1bit_Register:inst1.In
+In[3] => 1bit_Register:inst.In
+Load => 1bit_Register:inst3.Load
+Load => 1bit_Register:inst2.Load
+Load => 1bit_Register:inst1.Load
+Load => 1bit_Register:inst.Load
+Clock => 1bit_Register:inst3.Clock
+Clock => 1bit_Register:inst2.Clock
+Clock => 1bit_Register:inst1.Clock
+Clock => 1bit_Register:inst.Clock
+CLRN => 1bit_Register:inst3.CLRN
+CLRN => 1bit_Register:inst2.CLRN
+CLRN => 1bit_Register:inst1.CLRN
+CLRN => 1bit_Register:inst.CLRN
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register3|1bit_Register:inst3
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register3|1bit_Register:inst3|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register3|1bit_Register:inst3|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register3|1bit_Register:inst3|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register3|1bit_Register:inst2
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register3|1bit_Register:inst2|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register3|1bit_Register:inst2|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register3|1bit_Register:inst2|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register3|1bit_Register:inst1
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register3|1bit_Register:inst1|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register3|1bit_Register:inst1|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register3|1bit_Register:inst1|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register3|1bit_Register:inst
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register3|1bit_Register:inst|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register3|1bit_Register:inst|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register3|1bit_Register:inst|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|Decoder_2to4:inst
+En => Y.IN1
+En => Y.IN1
+En => Y.IN1
+En => Y.IN1
+w[0] => Y.IN0
+w[0] => Y.IN0
+w[0] => Y.IN0
+w[0] => Y.IN0
+w[1] => Y.IN1
+w[1] => Y.IN1
+w[1] => Y.IN1
+w[1] => Y.IN1
+Y[0] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register2
+Out[0] <= 1bit_Register:inst3.Out
+Out[1] <= 1bit_Register:inst2.Out
+Out[2] <= 1bit_Register:inst1.Out
+Out[3] <= 1bit_Register:inst.Out
+In[0] => 1bit_Register:inst3.In
+In[1] => 1bit_Register:inst2.In
+In[2] => 1bit_Register:inst1.In
+In[3] => 1bit_Register:inst.In
+Load => 1bit_Register:inst3.Load
+Load => 1bit_Register:inst2.Load
+Load => 1bit_Register:inst1.Load
+Load => 1bit_Register:inst.Load
+Clock => 1bit_Register:inst3.Clock
+Clock => 1bit_Register:inst2.Clock
+Clock => 1bit_Register:inst1.Clock
+Clock => 1bit_Register:inst.Clock
+CLRN => 1bit_Register:inst3.CLRN
+CLRN => 1bit_Register:inst2.CLRN
+CLRN => 1bit_Register:inst1.CLRN
+CLRN => 1bit_Register:inst.CLRN
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register2|1bit_Register:inst3
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register2|1bit_Register:inst3|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register2|1bit_Register:inst3|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register2|1bit_Register:inst3|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register2|1bit_Register:inst2
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register2|1bit_Register:inst2|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register2|1bit_Register:inst2|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register2|1bit_Register:inst2|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register2|1bit_Register:inst1
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register2|1bit_Register:inst1|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register2|1bit_Register:inst1|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register2|1bit_Register:inst1|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register2|1bit_Register:inst
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register2|1bit_Register:inst|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register2|1bit_Register:inst|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register2|1bit_Register:inst|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register1
+Out[0] <= 1bit_Register:inst3.Out
+Out[1] <= 1bit_Register:inst2.Out
+Out[2] <= 1bit_Register:inst1.Out
+Out[3] <= 1bit_Register:inst.Out
+In[0] => 1bit_Register:inst3.In
+In[1] => 1bit_Register:inst2.In
+In[2] => 1bit_Register:inst1.In
+In[3] => 1bit_Register:inst.In
+Load => 1bit_Register:inst3.Load
+Load => 1bit_Register:inst2.Load
+Load => 1bit_Register:inst1.Load
+Load => 1bit_Register:inst.Load
+Clock => 1bit_Register:inst3.Clock
+Clock => 1bit_Register:inst2.Clock
+Clock => 1bit_Register:inst1.Clock
+Clock => 1bit_Register:inst.Clock
+CLRN => 1bit_Register:inst3.CLRN
+CLRN => 1bit_Register:inst2.CLRN
+CLRN => 1bit_Register:inst1.CLRN
+CLRN => 1bit_Register:inst.CLRN
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register1|1bit_Register:inst3
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register1|1bit_Register:inst3|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register1|1bit_Register:inst3|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register1|1bit_Register:inst3|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register1|1bit_Register:inst2
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register1|1bit_Register:inst2|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register1|1bit_Register:inst2|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register1|1bit_Register:inst2|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register1|1bit_Register:inst1
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register1|1bit_Register:inst1|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register1|1bit_Register:inst1|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register1|1bit_Register:inst1|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register1|1bit_Register:inst
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register1|1bit_Register:inst|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register1|1bit_Register:inst|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register1|1bit_Register:inst|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register0
+Out[0] <= 1bit_Register:inst3.Out
+Out[1] <= 1bit_Register:inst2.Out
+Out[2] <= 1bit_Register:inst1.Out
+Out[3] <= 1bit_Register:inst.Out
+In[0] => 1bit_Register:inst3.In
+In[1] => 1bit_Register:inst2.In
+In[2] => 1bit_Register:inst1.In
+In[3] => 1bit_Register:inst.In
+Load => 1bit_Register:inst3.Load
+Load => 1bit_Register:inst2.Load
+Load => 1bit_Register:inst1.Load
+Load => 1bit_Register:inst.Load
+Clock => 1bit_Register:inst3.Clock
+Clock => 1bit_Register:inst2.Clock
+Clock => 1bit_Register:inst1.Clock
+Clock => 1bit_Register:inst.Clock
+CLRN => 1bit_Register:inst3.CLRN
+CLRN => 1bit_Register:inst2.CLRN
+CLRN => 1bit_Register:inst1.CLRN
+CLRN => 1bit_Register:inst.CLRN
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register0|1bit_Register:inst3
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register0|1bit_Register:inst3|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register0|1bit_Register:inst3|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register0|1bit_Register:inst3|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register0|1bit_Register:inst2
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register0|1bit_Register:inst2|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register0|1bit_Register:inst2|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register0|1bit_Register:inst2|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register0|1bit_Register:inst1
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register0|1bit_Register:inst1|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register0|1bit_Register:inst1|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register0|1bit_Register:inst1|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register0|1bit_Register:inst
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register0|1bit_Register:inst|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register0|1bit_Register:inst|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|4_4bit_Register_File:inst6|4bit_Register:Register0|1bit_Register:inst|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|TLCF:inst2
+Counter_0[0] <= TLC_Mk3:inst2.Out[0]
+Counter_0[1] <= TLC_Mk3:inst2.Out[1]
+Counter_0[2] <= TLC_Mk3:inst2.Out[2]
+Counter_0[3] <= TLC_Mk3:inst2.Out[3]
+Clock => TLC_Mk3:inst2.Clock
+Clock => TLC_Mk3:inst1.Clock
+Clock => TLC_Mk3:inst.Clock
+Clock => TLC_Mk3:inst3.Clock
+Enable => decoder_2to4_TCLF:inst4.en
+Counter_Select[0] => Priority_Encoder_4to2_TLCF:sadfgsa.w[0]
+Counter_Select[1] => Priority_Encoder_4to2_TLCF:sadfgsa.w[1]
+Counter_Select[2] => Priority_Encoder_4to2_TLCF:sadfgsa.w[2]
+Counter_Select[3] => Priority_Encoder_4to2_TLCF:sadfgsa.w[3]
+Counter_Capacity[0] => TLC_Mk3:inst2.Counter_Capacity[0]
+Counter_Capacity[0] => TLC_Mk3:inst1.Counter_Capacity[0]
+Counter_Capacity[0] => TLC_Mk3:inst.Counter_Capacity[0]
+Counter_Capacity[0] => TLC_Mk3:inst3.Counter_Capacity[0]
+Counter_Capacity[1] => TLC_Mk3:inst2.Counter_Capacity[1]
+Counter_Capacity[1] => TLC_Mk3:inst1.Counter_Capacity[1]
+Counter_Capacity[1] => TLC_Mk3:inst.Counter_Capacity[1]
+Counter_Capacity[1] => TLC_Mk3:inst3.Counter_Capacity[1]
+Counter_Capacity[2] => TLC_Mk3:inst2.Counter_Capacity[2]
+Counter_Capacity[2] => TLC_Mk3:inst1.Counter_Capacity[2]
+Counter_Capacity[2] => TLC_Mk3:inst.Counter_Capacity[2]
+Counter_Capacity[2] => TLC_Mk3:inst3.Counter_Capacity[2]
+Counter_Capacity[3] => TLC_Mk3:inst2.Counter_Capacity[3]
+Counter_Capacity[3] => TLC_Mk3:inst1.Counter_Capacity[3]
+Counter_Capacity[3] => TLC_Mk3:inst.Counter_Capacity[3]
+Counter_Capacity[3] => TLC_Mk3:inst3.Counter_Capacity[3]
+Counter_Control[0] => TLC_Mk3:inst2.In[0]
+Counter_Control[0] => TLC_Mk3:inst1.In[0]
+Counter_Control[0] => TLC_Mk3:inst.In[0]
+Counter_Control[0] => TLC_Mk3:inst3.In[0]
+Counter_Control[1] => TLC_Mk3:inst2.In[1]
+Counter_Control[1] => TLC_Mk3:inst1.In[1]
+Counter_Control[1] => TLC_Mk3:inst.In[1]
+Counter_Control[1] => TLC_Mk3:inst3.In[1]
+Counter_1[0] <= TLC_Mk3:inst1.Out[0]
+Counter_1[1] <= TLC_Mk3:inst1.Out[1]
+Counter_1[2] <= TLC_Mk3:inst1.Out[2]
+Counter_1[3] <= TLC_Mk3:inst1.Out[3]
+Counter_2[0] <= TLC_Mk3:inst.Out[0]
+Counter_2[1] <= TLC_Mk3:inst.Out[1]
+Counter_2[2] <= TLC_Mk3:inst.Out[2]
+Counter_2[3] <= TLC_Mk3:inst.Out[3]
+Counter_3[0] <= TLC_Mk3:inst3.Out[0]
+Counter_3[1] <= TLC_Mk3:inst3.Out[1]
+Counter_3[2] <= TLC_Mk3:inst3.Out[2]
+Counter_3[3] <= TLC_Mk3:inst3.Out[3]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|TLCF:inst2|TLC_Mk3:inst2
+Out[0] <= Output_Logic_TLC_Mk3:inst.Z[0]
+Out[1] <= Output_Logic_TLC_Mk3:inst.Z[1]
+Out[2] <= Output_Logic_TLC_Mk3:inst.Z[2]
+Out[3] <= Output_Logic_TLC_Mk3:inst.Z[3]
+Clock => DFF3.CLK
+Clock => DFF1.CLK
+Clock => DFF0.CLK
+Clock => DFF2.CLK
+Enable => Input_Logic_TLC_Mk3:inst1.en
+In[0] => Input_Logic_TLC_Mk3:inst1.w[0]
+In[1] => Input_Logic_TLC_Mk3:inst1.w[1]
+Counter_Capacity[0] => Capacity_Check_TCL_Mk3:inst5.cap_max[0]
+Counter_Capacity[1] => Capacity_Check_TCL_Mk3:inst5.cap_max[1]
+Counter_Capacity[2] => Capacity_Check_TCL_Mk3:inst5.cap_max[2]
+Counter_Capacity[3] => Capacity_Check_TCL_Mk3:inst5.cap_max[3]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|TLCF:inst2|TLC_Mk3:inst2|Output_Logic_TLC_Mk3:inst
+y[0] => Z[0].DATAIN
+y[1] => Z[1].DATAIN
+y[2] => Z[2].DATAIN
+y[3] => Z[3].DATAIN
+Z[0] <= y[0].DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= y[1].DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= y[2].DB_MAX_OUTPUT_PORT_TYPE
+Z[3] <= y[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|TLCF:inst2|TLC_Mk3:inst2|Capacity_Check_TCL_Mk3:inst5
+cap_max[0] => LessThan0.IN4
+cap_max[1] => LessThan0.IN3
+cap_max[2] => LessThan0.IN2
+cap_max[3] => LessThan0.IN1
+cap_curr[0] => Next_State.DATAA
+cap_curr[1] => Next_State.DATAA
+cap_curr[2] => Next_State.DATAA
+cap_curr[3] => Next_State.DATAA
+cap_des[0] => LessThan0.IN8
+cap_des[0] => Next_State.DATAB
+cap_des[1] => LessThan0.IN7
+cap_des[1] => Next_State.DATAB
+cap_des[2] => LessThan0.IN6
+cap_des[2] => Next_State.DATAB
+cap_des[3] => LessThan0.IN5
+cap_des[3] => Next_State.DATAB
+Next_State[0] <= Next_State.DB_MAX_OUTPUT_PORT_TYPE
+Next_State[1] <= Next_State.DB_MAX_OUTPUT_PORT_TYPE
+Next_State[2] <= Next_State.DB_MAX_OUTPUT_PORT_TYPE
+Next_State[3] <= Next_State.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|TLCF:inst2|TLC_Mk3:inst2|Input_Logic_TLC_Mk3:inst1
+en => Decoder0.IN0
+w[0] => Decoder0.IN2
+w[1] => Decoder0.IN1
+y[0] => Decoder0.IN6
+y[0] => Selector3.IN5
+y[1] => Decoder0.IN5
+y[1] => Selector2.IN5
+y[2] => Decoder0.IN4
+y[2] => Selector1.IN5
+y[3] => Decoder0.IN3
+y[3] => Selector0.IN5
+X[0] <= Selector3.DB_MAX_OUTPUT_PORT_TYPE
+X[1] <= Selector2.DB_MAX_OUTPUT_PORT_TYPE
+X[2] <= Selector1.DB_MAX_OUTPUT_PORT_TYPE
+X[3] <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|TLCF:inst2|decoder_2to4_TCLF:inst4
+en => Selected.IN1
+en => Selected.IN1
+en => Selected.IN1
+en => Selected.IN1
+sel[0] => Selected.IN0
+sel[0] => Selected.IN0
+sel[0] => Selected.IN0
+sel[0] => Selected.IN0
+sel[1] => Selected.IN1
+sel[1] => Selected.IN1
+sel[1] => Selected.IN1
+sel[1] => Selected.IN1
+Selected[0] <= Selected.DB_MAX_OUTPUT_PORT_TYPE
+Selected[1] <= Selected.DB_MAX_OUTPUT_PORT_TYPE
+Selected[2] <= Selected.DB_MAX_OUTPUT_PORT_TYPE
+Selected[3] <= Selected.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|TLCF:inst2|Priority_Encoder_4to2_TLCF:sadfgsa
+w[0] => ~NO_FANOUT~
+w[1] => Z.IN0
+w[2] => Z.IN0
+w[2] => Z.IN1
+w[3] => Z.IN1
+w[3] => Z.IN1
+Z[0] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|TLCF:inst2|TLC_Mk3:inst1
+Out[0] <= Output_Logic_TLC_Mk3:inst.Z[0]
+Out[1] <= Output_Logic_TLC_Mk3:inst.Z[1]
+Out[2] <= Output_Logic_TLC_Mk3:inst.Z[2]
+Out[3] <= Output_Logic_TLC_Mk3:inst.Z[3]
+Clock => DFF3.CLK
+Clock => DFF1.CLK
+Clock => DFF0.CLK
+Clock => DFF2.CLK
+Enable => Input_Logic_TLC_Mk3:inst1.en
+In[0] => Input_Logic_TLC_Mk3:inst1.w[0]
+In[1] => Input_Logic_TLC_Mk3:inst1.w[1]
+Counter_Capacity[0] => Capacity_Check_TCL_Mk3:inst5.cap_max[0]
+Counter_Capacity[1] => Capacity_Check_TCL_Mk3:inst5.cap_max[1]
+Counter_Capacity[2] => Capacity_Check_TCL_Mk3:inst5.cap_max[2]
+Counter_Capacity[3] => Capacity_Check_TCL_Mk3:inst5.cap_max[3]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|TLCF:inst2|TLC_Mk3:inst1|Output_Logic_TLC_Mk3:inst
+y[0] => Z[0].DATAIN
+y[1] => Z[1].DATAIN
+y[2] => Z[2].DATAIN
+y[3] => Z[3].DATAIN
+Z[0] <= y[0].DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= y[1].DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= y[2].DB_MAX_OUTPUT_PORT_TYPE
+Z[3] <= y[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|TLCF:inst2|TLC_Mk3:inst1|Capacity_Check_TCL_Mk3:inst5
+cap_max[0] => LessThan0.IN4
+cap_max[1] => LessThan0.IN3
+cap_max[2] => LessThan0.IN2
+cap_max[3] => LessThan0.IN1
+cap_curr[0] => Next_State.DATAA
+cap_curr[1] => Next_State.DATAA
+cap_curr[2] => Next_State.DATAA
+cap_curr[3] => Next_State.DATAA
+cap_des[0] => LessThan0.IN8
+cap_des[0] => Next_State.DATAB
+cap_des[1] => LessThan0.IN7
+cap_des[1] => Next_State.DATAB
+cap_des[2] => LessThan0.IN6
+cap_des[2] => Next_State.DATAB
+cap_des[3] => LessThan0.IN5
+cap_des[3] => Next_State.DATAB
+Next_State[0] <= Next_State.DB_MAX_OUTPUT_PORT_TYPE
+Next_State[1] <= Next_State.DB_MAX_OUTPUT_PORT_TYPE
+Next_State[2] <= Next_State.DB_MAX_OUTPUT_PORT_TYPE
+Next_State[3] <= Next_State.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|TLCF:inst2|TLC_Mk3:inst1|Input_Logic_TLC_Mk3:inst1
+en => Decoder0.IN0
+w[0] => Decoder0.IN2
+w[1] => Decoder0.IN1
+y[0] => Decoder0.IN6
+y[0] => Selector3.IN5
+y[1] => Decoder0.IN5
+y[1] => Selector2.IN5
+y[2] => Decoder0.IN4
+y[2] => Selector1.IN5
+y[3] => Decoder0.IN3
+y[3] => Selector0.IN5
+X[0] <= Selector3.DB_MAX_OUTPUT_PORT_TYPE
+X[1] <= Selector2.DB_MAX_OUTPUT_PORT_TYPE
+X[2] <= Selector1.DB_MAX_OUTPUT_PORT_TYPE
+X[3] <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|TLCF:inst2|TLC_Mk3:inst
+Out[0] <= Output_Logic_TLC_Mk3:inst.Z[0]
+Out[1] <= Output_Logic_TLC_Mk3:inst.Z[1]
+Out[2] <= Output_Logic_TLC_Mk3:inst.Z[2]
+Out[3] <= Output_Logic_TLC_Mk3:inst.Z[3]
+Clock => DFF3.CLK
+Clock => DFF1.CLK
+Clock => DFF0.CLK
+Clock => DFF2.CLK
+Enable => Input_Logic_TLC_Mk3:inst1.en
+In[0] => Input_Logic_TLC_Mk3:inst1.w[0]
+In[1] => Input_Logic_TLC_Mk3:inst1.w[1]
+Counter_Capacity[0] => Capacity_Check_TCL_Mk3:inst5.cap_max[0]
+Counter_Capacity[1] => Capacity_Check_TCL_Mk3:inst5.cap_max[1]
+Counter_Capacity[2] => Capacity_Check_TCL_Mk3:inst5.cap_max[2]
+Counter_Capacity[3] => Capacity_Check_TCL_Mk3:inst5.cap_max[3]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|TLCF:inst2|TLC_Mk3:inst|Output_Logic_TLC_Mk3:inst
+y[0] => Z[0].DATAIN
+y[1] => Z[1].DATAIN
+y[2] => Z[2].DATAIN
+y[3] => Z[3].DATAIN
+Z[0] <= y[0].DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= y[1].DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= y[2].DB_MAX_OUTPUT_PORT_TYPE
+Z[3] <= y[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|TLCF:inst2|TLC_Mk3:inst|Capacity_Check_TCL_Mk3:inst5
+cap_max[0] => LessThan0.IN4
+cap_max[1] => LessThan0.IN3
+cap_max[2] => LessThan0.IN2
+cap_max[3] => LessThan0.IN1
+cap_curr[0] => Next_State.DATAA
+cap_curr[1] => Next_State.DATAA
+cap_curr[2] => Next_State.DATAA
+cap_curr[3] => Next_State.DATAA
+cap_des[0] => LessThan0.IN8
+cap_des[0] => Next_State.DATAB
+cap_des[1] => LessThan0.IN7
+cap_des[1] => Next_State.DATAB
+cap_des[2] => LessThan0.IN6
+cap_des[2] => Next_State.DATAB
+cap_des[3] => LessThan0.IN5
+cap_des[3] => Next_State.DATAB
+Next_State[0] <= Next_State.DB_MAX_OUTPUT_PORT_TYPE
+Next_State[1] <= Next_State.DB_MAX_OUTPUT_PORT_TYPE
+Next_State[2] <= Next_State.DB_MAX_OUTPUT_PORT_TYPE
+Next_State[3] <= Next_State.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|TLCF:inst2|TLC_Mk3:inst|Input_Logic_TLC_Mk3:inst1
+en => Decoder0.IN0
+w[0] => Decoder0.IN2
+w[1] => Decoder0.IN1
+y[0] => Decoder0.IN6
+y[0] => Selector3.IN5
+y[1] => Decoder0.IN5
+y[1] => Selector2.IN5
+y[2] => Decoder0.IN4
+y[2] => Selector1.IN5
+y[3] => Decoder0.IN3
+y[3] => Selector0.IN5
+X[0] <= Selector3.DB_MAX_OUTPUT_PORT_TYPE
+X[1] <= Selector2.DB_MAX_OUTPUT_PORT_TYPE
+X[2] <= Selector1.DB_MAX_OUTPUT_PORT_TYPE
+X[3] <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|TLCF:inst2|TLC_Mk3:inst3
+Out[0] <= Output_Logic_TLC_Mk3:inst.Z[0]
+Out[1] <= Output_Logic_TLC_Mk3:inst.Z[1]
+Out[2] <= Output_Logic_TLC_Mk3:inst.Z[2]
+Out[3] <= Output_Logic_TLC_Mk3:inst.Z[3]
+Clock => DFF3.CLK
+Clock => DFF1.CLK
+Clock => DFF0.CLK
+Clock => DFF2.CLK
+Enable => Input_Logic_TLC_Mk3:inst1.en
+In[0] => Input_Logic_TLC_Mk3:inst1.w[0]
+In[1] => Input_Logic_TLC_Mk3:inst1.w[1]
+Counter_Capacity[0] => Capacity_Check_TCL_Mk3:inst5.cap_max[0]
+Counter_Capacity[1] => Capacity_Check_TCL_Mk3:inst5.cap_max[1]
+Counter_Capacity[2] => Capacity_Check_TCL_Mk3:inst5.cap_max[2]
+Counter_Capacity[3] => Capacity_Check_TCL_Mk3:inst5.cap_max[3]
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|TLCF:inst2|TLC_Mk3:inst3|Output_Logic_TLC_Mk3:inst
+y[0] => Z[0].DATAIN
+y[1] => Z[1].DATAIN
+y[2] => Z[2].DATAIN
+y[3] => Z[3].DATAIN
+Z[0] <= y[0].DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= y[1].DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= y[2].DB_MAX_OUTPUT_PORT_TYPE
+Z[3] <= y[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|TLCF:inst2|TLC_Mk3:inst3|Capacity_Check_TCL_Mk3:inst5
+cap_max[0] => LessThan0.IN4
+cap_max[1] => LessThan0.IN3
+cap_max[2] => LessThan0.IN2
+cap_max[3] => LessThan0.IN1
+cap_curr[0] => Next_State.DATAA
+cap_curr[1] => Next_State.DATAA
+cap_curr[2] => Next_State.DATAA
+cap_curr[3] => Next_State.DATAA
+cap_des[0] => LessThan0.IN8
+cap_des[0] => Next_State.DATAB
+cap_des[1] => LessThan0.IN7
+cap_des[1] => Next_State.DATAB
+cap_des[2] => LessThan0.IN6
+cap_des[2] => Next_State.DATAB
+cap_des[3] => LessThan0.IN5
+cap_des[3] => Next_State.DATAB
+Next_State[0] <= Next_State.DB_MAX_OUTPUT_PORT_TYPE
+Next_State[1] <= Next_State.DB_MAX_OUTPUT_PORT_TYPE
+Next_State[2] <= Next_State.DB_MAX_OUTPUT_PORT_TYPE
+Next_State[3] <= Next_State.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_4bRL_TLCF_C_Test|IRL_4bRL_TLCF_C:inst|TLCF:inst2|TLC_Mk3:inst3|Input_Logic_TLC_Mk3:inst1
+en => Decoder0.IN0
+w[0] => Decoder0.IN2
+w[1] => Decoder0.IN1
+y[0] => Decoder0.IN6
+y[0] => Selector3.IN5
+y[1] => Decoder0.IN5
+y[1] => Selector2.IN5
+y[2] => Decoder0.IN4
+y[2] => Selector1.IN5
+y[3] => Decoder0.IN3
+y[3] => Selector0.IN5
+X[0] <= Selector3.DB_MAX_OUTPUT_PORT_TYPE
+X[1] <= Selector2.DB_MAX_OUTPUT_PORT_TYPE
+X[2] <= Selector1.DB_MAX_OUTPUT_PORT_TYPE
+X[3] <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_4bRL_TLCF_C_Test|seven_seg_decoder:inst6
+x[0] => Decoder0.IN3
+x[1] => Decoder0.IN2
+x[2] => Decoder0.IN1
+x[3] => Decoder0.IN0
+Y[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_4bRL_TLCF_C_Test|seven_seg_decoder:inst5
+x[0] => Decoder0.IN3
+x[1] => Decoder0.IN2
+x[2] => Decoder0.IN1
+x[3] => Decoder0.IN0
+Y[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_4bRL_TLCF_C_Test|seven_seg_decoder:inst4
+x[0] => Decoder0.IN3
+x[1] => Decoder0.IN2
+x[2] => Decoder0.IN1
+x[3] => Decoder0.IN0
+Y[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_4bRL_TLCF_C_Test|seven_seg_decoder:inst3
+x[0] => Decoder0.IN3
+x[1] => Decoder0.IN2
+x[2] => Decoder0.IN1
+x[3] => Decoder0.IN0
+Y[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_4bRL_TLCF_C_Test|seven_seg_decoder:inst11
+x[0] => Decoder0.IN3
+x[1] => Decoder0.IN2
+x[2] => Decoder0.IN1
+x[3] => Decoder0.IN0
+Y[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

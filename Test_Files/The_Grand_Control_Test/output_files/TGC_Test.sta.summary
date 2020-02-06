@@ -1,0 +1,77 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'TGC_Machine:inst|inst2'
+Slack : -2.001
+TNS   : -4.094
+
+Type  : Slow 1200mV 85C Model Setup 'Clock'
+Slack : -1.428
+TNS   : -2.788
+
+Type  : Slow 1200mV 85C Model Hold 'TGC_Machine:inst|inst2'
+Slack : 0.116
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Clock'
+Slack : 1.385
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Clock'
+Slack : -3.000
+TNS   : -5.570
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'TGC_Machine:inst|inst2'
+Slack : 0.375
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'TGC_Machine:inst|inst2'
+Slack : -1.780
+TNS   : -3.691
+
+Type  : Slow 1200mV 0C Model Setup 'Clock'
+Slack : -1.333
+TNS   : -2.617
+
+Type  : Slow 1200mV 0C Model Hold 'TGC_Machine:inst|inst2'
+Slack : 0.212
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Clock'
+Slack : 1.184
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Clock'
+Slack : -3.000
+TNS   : -5.570
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'TGC_Machine:inst|inst2'
+Slack : 0.352
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'TGC_Machine:inst|inst2'
+Slack : -0.864
+TNS   : -1.693
+
+Type  : Fast 1200mV 0C Model Setup 'Clock'
+Slack : -0.127
+TNS   : -0.127
+
+Type  : Fast 1200mV 0C Model Hold 'TGC_Machine:inst|inst2'
+Slack : 0.394
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Clock'
+Slack : 0.424
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Clock'
+Slack : -3.000
+TNS   : -5.252
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'TGC_Machine:inst|inst2'
+Slack : 0.456
+TNS   : 0.000
+
+------------------------------------------------------------

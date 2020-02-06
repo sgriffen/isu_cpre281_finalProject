@@ -1,0 +1,1216 @@
+|IRL_RCC_Combo_Test
+Load_Done <= IRL_RCC_Combo:inst.Load_Done
+Enable => IRL_RCC_Combo:inst.Enable
+Clock => IRL_RCC_Combo:inst.Clock
+Input_Select => IRL_RCC_Combo:inst.Input_Select
+CLRN => IRL_RCC_Combo:inst.CLRN
+Counter_Control[0] => IRL_RCC_Combo:inst.Counter_Control[0]
+Counter_Control[1] => IRL_RCC_Combo:inst.Counter_Control[1]
+Counter_Select[0] => IRL_RCC_Combo:inst.Counter_Select[0]
+Counter_Select[1] => IRL_RCC_Combo:inst.Counter_Select[1]
+In[0] => IRL_RCC_Combo:inst.User_In[0]
+In[1] => IRL_RCC_Combo:inst.User_In[1]
+In[2] => IRL_RCC_Combo:inst.User_In[2]
+In[3] => IRL_RCC_Combo:inst.User_In[3]
+Out6 <= seven_seg_decoder:inst2.Y[6]
+Out5 <= seven_seg_decoder:inst2.Y[5]
+Out4 <= seven_seg_decoder:inst2.Y[4]
+Out3 <= seven_seg_decoder:inst2.Y[3]
+Out2 <= seven_seg_decoder:inst2.Y[2]
+Out1 <= seven_seg_decoder:inst2.Y[1]
+Out0 <= seven_seg_decoder:inst2.Y[0]
+Out16 <= seven_seg_decoder:sdaasfg.Y[6]
+Out15 <= seven_seg_decoder:sdaasfg.Y[5]
+Out14 <= seven_seg_decoder:sdaasfg.Y[4]
+Out13 <= seven_seg_decoder:sdaasfg.Y[3]
+Out12 <= seven_seg_decoder:sdaasfg.Y[2]
+Out11 <= seven_seg_decoder:sdaasfg.Y[1]
+Out10 <= seven_seg_decoder:sdaasfg.Y[0]
+Register_Selected[0] <= IRL_RCC_Combo:inst.Register_Selected[0]
+Register_Selected[1] <= IRL_RCC_Combo:inst.Register_Selected[1]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst
+Load_Done <= IRL_Machine:inst4.All_Registers_Loaded
+Clock => IRL_Machine:inst4.Clock
+Clock => 4_4bit_Register_File:inst.Clock
+Clock => TLCF:inst3.Clock
+Input_Select => IRL_Machine:inst4.Input_Select
+User_In[0] => IRL_Machine:inst4.User_In[0]
+User_In[1] => IRL_Machine:inst4.User_In[1]
+User_In[2] => IRL_Machine:inst4.User_In[2]
+User_In[3] => IRL_Machine:inst4.User_In[3]
+Register_Contents[0] <= 4_4bit_Register_File:inst.Register_Selected[0]
+Register_Contents[1] <= 4_4bit_Register_File:inst.Register_Selected[1]
+Register_Contents[2] <= 4_4bit_Register_File:inst.Register_Selected[2]
+Register_Contents[3] <= 4_4bit_Register_File:inst.Register_Selected[3]
+CLRN => 4_4bit_Register_File:inst.CLRN
+Enable => 4_4bit_Register_File:inst.Register_Enable
+Counter_Control[0] => TLCF:inst3.Counter_Control[0]
+Counter_Control[1] => TLCF:inst3.Counter_Control[1]
+Counter_Select[0] => TLCF:inst3.Counter_Select[0]
+Counter_Select[0] => load_count_mux:inst12.TCLF_reg_sel[0]
+Counter_Select[1] => TLCF:inst3.Counter_Select[1]
+Counter_Select[1] => load_count_mux:inst12.TCLF_reg_sel[1]
+Register_Input[0] <= bus_splitter_IRL_RCC_Combo:inst13.REG_i[0]
+Register_Input[1] <= bus_splitter_IRL_RCC_Combo:inst13.REG_i[1]
+Register_Input[2] <= bus_splitter_IRL_RCC_Combo:inst13.REG_i[2]
+Register_Input[3] <= bus_splitter_IRL_RCC_Combo:inst13.REG_i[3]
+Register_Selected[0] <= bus_splitter_IRL_RCC_Combo:inst13.REG_s[0]
+Register_Selected[1] <= bus_splitter_IRL_RCC_Combo:inst13.REG_s[1]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|IRL_Machine:inst4
+All_Registers_Loaded <= bus_split_3bit:inst17.Z
+Clock => inst7.CLK
+Clock => inst8.CLK
+Clock => inst9.CLK
+Input_Select => w_IRL:inst12.a
+User_In[0] => LR_Machine:klasdjf.In[0]
+User_In[1] => LR_Machine:klasdjf.In[1]
+User_In[2] => LR_Machine:klasdjf.In[2]
+User_In[3] => LR_Machine:klasdjf.In[3]
+Register_Input[0] <= LR_Machine:klasdjf.User_Input[0]
+Register_Input[1] <= LR_Machine:klasdjf.User_Input[1]
+Register_Input[2] <= LR_Machine:klasdjf.User_Input[2]
+Register_Input[3] <= LR_Machine:klasdjf.User_Input[3]
+Register_Selected[0] <= bus_split_3bit:inst17.Y[0]
+Register_Selected[1] <= bus_split_3bit:inst17.Y[1]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|IRL_Machine:inst4|bus_split_3bit:inst17
+x[0] => Y[0].DATAIN
+x[1] => Y[1].DATAIN
+x[2] => Z.DATAIN
+Y[0] <= x[0].DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= x[1].DB_MAX_OUTPUT_PORT_TYPE
+Z <= x[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|IRL_Machine:inst4|Output_Logic_IRL:inst
+y[0] => Decoder1.IN1
+y[1] => Decoder0.IN1
+y[2] => Decoder0.IN0
+y[2] => Decoder1.IN0
+y[2] => Z[2].DATAIN
+Z[0] <= Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= y[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|IRL_Machine:inst4|Input_Logic_IRL:inst13
+w[0] => Decoder0.IN2
+w[1] => Decoder0.IN1
+y[0] => Decoder0.IN5
+y[1] => Decoder0.IN4
+y[2] => Decoder0.IN3
+d => Decoder0.IN0
+X[0] <= X[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+X[1] <= X[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+X[2] <= X[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|IRL_Machine:inst4|w_IRL:inst12
+a => W[0].DATAIN
+b => W[1].DATAIN
+W[0] <= a.DB_MAX_OUTPUT_PORT_TYPE
+W[1] <= b.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|IRL_Machine:inst4|LR_Machine:klasdjf
+Accepted <= Logic_LR:inst.W
+In[0] => Logic_LR:inst.x[0]
+In[1] => Logic_LR:inst.x[1]
+In[2] => Logic_LR:inst.x[2]
+In[3] => Logic_LR:inst.x[3]
+User_Input[0] <= Logic_LR:inst.In[0]
+User_Input[1] <= Logic_LR:inst.In[1]
+User_Input[2] <= Logic_LR:inst.In[2]
+User_Input[3] <= Logic_LR:inst.In[3]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|IRL_Machine:inst4|LR_Machine:klasdjf|Logic_LR:inst
+x[0] => W.IN1
+x[0] => In.IN1
+x[1] => W.IN1
+x[1] => In.IN1
+x[2] => W.IN0
+x[2] => In.IN1
+x[3] => W.IN1
+x[3] => In.IN1
+W <= W.DB_MAX_OUTPUT_PORT_TYPE
+In[0] <= In.DB_MAX_OUTPUT_PORT_TYPE
+In[1] <= In.DB_MAX_OUTPUT_PORT_TYPE
+In[2] <= In.DB_MAX_OUTPUT_PORT_TYPE
+In[3] <= In.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst
+Register_Selected[0] <= Mux_4to1:inst1.Y[0]
+Register_Selected[1] <= Mux_4to1:inst1.Y[1]
+Register_Selected[2] <= Mux_4to1:inst1.Y[2]
+Register_Selected[3] <= Mux_4to1:inst1.Y[3]
+Register_Select[0] => Mux_4to1:inst1.s[0]
+Register_Select[0] => Decoder_2to4:inst.w[0]
+Register_Select[1] => Mux_4to1:inst1.s[1]
+Register_Select[1] => Decoder_2to4:inst.w[1]
+Register_Enable => Decoder_2to4:inst.En
+Clock => 4bit_Register:Register3.Clock
+Clock => 4bit_Register:Register2.Clock
+Clock => 4bit_Register:Register1.Clock
+Clock => 4bit_Register:Register0.Clock
+CLRN => 4bit_Register:Register3.CLRN
+CLRN => 4bit_Register:Register2.CLRN
+CLRN => 4bit_Register:Register1.CLRN
+CLRN => 4bit_Register:Register0.CLRN
+Register_Input[0] => 4bit_Register:Register3.In[0]
+Register_Input[0] => 4bit_Register:Register2.In[0]
+Register_Input[0] => 4bit_Register:Register1.In[0]
+Register_Input[0] => 4bit_Register:Register0.In[0]
+Register_Input[1] => 4bit_Register:Register3.In[1]
+Register_Input[1] => 4bit_Register:Register2.In[1]
+Register_Input[1] => 4bit_Register:Register1.In[1]
+Register_Input[1] => 4bit_Register:Register0.In[1]
+Register_Input[2] => 4bit_Register:Register3.In[2]
+Register_Input[2] => 4bit_Register:Register2.In[2]
+Register_Input[2] => 4bit_Register:Register1.In[2]
+Register_Input[2] => 4bit_Register:Register0.In[2]
+Register_Input[3] => 4bit_Register:Register3.In[3]
+Register_Input[3] => 4bit_Register:Register2.In[3]
+Register_Input[3] => 4bit_Register:Register1.In[3]
+Register_Input[3] => 4bit_Register:Register0.In[3]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|Mux_4to1:inst1
+x0[0] => Mux3.IN2
+x0[1] => Mux2.IN2
+x0[2] => Mux1.IN2
+x0[3] => Mux0.IN2
+x1[0] => Mux3.IN3
+x1[1] => Mux2.IN3
+x1[2] => Mux1.IN3
+x1[3] => Mux0.IN3
+x2[0] => Mux3.IN4
+x2[1] => Mux2.IN4
+x2[2] => Mux1.IN4
+x2[3] => Mux0.IN4
+x3[0] => Mux3.IN5
+x3[1] => Mux2.IN5
+x3[2] => Mux1.IN5
+x3[3] => Mux0.IN5
+s[0] => Mux0.IN1
+s[0] => Mux1.IN1
+s[0] => Mux2.IN1
+s[0] => Mux3.IN1
+s[1] => Mux0.IN0
+s[1] => Mux1.IN0
+s[1] => Mux2.IN0
+s[1] => Mux3.IN0
+Y[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register3
+Out[0] <= 1bit_Register:inst3.Out
+Out[1] <= 1bit_Register:inst2.Out
+Out[2] <= 1bit_Register:inst1.Out
+Out[3] <= 1bit_Register:inst.Out
+In[0] => 1bit_Register:inst3.In
+In[1] => 1bit_Register:inst2.In
+In[2] => 1bit_Register:inst1.In
+In[3] => 1bit_Register:inst.In
+Load => 1bit_Register:inst3.Load
+Load => 1bit_Register:inst2.Load
+Load => 1bit_Register:inst1.Load
+Load => 1bit_Register:inst.Load
+Clock => 1bit_Register:inst3.Clock
+Clock => 1bit_Register:inst2.Clock
+Clock => 1bit_Register:inst1.Clock
+Clock => 1bit_Register:inst.Clock
+CLRN => 1bit_Register:inst3.CLRN
+CLRN => 1bit_Register:inst2.CLRN
+CLRN => 1bit_Register:inst1.CLRN
+CLRN => 1bit_Register:inst.CLRN
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register3|1bit_Register:inst3
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register3|1bit_Register:inst3|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register3|1bit_Register:inst3|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register3|1bit_Register:inst3|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register3|1bit_Register:inst2
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register3|1bit_Register:inst2|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register3|1bit_Register:inst2|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register3|1bit_Register:inst2|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register3|1bit_Register:inst1
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register3|1bit_Register:inst1|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register3|1bit_Register:inst1|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register3|1bit_Register:inst1|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register3|1bit_Register:inst
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register3|1bit_Register:inst|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register3|1bit_Register:inst|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register3|1bit_Register:inst|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|Decoder_2to4:inst
+En => Y.IN1
+En => Y.IN1
+En => Y.IN1
+En => Y.IN1
+w[0] => Y.IN0
+w[0] => Y.IN0
+w[0] => Y.IN0
+w[0] => Y.IN0
+w[1] => Y.IN1
+w[1] => Y.IN1
+w[1] => Y.IN1
+w[1] => Y.IN1
+Y[0] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register2
+Out[0] <= 1bit_Register:inst3.Out
+Out[1] <= 1bit_Register:inst2.Out
+Out[2] <= 1bit_Register:inst1.Out
+Out[3] <= 1bit_Register:inst.Out
+In[0] => 1bit_Register:inst3.In
+In[1] => 1bit_Register:inst2.In
+In[2] => 1bit_Register:inst1.In
+In[3] => 1bit_Register:inst.In
+Load => 1bit_Register:inst3.Load
+Load => 1bit_Register:inst2.Load
+Load => 1bit_Register:inst1.Load
+Load => 1bit_Register:inst.Load
+Clock => 1bit_Register:inst3.Clock
+Clock => 1bit_Register:inst2.Clock
+Clock => 1bit_Register:inst1.Clock
+Clock => 1bit_Register:inst.Clock
+CLRN => 1bit_Register:inst3.CLRN
+CLRN => 1bit_Register:inst2.CLRN
+CLRN => 1bit_Register:inst1.CLRN
+CLRN => 1bit_Register:inst.CLRN
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register2|1bit_Register:inst3
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register2|1bit_Register:inst3|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register2|1bit_Register:inst3|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register2|1bit_Register:inst3|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register2|1bit_Register:inst2
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register2|1bit_Register:inst2|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register2|1bit_Register:inst2|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register2|1bit_Register:inst2|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register2|1bit_Register:inst1
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register2|1bit_Register:inst1|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register2|1bit_Register:inst1|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register2|1bit_Register:inst1|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register2|1bit_Register:inst
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register2|1bit_Register:inst|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register2|1bit_Register:inst|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register2|1bit_Register:inst|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register1
+Out[0] <= 1bit_Register:inst3.Out
+Out[1] <= 1bit_Register:inst2.Out
+Out[2] <= 1bit_Register:inst1.Out
+Out[3] <= 1bit_Register:inst.Out
+In[0] => 1bit_Register:inst3.In
+In[1] => 1bit_Register:inst2.In
+In[2] => 1bit_Register:inst1.In
+In[3] => 1bit_Register:inst.In
+Load => 1bit_Register:inst3.Load
+Load => 1bit_Register:inst2.Load
+Load => 1bit_Register:inst1.Load
+Load => 1bit_Register:inst.Load
+Clock => 1bit_Register:inst3.Clock
+Clock => 1bit_Register:inst2.Clock
+Clock => 1bit_Register:inst1.Clock
+Clock => 1bit_Register:inst.Clock
+CLRN => 1bit_Register:inst3.CLRN
+CLRN => 1bit_Register:inst2.CLRN
+CLRN => 1bit_Register:inst1.CLRN
+CLRN => 1bit_Register:inst.CLRN
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register1|1bit_Register:inst3
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register1|1bit_Register:inst3|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register1|1bit_Register:inst3|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register1|1bit_Register:inst3|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register1|1bit_Register:inst2
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register1|1bit_Register:inst2|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register1|1bit_Register:inst2|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register1|1bit_Register:inst2|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register1|1bit_Register:inst1
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register1|1bit_Register:inst1|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register1|1bit_Register:inst1|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register1|1bit_Register:inst1|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register1|1bit_Register:inst
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register1|1bit_Register:inst|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register1|1bit_Register:inst|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register1|1bit_Register:inst|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register0
+Out[0] <= 1bit_Register:inst3.Out
+Out[1] <= 1bit_Register:inst2.Out
+Out[2] <= 1bit_Register:inst1.Out
+Out[3] <= 1bit_Register:inst.Out
+In[0] => 1bit_Register:inst3.In
+In[1] => 1bit_Register:inst2.In
+In[2] => 1bit_Register:inst1.In
+In[3] => 1bit_Register:inst.In
+Load => 1bit_Register:inst3.Load
+Load => 1bit_Register:inst2.Load
+Load => 1bit_Register:inst1.Load
+Load => 1bit_Register:inst.Load
+Clock => 1bit_Register:inst3.Clock
+Clock => 1bit_Register:inst2.Clock
+Clock => 1bit_Register:inst1.Clock
+Clock => 1bit_Register:inst.Clock
+CLRN => 1bit_Register:inst3.CLRN
+CLRN => 1bit_Register:inst2.CLRN
+CLRN => 1bit_Register:inst1.CLRN
+CLRN => 1bit_Register:inst.CLRN
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register0|1bit_Register:inst3
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register0|1bit_Register:inst3|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register0|1bit_Register:inst3|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register0|1bit_Register:inst3|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register0|1bit_Register:inst2
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register0|1bit_Register:inst2|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register0|1bit_Register:inst2|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register0|1bit_Register:inst2|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register0|1bit_Register:inst1
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register0|1bit_Register:inst1|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register0|1bit_Register:inst1|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register0|1bit_Register:inst1|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register0|1bit_Register:inst
+Out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+Clock => inst.CLK
+Load => BUSMUX:inst1.sel
+In => BUSMUX:inst1.datab[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register0|1bit_Register:inst|BUSMUX:inst1
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register0|1bit_Register:inst|BUSMUX:inst1|lpm_mux:$00000
+data[0][0] => mux_7rc:auto_generated.data[0]
+data[1][0] => mux_7rc:auto_generated.data[1]
+sel[0] => mux_7rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_7rc:auto_generated.result[0]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|4_4bit_Register_File:inst|4bit_Register:Register0|1bit_Register:inst|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|bus_splitter_IRL_RCC_Combo:inst13
+x[0] => REG_s[0].DATAIN
+x[1] => REG_s[1].DATAIN
+x[2] => REG_i[0].DATAIN
+x[3] => REG_i[1].DATAIN
+x[4] => REG_i[2].DATAIN
+x[5] => REG_i[3].DATAIN
+REG_s[0] <= x[0].DB_MAX_OUTPUT_PORT_TYPE
+REG_s[1] <= x[1].DB_MAX_OUTPUT_PORT_TYPE
+REG_i[0] <= x[2].DB_MAX_OUTPUT_PORT_TYPE
+REG_i[1] <= x[3].DB_MAX_OUTPUT_PORT_TYPE
+REG_i[2] <= x[4].DB_MAX_OUTPUT_PORT_TYPE
+REG_i[3] <= x[5].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|load_count_mux:inst12
+sel => Decoder0.IN0
+IRL_reg_sel[0] => Z.DATAA
+IRL_reg_sel[1] => Z.DATAA
+IRL_reg_in[0] => Z.DATAA
+IRL_reg_in[1] => Z.DATAA
+IRL_reg_in[2] => Z.DATAA
+IRL_reg_in[3] => Z.DATAA
+TCLF_reg_sel[0] => Z.DATAB
+TCLF_reg_sel[1] => Z.DATAB
+TCLF_reg_in[0] => Z.DATAB
+TCLF_reg_in[1] => Z.DATAB
+TCLF_reg_in[2] => Z.DATAB
+TCLF_reg_in[3] => Z.DATAB
+Z[0] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[3] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[4] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[5] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|TLCF:inst3
+Counter_Selected[0] <= Mux_4to1:inst7.Y[0]
+Counter_Selected[1] <= Mux_4to1:inst7.Y[1]
+Counter_Selected[2] <= Mux_4to1:inst7.Y[2]
+Counter_Selected[3] <= Mux_4to1:inst7.Y[3]
+Counter_Select[0] => Mux_4to1:inst7.s[0]
+Counter_Select[0] => Decoder_2to4:inst12.w[0]
+Counter_Select[1] => Mux_4to1:inst7.s[1]
+Counter_Select[1] => Decoder_2to4:inst12.w[1]
+Clock => TLC_Mk3:inst.Clock
+Clock => TLC_Mk3:inst9.Clock
+Clock => TLC_Mk3:inst10.Clock
+Clock => TLC_Mk3:inst11.Clock
+Enable => Decoder_2to4:inst12.En
+Counter_Control[0] => TLC_Mk3:inst.In[0]
+Counter_Control[0] => TLC_Mk3:inst9.In[0]
+Counter_Control[0] => TLC_Mk3:inst10.In[0]
+Counter_Control[0] => TLC_Mk3:inst11.In[0]
+Counter_Control[1] => TLC_Mk3:inst.In[1]
+Counter_Control[1] => TLC_Mk3:inst9.In[1]
+Counter_Control[1] => TLC_Mk3:inst10.In[1]
+Counter_Control[1] => TLC_Mk3:inst11.In[1]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|TLCF:inst3|Mux_4to1:inst7
+x0[0] => Mux3.IN2
+x0[1] => Mux2.IN2
+x0[2] => Mux1.IN2
+x0[3] => Mux0.IN2
+x1[0] => Mux3.IN3
+x1[1] => Mux2.IN3
+x1[2] => Mux1.IN3
+x1[3] => Mux0.IN3
+x2[0] => Mux3.IN4
+x2[1] => Mux2.IN4
+x2[2] => Mux1.IN4
+x2[3] => Mux0.IN4
+x3[0] => Mux3.IN5
+x3[1] => Mux2.IN5
+x3[2] => Mux1.IN5
+x3[3] => Mux0.IN5
+s[0] => Mux0.IN1
+s[0] => Mux1.IN1
+s[0] => Mux2.IN1
+s[0] => Mux3.IN1
+s[1] => Mux0.IN0
+s[1] => Mux1.IN0
+s[1] => Mux2.IN0
+s[1] => Mux3.IN0
+Y[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|TLCF:inst3|TLC_Mk3:inst
+Out[0] <= Output_Logic_TLC_Mk3:inst.Z[0]
+Out[1] <= Output_Logic_TLC_Mk3:inst.Z[1]
+Out[2] <= Output_Logic_TLC_Mk3:inst.Z[2]
+Out[3] <= Output_Logic_TLC_Mk3:inst.Z[3]
+Clock => DFF0.CLK
+Clock => DFF1.CLK
+Clock => DFF2.CLK
+Clock => DFF3.CLK
+Enable => bus_combiner_TLC_Mk3:inst3.en
+In[0] => bus_combiner_TLC_Mk3:inst3.x[0]
+In[1] => bus_combiner_TLC_Mk3:inst3.x[1]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|TLCF:inst3|TLC_Mk3:inst|Output_Logic_TLC_Mk3:inst
+y[0] => Z[0].DATAIN
+y[1] => Z[1].DATAIN
+y[2] => Z[2].DATAIN
+y[3] => Z[3].DATAIN
+Z[0] <= y[0].DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= y[1].DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= y[2].DB_MAX_OUTPUT_PORT_TYPE
+Z[3] <= y[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|TLCF:inst3|TLC_Mk3:inst|Input_Logic_TLC_Mk3:inst1
+w[0] => Decoder0.IN6
+w[1] => Decoder0.IN5
+w[2] => Decoder0.IN4
+w[3] => Decoder0.IN3
+w[4] => Decoder0.IN2
+w[5] => Decoder0.IN1
+w[6] => Decoder0.IN0
+X[0] <= X[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+X[1] <= X[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+X[2] <= X[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+X[3] <= X[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|TLCF:inst3|TLC_Mk3:inst|bus_combiner_TLC_Mk3:inst3
+en => Z[6].DATAIN
+x[0] => Z[4].DATAIN
+x[1] => Z[5].DATAIN
+y[0] => Z[0].DATAIN
+y[1] => Z[1].DATAIN
+y[2] => Z[2].DATAIN
+y[3] => Z[3].DATAIN
+Z[0] <= y[0].DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= y[1].DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= y[2].DB_MAX_OUTPUT_PORT_TYPE
+Z[3] <= y[3].DB_MAX_OUTPUT_PORT_TYPE
+Z[4] <= x[0].DB_MAX_OUTPUT_PORT_TYPE
+Z[5] <= x[1].DB_MAX_OUTPUT_PORT_TYPE
+Z[6] <= en.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|TLCF:inst3|Decoder_2to4:inst12
+En => Y.IN1
+En => Y.IN1
+En => Y.IN1
+En => Y.IN1
+w[0] => Y.IN0
+w[0] => Y.IN0
+w[0] => Y.IN0
+w[0] => Y.IN0
+w[1] => Y.IN1
+w[1] => Y.IN1
+w[1] => Y.IN1
+w[1] => Y.IN1
+Y[0] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|TLCF:inst3|TLC_Mk3:inst9
+Out[0] <= Output_Logic_TLC_Mk3:inst.Z[0]
+Out[1] <= Output_Logic_TLC_Mk3:inst.Z[1]
+Out[2] <= Output_Logic_TLC_Mk3:inst.Z[2]
+Out[3] <= Output_Logic_TLC_Mk3:inst.Z[3]
+Clock => DFF0.CLK
+Clock => DFF1.CLK
+Clock => DFF2.CLK
+Clock => DFF3.CLK
+Enable => bus_combiner_TLC_Mk3:inst3.en
+In[0] => bus_combiner_TLC_Mk3:inst3.x[0]
+In[1] => bus_combiner_TLC_Mk3:inst3.x[1]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|TLCF:inst3|TLC_Mk3:inst9|Output_Logic_TLC_Mk3:inst
+y[0] => Z[0].DATAIN
+y[1] => Z[1].DATAIN
+y[2] => Z[2].DATAIN
+y[3] => Z[3].DATAIN
+Z[0] <= y[0].DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= y[1].DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= y[2].DB_MAX_OUTPUT_PORT_TYPE
+Z[3] <= y[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|TLCF:inst3|TLC_Mk3:inst9|Input_Logic_TLC_Mk3:inst1
+w[0] => Decoder0.IN6
+w[1] => Decoder0.IN5
+w[2] => Decoder0.IN4
+w[3] => Decoder0.IN3
+w[4] => Decoder0.IN2
+w[5] => Decoder0.IN1
+w[6] => Decoder0.IN0
+X[0] <= X[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+X[1] <= X[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+X[2] <= X[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+X[3] <= X[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|TLCF:inst3|TLC_Mk3:inst9|bus_combiner_TLC_Mk3:inst3
+en => Z[6].DATAIN
+x[0] => Z[4].DATAIN
+x[1] => Z[5].DATAIN
+y[0] => Z[0].DATAIN
+y[1] => Z[1].DATAIN
+y[2] => Z[2].DATAIN
+y[3] => Z[3].DATAIN
+Z[0] <= y[0].DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= y[1].DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= y[2].DB_MAX_OUTPUT_PORT_TYPE
+Z[3] <= y[3].DB_MAX_OUTPUT_PORT_TYPE
+Z[4] <= x[0].DB_MAX_OUTPUT_PORT_TYPE
+Z[5] <= x[1].DB_MAX_OUTPUT_PORT_TYPE
+Z[6] <= en.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|TLCF:inst3|TLC_Mk3:inst10
+Out[0] <= Output_Logic_TLC_Mk3:inst.Z[0]
+Out[1] <= Output_Logic_TLC_Mk3:inst.Z[1]
+Out[2] <= Output_Logic_TLC_Mk3:inst.Z[2]
+Out[3] <= Output_Logic_TLC_Mk3:inst.Z[3]
+Clock => DFF0.CLK
+Clock => DFF1.CLK
+Clock => DFF2.CLK
+Clock => DFF3.CLK
+Enable => bus_combiner_TLC_Mk3:inst3.en
+In[0] => bus_combiner_TLC_Mk3:inst3.x[0]
+In[1] => bus_combiner_TLC_Mk3:inst3.x[1]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|TLCF:inst3|TLC_Mk3:inst10|Output_Logic_TLC_Mk3:inst
+y[0] => Z[0].DATAIN
+y[1] => Z[1].DATAIN
+y[2] => Z[2].DATAIN
+y[3] => Z[3].DATAIN
+Z[0] <= y[0].DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= y[1].DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= y[2].DB_MAX_OUTPUT_PORT_TYPE
+Z[3] <= y[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|TLCF:inst3|TLC_Mk3:inst10|Input_Logic_TLC_Mk3:inst1
+w[0] => Decoder0.IN6
+w[1] => Decoder0.IN5
+w[2] => Decoder0.IN4
+w[3] => Decoder0.IN3
+w[4] => Decoder0.IN2
+w[5] => Decoder0.IN1
+w[6] => Decoder0.IN0
+X[0] <= X[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+X[1] <= X[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+X[2] <= X[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+X[3] <= X[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|TLCF:inst3|TLC_Mk3:inst10|bus_combiner_TLC_Mk3:inst3
+en => Z[6].DATAIN
+x[0] => Z[4].DATAIN
+x[1] => Z[5].DATAIN
+y[0] => Z[0].DATAIN
+y[1] => Z[1].DATAIN
+y[2] => Z[2].DATAIN
+y[3] => Z[3].DATAIN
+Z[0] <= y[0].DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= y[1].DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= y[2].DB_MAX_OUTPUT_PORT_TYPE
+Z[3] <= y[3].DB_MAX_OUTPUT_PORT_TYPE
+Z[4] <= x[0].DB_MAX_OUTPUT_PORT_TYPE
+Z[5] <= x[1].DB_MAX_OUTPUT_PORT_TYPE
+Z[6] <= en.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|TLCF:inst3|TLC_Mk3:inst11
+Out[0] <= Output_Logic_TLC_Mk3:inst.Z[0]
+Out[1] <= Output_Logic_TLC_Mk3:inst.Z[1]
+Out[2] <= Output_Logic_TLC_Mk3:inst.Z[2]
+Out[3] <= Output_Logic_TLC_Mk3:inst.Z[3]
+Clock => DFF0.CLK
+Clock => DFF1.CLK
+Clock => DFF2.CLK
+Clock => DFF3.CLK
+Enable => bus_combiner_TLC_Mk3:inst3.en
+In[0] => bus_combiner_TLC_Mk3:inst3.x[0]
+In[1] => bus_combiner_TLC_Mk3:inst3.x[1]
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|TLCF:inst3|TLC_Mk3:inst11|Output_Logic_TLC_Mk3:inst
+y[0] => Z[0].DATAIN
+y[1] => Z[1].DATAIN
+y[2] => Z[2].DATAIN
+y[3] => Z[3].DATAIN
+Z[0] <= y[0].DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= y[1].DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= y[2].DB_MAX_OUTPUT_PORT_TYPE
+Z[3] <= y[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|TLCF:inst3|TLC_Mk3:inst11|Input_Logic_TLC_Mk3:inst1
+w[0] => Decoder0.IN6
+w[1] => Decoder0.IN5
+w[2] => Decoder0.IN4
+w[3] => Decoder0.IN3
+w[4] => Decoder0.IN2
+w[5] => Decoder0.IN1
+w[6] => Decoder0.IN0
+X[0] <= X[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+X[1] <= X[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+X[2] <= X[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+X[3] <= X[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_RCC_Combo_Test|IRL_RCC_Combo:inst|TLCF:inst3|TLC_Mk3:inst11|bus_combiner_TLC_Mk3:inst3
+en => Z[6].DATAIN
+x[0] => Z[4].DATAIN
+x[1] => Z[5].DATAIN
+y[0] => Z[0].DATAIN
+y[1] => Z[1].DATAIN
+y[2] => Z[2].DATAIN
+y[3] => Z[3].DATAIN
+Z[0] <= y[0].DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= y[1].DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= y[2].DB_MAX_OUTPUT_PORT_TYPE
+Z[3] <= y[3].DB_MAX_OUTPUT_PORT_TYPE
+Z[4] <= x[0].DB_MAX_OUTPUT_PORT_TYPE
+Z[5] <= x[1].DB_MAX_OUTPUT_PORT_TYPE
+Z[6] <= en.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_RCC_Combo_Test|seven_seg_decoder:inst2
+x[0] => Decoder0.IN3
+x[1] => Decoder0.IN2
+x[2] => Decoder0.IN1
+x[3] => Decoder0.IN0
+Y[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRL_RCC_Combo_Test|seven_seg_decoder:sdaasfg
+x[0] => Decoder0.IN3
+x[1] => Decoder0.IN2
+x[2] => Decoder0.IN1
+x[3] => Decoder0.IN0
+Y[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

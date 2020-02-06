@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Nov 22 23:25:09 2018
+Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+Revision Name : TLS_Test
+Top-level Entity Name : TLS_Test
+Family : Cyclone IV E
+Total logic elements : 6
+    Total combinational functions : 6
+    Dedicated logic registers : 2
+Total registers : 2
+Total pins : 9
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

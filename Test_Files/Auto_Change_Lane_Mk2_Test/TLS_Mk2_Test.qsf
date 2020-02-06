@@ -1,0 +1,179 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2018  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+# Date created = 06:04:51  December 04, 2018
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		TLS_Mk2_Test_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2018  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+# Date created = 16:47:20  November 23, 2018
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		TLS_Mk2_Test_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2018  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+# Date created = 16:22:56  November 23, 2018
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		TLS_Mk2_Test_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE115F29C7
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.0.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:22:56  NOVEMBER 23, 2018"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.0.0 Standard Edition"
+
+
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name BDF_FILE ACL_Mk2_Test.bdf
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
+
+
+set_location_assignment PIN_M23 -to Clock
+set_location_assignment PIN_AB28 -to Lane[0]
+set_location_assignment PIN_AC28 -to Lane[1]
+set_location_assignment PIN_AC27 -to Lane[2]
+set_location_assignment PIN_AD27 -to Lane[3]
+set_location_assignment PIN_AA23 -to Lane_Info[0]
+set_location_assignment PIN_AA22 -to Lane_Info[1]
+set_location_assignment PIN_Y24 -to Lane_Info[2]
+set_location_assignment PIN_Y23 -to Lane_Info[3]
+
+set_location_assignment PIN_G18 -to Out0[6]
+set_location_assignment PIN_F22 -to Out0[5]
+set_location_assignment PIN_E17 -to Out0[4]
+set_location_assignment PIN_L26 -to Out0[3]
+set_location_assignment PIN_L25 -to Out0[2]
+set_location_assignment PIN_J22 -to Out0[1]
+set_location_assignment PIN_H22 -to Out0[0]
+set_location_assignment PIN_G21 -to Lane_Has_Car[3]
+set_location_assignment PIN_G22 -to Lane_Has_Car[2]
+set_location_assignment PIN_G20 -to Lane_Has_Car[1]
+set_location_assignment PIN_H21 -to Lane_Has_Car[0]
+set_location_assignment PIN_E21 -to Counter[0]
+set_location_assignment PIN_E22 -to Counter[1]
+set_location_assignment PIN_E25 -to Counter[2]
+
+
+set_global_assignment -name VERILOG_FILE Input_Logic_ACL_Mk2.v
+set_global_assignment -name VERILOG_FILE "Output_Logic ACL_Mk2.v"
+set_global_assignment -name VERILOG_FILE Lane_Has_1_Car_ACL_Machine_Mk2.v
+set_global_assignment -name VERILOG_FILE Priority_Encoder_4to2_ACL_Mk2.v
+set_location_assignment PIN_F15 -to ACL_Selection[0]
+set_location_assignment PIN_G15 -to ACL_Selection[1]
+set_location_assignment PIN_G16 -to ACL_Selection[2]
+set_location_assignment PIN_H15 -to ACL_Selection[3]
+set_location_assignment PIN_E21 -to Count[0]
+set_location_assignment PIN_E22 -to Count[1]
+set_location_assignment PIN_E25 -to Count[2]
+set_location_assignment PIN_G21 -to Lane_Change
+set_location_assignment PIN_AB28 -to Select[0]
+set_location_assignment PIN_AC28 -to Select[1]
+set_location_assignment PIN_AC27 -to Select[2]
+set_location_assignment PIN_AD27 -to Select[3]
+set_location_assignment PIN_G19 -to Selection[0]
+set_location_assignment PIN_F19 -to Selection[1]
+set_location_assignment PIN_E19 -to Selection[2]
+set_location_assignment PIN_F21 -to Selection[3]
+set_global_assignment -name TOP_LEVEL_ENTITY ACL_Mk2_Test
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

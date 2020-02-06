@@ -1,0 +1,593 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'TGCo:inst|MSM:inst|TLCF_Clock'
+Slack : -6.829
+TNS   : -103.633
+
+Type  : Slow 1200mV 85C Model Setup 'TGCo:inst|ACL_Machine_Mk2:inst16|ACL_Machine:inst1|Mod5_Counter_ACL:inst1|inst6'
+Slack : -4.146
+TNS   : -4.146
+
+Type  : Slow 1200mV 85C Model Setup 'TGCo:inst|MSM:inst|ACL_Clock'
+Slack : -3.590
+TNS   : -10.971
+
+Type  : Slow 1200mV 85C Model Setup 'TGCo:inst|switch_debouncer:inst10|clock_divider_1024:inst|inst10'
+Slack : -3.332
+TNS   : -9.362
+
+Type  : Slow 1200mV 85C Model Setup 'TGCo:inst|clock_generator:inst9|inst5'
+Slack : -2.904
+TNS   : -3.823
+
+Type  : Slow 1200mV 85C Model Setup 'TGCo:inst|TGC_Machine:inst6|inst2'
+Slack : -2.842
+TNS   : -52.264
+
+Type  : Slow 1200mV 85C Model Setup 'Clock'
+Slack : -2.743
+TNS   : -18.607
+
+Type  : Slow 1200mV 85C Model Setup 'TGCo:inst|MSM:inst|IRL_Clock'
+Slack : -2.374
+TNS   : -31.588
+
+Type  : Slow 1200mV 85C Model Setup 'TGCo:inst|switch_debouncer:inst8|clock_divider_1024:inst|inst10'
+Slack : -2.306
+TNS   : -6.616
+
+Type  : Slow 1200mV 85C Model Setup 'TGCo:inst|switch_debouncer:inst11|clock_divider_1024:inst|inst10'
+Slack : -2.297
+TNS   : -6.532
+
+Type  : Slow 1200mV 85C Model Setup 'TGCo:inst|switch_debouncer:inst13|clock_divider_1024:inst|inst10'
+Slack : -2.266
+TNS   : -6.888
+
+Type  : Slow 1200mV 85C Model Setup 'TGCo:inst|clock_generator:inst9|clock_divider_1024:inst|inst10'
+Slack : -2.252
+TNS   : -6.517
+
+Type  : Slow 1200mV 85C Model Setup 'TGCo:inst|switch_debouncer:inst7|clock_divider_1024:inst|inst10'
+Slack : -2.227
+TNS   : -6.645
+
+Type  : Slow 1200mV 85C Model Setup 'TGCo:inst|clock_generator:inst9|clock_divider_1024:inst8|inst10'
+Slack : -1.998
+TNS   : -2.735
+
+Type  : Slow 1200mV 85C Model Hold 'TGCo:inst|ACL_Machine_Mk2:inst16|ACL_Machine:inst1|Mod5_Counter_ACL:inst1|inst6'
+Slack : 0.027
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'TGCo:inst|TGC_Machine:inst6|inst2'
+Slack : 0.387
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Clock'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'TGCo:inst|clock_generator:inst9|clock_divider_1024:inst|inst10'
+Slack : 0.403
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'TGCo:inst|switch_debouncer:inst11|clock_divider_1024:inst|inst10'
+Slack : 0.403
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'TGCo:inst|switch_debouncer:inst13|clock_divider_1024:inst|inst10'
+Slack : 0.403
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'TGCo:inst|switch_debouncer:inst7|clock_divider_1024:inst|inst10'
+Slack : 0.403
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'TGCo:inst|switch_debouncer:inst10|clock_divider_1024:inst|inst10'
+Slack : 0.404
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'TGCo:inst|switch_debouncer:inst8|clock_divider_1024:inst|inst10'
+Slack : 0.404
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'TGCo:inst|clock_generator:inst9|clock_divider_1024:inst8|inst10'
+Slack : 0.405
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'TGCo:inst|MSM:inst|TLCF_Clock'
+Slack : 0.440
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'TGCo:inst|clock_generator:inst9|inst5'
+Slack : 0.512
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'TGCo:inst|MSM:inst|ACL_Clock'
+Slack : 0.748
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'TGCo:inst|MSM:inst|IRL_Clock'
+Slack : 0.932
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'TGCo:inst|MSM:inst|ACL_Clock'
+Slack : -1.442
+TNS   : -4.326
+
+Type  : Slow 1200mV 85C Model Removal 'TGCo:inst|MSM:inst|ACL_Clock'
+Slack : 1.646
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Clock'
+Slack : -3.000
+TNS   : -22.275
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'TGCo:inst|MSM:inst|IRL_Clock'
+Slack : -1.285
+TNS   : -24.415
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'TGCo:inst|MSM:inst|TLCF_Clock'
+Slack : -1.285
+TNS   : -20.560
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'TGCo:inst|clock_generator:inst9|clock_divider_1024:inst|inst10'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'TGCo:inst|switch_debouncer:inst10|clock_divider_1024:inst|inst10'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'TGCo:inst|switch_debouncer:inst11|clock_divider_1024:inst|inst10'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'TGCo:inst|switch_debouncer:inst13|clock_divider_1024:inst|inst10'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'TGCo:inst|switch_debouncer:inst7|clock_divider_1024:inst|inst10'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'TGCo:inst|switch_debouncer:inst8|clock_divider_1024:inst|inst10'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'TGCo:inst|MSM:inst|ACL_Clock'
+Slack : -1.285
+TNS   : -6.425
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'TGCo:inst|clock_generator:inst9|clock_divider_1024:inst8|inst10'
+Slack : -1.285
+TNS   : -6.425
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'TGCo:inst|clock_generator:inst9|inst5'
+Slack : -1.285
+TNS   : -2.570
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'TGCo:inst|switch_debouncer:inst10|clock_divider_1024:inst1|inst10'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'TGCo:inst|switch_debouncer:inst11|clock_divider_1024:inst1|inst10'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'TGCo:inst|switch_debouncer:inst13|clock_divider_1024:inst1|inst10'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'TGCo:inst|switch_debouncer:inst7|clock_divider_1024:inst1|inst10'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'TGCo:inst|switch_debouncer:inst8|clock_divider_1024:inst1|inst10'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'TGCo:inst|ACL_Machine_Mk2:inst16|ACL_Machine:inst1|Mod5_Counter_ACL:inst1|inst6'
+Slack : 0.421
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'TGCo:inst|TGC_Machine:inst6|inst2'
+Slack : 0.469
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'TGCo:inst|MSM:inst|TLCF_Clock'
+Slack : -6.068
+TNS   : -91.319
+
+Type  : Slow 1200mV 0C Model Setup 'TGCo:inst|ACL_Machine_Mk2:inst16|ACL_Machine:inst1|Mod5_Counter_ACL:inst1|inst6'
+Slack : -3.729
+TNS   : -3.729
+
+Type  : Slow 1200mV 0C Model Setup 'TGCo:inst|MSM:inst|ACL_Clock'
+Slack : -3.186
+TNS   : -9.649
+
+Type  : Slow 1200mV 0C Model Setup 'TGCo:inst|switch_debouncer:inst10|clock_divider_1024:inst|inst10'
+Slack : -2.965
+TNS   : -7.649
+
+Type  : Slow 1200mV 0C Model Setup 'TGCo:inst|TGC_Machine:inst6|inst2'
+Slack : -2.650
+TNS   : -49.260
+
+Type  : Slow 1200mV 0C Model Setup 'TGCo:inst|clock_generator:inst9|inst5'
+Slack : -2.505
+TNS   : -3.235
+
+Type  : Slow 1200mV 0C Model Setup 'Clock'
+Slack : -2.419
+TNS   : -15.528
+
+Type  : Slow 1200mV 0C Model Setup 'TGCo:inst|MSM:inst|IRL_Clock'
+Slack : -2.029
+TNS   : -26.381
+
+Type  : Slow 1200mV 0C Model Setup 'TGCo:inst|switch_debouncer:inst8|clock_divider_1024:inst|inst10'
+Slack : -2.026
+TNS   : -5.148
+
+Type  : Slow 1200mV 0C Model Setup 'TGCo:inst|switch_debouncer:inst11|clock_divider_1024:inst|inst10'
+Slack : -2.019
+TNS   : -5.085
+
+Type  : Slow 1200mV 0C Model Setup 'TGCo:inst|switch_debouncer:inst13|clock_divider_1024:inst|inst10'
+Slack : -1.985
+TNS   : -5.415
+
+Type  : Slow 1200mV 0C Model Setup 'TGCo:inst|clock_generator:inst9|clock_divider_1024:inst|inst10'
+Slack : -1.980
+TNS   : -5.057
+
+Type  : Slow 1200mV 0C Model Setup 'TGCo:inst|switch_debouncer:inst7|clock_divider_1024:inst|inst10'
+Slack : -1.954
+TNS   : -5.199
+
+Type  : Slow 1200mV 0C Model Setup 'TGCo:inst|clock_generator:inst9|clock_divider_1024:inst8|inst10'
+Slack : -1.742
+TNS   : -2.138
+
+Type  : Slow 1200mV 0C Model Hold 'TGCo:inst|ACL_Machine_Mk2:inst16|ACL_Machine:inst1|Mod5_Counter_ACL:inst1|inst6'
+Slack : 0.050
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Clock'
+Slack : 0.354
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'TGCo:inst|clock_generator:inst9|clock_divider_1024:inst|inst10'
+Slack : 0.354
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'TGCo:inst|clock_generator:inst9|clock_divider_1024:inst8|inst10'
+Slack : 0.355
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'TGCo:inst|switch_debouncer:inst10|clock_divider_1024:inst|inst10'
+Slack : 0.355
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'TGCo:inst|switch_debouncer:inst11|clock_divider_1024:inst|inst10'
+Slack : 0.355
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'TGCo:inst|switch_debouncer:inst13|clock_divider_1024:inst|inst10'
+Slack : 0.355
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'TGCo:inst|switch_debouncer:inst7|clock_divider_1024:inst|inst10'
+Slack : 0.355
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'TGCo:inst|switch_debouncer:inst8|clock_divider_1024:inst|inst10'
+Slack : 0.355
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'TGCo:inst|MSM:inst|TLCF_Clock'
+Slack : 0.387
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'TGCo:inst|clock_generator:inst9|inst5'
+Slack : 0.457
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'TGCo:inst|TGC_Machine:inst6|inst2'
+Slack : 0.468
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'TGCo:inst|MSM:inst|ACL_Clock'
+Slack : 0.686
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'TGCo:inst|MSM:inst|IRL_Clock'
+Slack : 0.770
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'TGCo:inst|MSM:inst|ACL_Clock'
+Slack : -1.335
+TNS   : -4.005
+
+Type  : Slow 1200mV 0C Model Removal 'TGCo:inst|MSM:inst|ACL_Clock'
+Slack : 1.458
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Clock'
+Slack : -3.000
+TNS   : -22.275
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'TGCo:inst|MSM:inst|IRL_Clock'
+Slack : -1.285
+TNS   : -24.415
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'TGCo:inst|MSM:inst|TLCF_Clock'
+Slack : -1.285
+TNS   : -20.560
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'TGCo:inst|clock_generator:inst9|clock_divider_1024:inst|inst10'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'TGCo:inst|switch_debouncer:inst10|clock_divider_1024:inst|inst10'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'TGCo:inst|switch_debouncer:inst11|clock_divider_1024:inst|inst10'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'TGCo:inst|switch_debouncer:inst13|clock_divider_1024:inst|inst10'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'TGCo:inst|switch_debouncer:inst7|clock_divider_1024:inst|inst10'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'TGCo:inst|switch_debouncer:inst8|clock_divider_1024:inst|inst10'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'TGCo:inst|MSM:inst|ACL_Clock'
+Slack : -1.285
+TNS   : -6.425
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'TGCo:inst|clock_generator:inst9|clock_divider_1024:inst8|inst10'
+Slack : -1.285
+TNS   : -6.425
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'TGCo:inst|clock_generator:inst9|inst5'
+Slack : -1.285
+TNS   : -2.570
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'TGCo:inst|switch_debouncer:inst10|clock_divider_1024:inst1|inst10'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'TGCo:inst|switch_debouncer:inst11|clock_divider_1024:inst1|inst10'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'TGCo:inst|switch_debouncer:inst13|clock_divider_1024:inst1|inst10'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'TGCo:inst|switch_debouncer:inst7|clock_divider_1024:inst1|inst10'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'TGCo:inst|switch_debouncer:inst8|clock_divider_1024:inst1|inst10'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'TGCo:inst|TGC_Machine:inst6|inst2'
+Slack : 0.405
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'TGCo:inst|ACL_Machine_Mk2:inst16|ACL_Machine:inst1|Mod5_Counter_ACL:inst1|inst6'
+Slack : 0.434
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'TGCo:inst|MSM:inst|TLCF_Clock'
+Slack : -3.000
+TNS   : -45.350
+
+Type  : Fast 1200mV 0C Model Setup 'TGCo:inst|ACL_Machine_Mk2:inst16|ACL_Machine:inst1|Mod5_Counter_ACL:inst1|inst6'
+Slack : -1.448
+TNS   : -1.448
+
+Type  : Fast 1200mV 0C Model Setup 'TGCo:inst|TGC_Machine:inst6|inst2'
+Slack : -1.227
+TNS   : -17.050
+
+Type  : Fast 1200mV 0C Model Setup 'TGCo:inst|MSM:inst|ACL_Clock'
+Slack : -1.206
+TNS   : -3.149
+
+Type  : Fast 1200mV 0C Model Setup 'TGCo:inst|switch_debouncer:inst10|clock_divider_1024:inst|inst10'
+Slack : -1.197
+TNS   : -1.240
+
+Type  : Fast 1200mV 0C Model Setup 'TGCo:inst|clock_generator:inst9|inst5'
+Slack : -1.037
+TNS   : -1.057
+
+Type  : Fast 1200mV 0C Model Setup 'Clock'
+Slack : -0.849
+TNS   : -2.594
+
+Type  : Fast 1200mV 0C Model Setup 'TGCo:inst|MSM:inst|IRL_Clock'
+Slack : -0.724
+TNS   : -7.027
+
+Type  : Fast 1200mV 0C Model Setup 'TGCo:inst|switch_debouncer:inst8|clock_divider_1024:inst|inst10'
+Slack : -0.626
+TNS   : -0.626
+
+Type  : Fast 1200mV 0C Model Setup 'TGCo:inst|switch_debouncer:inst11|clock_divider_1024:inst|inst10'
+Slack : -0.624
+TNS   : -0.624
+
+Type  : Fast 1200mV 0C Model Setup 'TGCo:inst|switch_debouncer:inst13|clock_divider_1024:inst|inst10'
+Slack : -0.610
+TNS   : -0.610
+
+Type  : Fast 1200mV 0C Model Setup 'TGCo:inst|switch_debouncer:inst7|clock_divider_1024:inst|inst10'
+Slack : -0.596
+TNS   : -0.596
+
+Type  : Fast 1200mV 0C Model Setup 'TGCo:inst|clock_generator:inst9|clock_divider_1024:inst|inst10'
+Slack : -0.592
+TNS   : -0.592
+
+Type  : Fast 1200mV 0C Model Setup 'TGCo:inst|clock_generator:inst9|clock_divider_1024:inst8|inst10'
+Slack : -0.485
+TNS   : -0.485
+
+Type  : Fast 1200mV 0C Model Hold 'TGCo:inst|ACL_Machine_Mk2:inst16|ACL_Machine:inst1|Mod5_Counter_ACL:inst1|inst6'
+Slack : -0.021
+TNS   : -0.021
+
+Type  : Fast 1200mV 0C Model Hold 'TGCo:inst|TGC_Machine:inst6|inst2'
+Slack : 0.114
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Clock'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'TGCo:inst|clock_generator:inst9|clock_divider_1024:inst|inst10'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'TGCo:inst|clock_generator:inst9|clock_divider_1024:inst8|inst10'
+Slack : 0.182
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'TGCo:inst|switch_debouncer:inst10|clock_divider_1024:inst|inst10'
+Slack : 0.182
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'TGCo:inst|switch_debouncer:inst11|clock_divider_1024:inst|inst10'
+Slack : 0.182
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'TGCo:inst|switch_debouncer:inst13|clock_divider_1024:inst|inst10'
+Slack : 0.182
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'TGCo:inst|switch_debouncer:inst7|clock_divider_1024:inst|inst10'
+Slack : 0.182
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'TGCo:inst|switch_debouncer:inst8|clock_divider_1024:inst|inst10'
+Slack : 0.182
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'TGCo:inst|clock_generator:inst9|inst5'
+Slack : 0.193
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'TGCo:inst|MSM:inst|TLCF_Clock'
+Slack : 0.201
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'TGCo:inst|MSM:inst|ACL_Clock'
+Slack : 0.322
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'TGCo:inst|MSM:inst|IRL_Clock'
+Slack : 0.492
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'TGCo:inst|MSM:inst|ACL_Clock'
+Slack : -0.364
+TNS   : -1.092
+
+Type  : Fast 1200mV 0C Model Removal 'TGCo:inst|MSM:inst|ACL_Clock'
+Slack : 0.702
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Clock'
+Slack : -3.000
+TNS   : -18.930
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'TGCo:inst|MSM:inst|IRL_Clock'
+Slack : -1.000
+TNS   : -19.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'TGCo:inst|MSM:inst|TLCF_Clock'
+Slack : -1.000
+TNS   : -16.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'TGCo:inst|clock_generator:inst9|clock_divider_1024:inst|inst10'
+Slack : -1.000
+TNS   : -10.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'TGCo:inst|switch_debouncer:inst10|clock_divider_1024:inst|inst10'
+Slack : -1.000
+TNS   : -10.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'TGCo:inst|switch_debouncer:inst11|clock_divider_1024:inst|inst10'
+Slack : -1.000
+TNS   : -10.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'TGCo:inst|switch_debouncer:inst13|clock_divider_1024:inst|inst10'
+Slack : -1.000
+TNS   : -10.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'TGCo:inst|switch_debouncer:inst7|clock_divider_1024:inst|inst10'
+Slack : -1.000
+TNS   : -10.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'TGCo:inst|switch_debouncer:inst8|clock_divider_1024:inst|inst10'
+Slack : -1.000
+TNS   : -10.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'TGCo:inst|MSM:inst|ACL_Clock'
+Slack : -1.000
+TNS   : -5.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'TGCo:inst|clock_generator:inst9|clock_divider_1024:inst8|inst10'
+Slack : -1.000
+TNS   : -5.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'TGCo:inst|clock_generator:inst9|inst5'
+Slack : -1.000
+TNS   : -2.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'TGCo:inst|switch_debouncer:inst10|clock_divider_1024:inst1|inst10'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'TGCo:inst|switch_debouncer:inst11|clock_divider_1024:inst1|inst10'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'TGCo:inst|switch_debouncer:inst13|clock_divider_1024:inst1|inst10'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'TGCo:inst|switch_debouncer:inst7|clock_divider_1024:inst1|inst10'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'TGCo:inst|switch_debouncer:inst8|clock_divider_1024:inst1|inst10'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'TGCo:inst|TGC_Machine:inst6|inst2'
+Slack : 0.389
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'TGCo:inst|ACL_Machine_Mk2:inst16|ACL_Machine:inst1|Mod5_Counter_ACL:inst1|inst6'
+Slack : 0.437
+TNS   : 0.000
+
+------------------------------------------------------------

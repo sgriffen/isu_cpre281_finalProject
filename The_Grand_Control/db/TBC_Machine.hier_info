@@ -1,0 +1,34 @@
+|TGC_Machine
+TBC_Chooseth[0] <= Output_Logic_TGC:inst7.Z[0]
+TBC_Chooseth[1] <= Output_Logic_TGC:inst7.Z[1]
+Clock => inst3.CLK
+Clock => inst2.CLK
+Mode_Select => Input_Logic_TGC:inst.Mode
+IRL_Out => Input_Logic_TGC:inst.IRL
+
+
+|TGC_Machine|Output_Logic_TGC:inst7
+y[0] => Z[0].DATAIN
+y[1] => Z[1].DATAIN
+Z[0] <= y[0].DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= y[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TGC_Machine|Input_Logic_TGC:inst
+Mode => X.IN0
+Mode => X.IN0
+Mode => X.IN0
+IRL => X.IN1
+IRL => X.IN0
+IRL => X.IN0
+IRL => X.IN0
+y[0] => X.IN1
+y[0] => X.IN1
+y[0] => X.IN1
+y[1] => X.IN1
+y[1] => X.IN1
+y[1] => X.IN1
+X[0] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[1] <= X.DB_MAX_OUTPUT_PORT_TYPE
+
+

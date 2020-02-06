@@ -1,0 +1,184 @@
+|ACL_Mk2_Test
+Counter[0] <= ACL_Machine_Mk2:inst.Counter[0]
+Counter[1] <= ACL_Machine_Mk2:inst.Counter[1]
+Counter[2] <= ACL_Machine_Mk2:inst.Counter[2]
+Clock => ACL_Machine_Mk2:inst.Clock
+Lane_Info[0] => ACL_Machine_Mk2:inst.Lane_Capacity[0]
+Lane_Info[1] => ACL_Machine_Mk2:inst.Lane_Capacity[1]
+Lane_Info[2] => ACL_Machine_Mk2:inst.Lane_Capacity[2]
+Lane_Info[3] => ACL_Machine_Mk2:inst.Lane_Capacity[3]
+Lane[0] => Priority_Encoder_4to2_ACL_Mk2:dfsdfaf.w[0]
+Lane[1] => Priority_Encoder_4to2_ACL_Mk2:dfsdfaf.w[1]
+Lane[2] => Priority_Encoder_4to2_ACL_Mk2:dfsdfaf.w[2]
+Lane[3] => Priority_Encoder_4to2_ACL_Mk2:dfsdfaf.w[3]
+Lane_Has_Car[0] <= ACL_Machine_Mk2:inst.Lane_Has_Car[0]
+Lane_Has_Car[1] <= ACL_Machine_Mk2:inst.Lane_Has_Car[1]
+Lane_Has_Car[2] <= ACL_Machine_Mk2:inst.Lane_Has_Car[2]
+Lane_Has_Car[3] <= ACL_Machine_Mk2:inst.Lane_Has_Car[3]
+Out0[0] <= seven_seg_decoder:inst2.Y[0]
+Out0[1] <= seven_seg_decoder:inst2.Y[1]
+Out0[2] <= seven_seg_decoder:inst2.Y[2]
+Out0[3] <= seven_seg_decoder:inst2.Y[3]
+Out0[4] <= seven_seg_decoder:inst2.Y[4]
+Out0[5] <= seven_seg_decoder:inst2.Y[5]
+Out0[6] <= seven_seg_decoder:inst2.Y[6]
+
+
+|ACL_Mk2_Test|ACL_Machine_Mk2:inst
+Counter[0] <= ACL_Machine:asdfasd.Count[0]
+Counter[1] <= ACL_Machine:asdfasd.Count[1]
+Counter[2] <= ACL_Machine:asdfasd.Count[2]
+Lane_Capacity[0] => Lane_Has_1_Car_ACL_Machine_Mk2:inst.lane_capacity[0]
+Lane_Capacity[1] => Lane_Has_1_Car_ACL_Machine_Mk2:inst.lane_capacity[1]
+Lane_Capacity[2] => Lane_Has_1_Car_ACL_Machine_Mk2:inst.lane_capacity[2]
+Lane_Capacity[3] => Lane_Has_1_Car_ACL_Machine_Mk2:inst.lane_capacity[3]
+Lane_To_Be_Checked[0] => Lane_Has_1_Car_ACL_Machine_Mk2:inst.lane_sel[0]
+Lane_To_Be_Checked[1] => Lane_Has_1_Car_ACL_Machine_Mk2:inst.lane_sel[1]
+Clock => ACL_Machine:asdfasd.Clock
+Lane_Has_Car[0] <= y[0].DB_MAX_OUTPUT_PORT_TYPE
+Lane_Has_Car[1] <= y[1].DB_MAX_OUTPUT_PORT_TYPE
+Lane_Has_Car[2] <= y[2].DB_MAX_OUTPUT_PORT_TYPE
+Lane_Has_Car[3] <= y[3].DB_MAX_OUTPUT_PORT_TYPE
+Lane_Selected[0] <= ACL_Machine:asdfasd.Lane_Selected[0]
+Lane_Selected[1] <= ACL_Machine:asdfasd.Lane_Selected[1]
+Lane_Selected[2] <= ACL_Machine:asdfasd.Lane_Selected[2]
+Lane_Selected[3] <= ACL_Machine:asdfasd.Lane_Selected[3]
+
+
+|ACL_Mk2_Test|ACL_Machine_Mk2:inst|ACL_Machine:asdfasd
+Count[0] <= O[0].DB_MAX_OUTPUT_PORT_TYPE
+Count[1] <= O[1].DB_MAX_OUTPUT_PORT_TYPE
+Count[2] <= O[2].DB_MAX_OUTPUT_PORT_TYPE
+Clock => Mod5_Counter_ACL:inst3.Clock
+Clock => inst5.CLK
+Clock => inst4.CLK
+Enable => Mod5_Counter_ACL:inst3.Enable
+Lane_Selected[0] <= Output_Logic_ACL_Mk2:adfasdf.Z[0]
+Lane_Selected[1] <= Output_Logic_ACL_Mk2:adfasdf.Z[1]
+Lane_Selected[2] <= Output_Logic_ACL_Mk2:adfasdf.Z[2]
+Lane_Selected[3] <= Output_Logic_ACL_Mk2:adfasdf.Z[3]
+lane0_has1 => Input_Logic_ACL_Mk2:inst.lane0_has1
+lane1_has1 => Input_Logic_ACL_Mk2:inst.lane1_has1
+lane2_has1 => Input_Logic_ACL_Mk2:inst.lane2_has1
+lane3_has1 => Input_Logic_ACL_Mk2:inst.lane3_has1
+
+
+|ACL_Mk2_Test|ACL_Machine_Mk2:inst|ACL_Machine:asdfasd|Mod5_Counter_ACL:inst3
+5Counter_Out[0] <= Output_Logic_Mod5_Counter_ACL:inst4.Z[0]
+5Counter_Out[1] <= Output_Logic_Mod5_Counter_ACL:inst4.Z[1]
+5Counter_Out[2] <= Output_Logic_Mod5_Counter_ACL:inst4.Z[2]
+Clock => inst6.CLK
+Clock => inst3.CLK
+Clock => inst2.CLK
+Enable => Input_Logic_Mod5_Counter_ACL:inst.w
+
+
+|ACL_Mk2_Test|ACL_Machine_Mk2:inst|ACL_Machine:asdfasd|Mod5_Counter_ACL:inst3|Output_Logic_Mod5_Counter_ACL:inst4
+y[0] => Z[0].DATAIN
+y[1] => Z[1].DATAIN
+y[2] => Z[2].DATAIN
+Z[0] <= y[0].DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= y[1].DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= y[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ACL_Mk2_Test|ACL_Machine_Mk2:inst|ACL_Machine:asdfasd|Mod5_Counter_ACL:inst3|Input_Logic_Mod5_Counter_ACL:inst
+w => X.IN0
+w => X.IN0
+w => X.IN0
+w => X.IN0
+w => X.IN0
+y[0] => X.IN1
+y[0] => X.IN1
+y[0] => X.IN1
+y[0] => X.IN0
+y[0] => X.IN1
+y[1] => X.IN1
+y[1] => X.IN1
+y[1] => X.IN1
+y[1] => X.IN1
+y[2] => X.IN1
+y[2] => X.IN1
+X[0] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[1] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[2] <= X.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ACL_Mk2_Test|ACL_Machine_Mk2:inst|ACL_Machine:asdfasd|Output_Logic_ACL_Mk2:adfasdf
+y[0] => Decoder0.IN1
+y[1] => Decoder0.IN0
+Z[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Z[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ACL_Mk2_Test|ACL_Machine_Mk2:inst|ACL_Machine:asdfasd|Input_Logic_ACL_Mk2:inst
+count => Next_State.OUTPUTSELECT
+count => Next_State.OUTPUTSELECT
+lane0_has1 => Next_State.OUTPUTSELECT
+lane0_has1 => Next_State.OUTPUTSELECT
+lane0_has1 => Next_State.OUTPUTSELECT
+lane0_has1 => Next_State.DATAA
+lane1_has1 => Next_State.OUTPUTSELECT
+lane1_has1 => Next_State.OUTPUTSELECT
+lane1_has1 => Next_State.OUTPUTSELECT
+lane1_has1 => Next_State.DATAA
+lane1_has1 => Next_State.DATAA
+lane2_has1 => Next_State.OUTPUTSELECT
+lane2_has1 => Next_State.OUTPUTSELECT
+lane2_has1 => Next_State.OUTPUTSELECT
+lane2_has1 => Next_State.DATAA
+lane3_has1 => Next_State.OUTPUTSELECT
+lane3_has1 => Next_State.OUTPUTSELECT
+lane3_has1 => Next_State.OUTPUTSELECT
+lane3_has1 => Next_State.DATAA
+lane3_has1 => Next_State.DATAA
+cur_state[0] => Mux0.IN5
+cur_state[0] => Mux1.IN5
+cur_state[0] => Next_State.DATAA
+cur_state[1] => Mux0.IN4
+cur_state[1] => Mux1.IN4
+cur_state[1] => Next_State.DATAA
+Next_State[0] <= Next_State.DB_MAX_OUTPUT_PORT_TYPE
+Next_State[1] <= Next_State.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ACL_Mk2_Test|ACL_Machine_Mk2:inst|Lane_Has_1_Car_ACL_Machine_Mk2:inst
+lane_sel[0] => Decoder0.IN1
+lane_sel[1] => Decoder0.IN0
+lane_capacity[0] => Lane0_Has1.IN1
+lane_capacity[1] => Lane0_Has1.IN1
+lane_capacity[2] => Lane0_Has1.IN0
+lane_capacity[3] => Lane0_Has1.IN1
+Lane0_Has1 <= Lane0_Has1$latch.DB_MAX_OUTPUT_PORT_TYPE
+Lane1_Has1 <= Lane1_Has1$latch.DB_MAX_OUTPUT_PORT_TYPE
+Lane2_Has1 <= Lane2_Has1$latch.DB_MAX_OUTPUT_PORT_TYPE
+Lane3_Has1 <= Lane3_Has1$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ACL_Mk2_Test|Priority_Encoder_4to2_ACL_Mk2:dfsdfaf
+w[0] => ~NO_FANOUT~
+w[1] => Z.IN0
+w[2] => Z.IN0
+w[2] => Z.IN1
+w[3] => Z.IN1
+w[3] => Z.IN1
+Z[0] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ACL_Mk2_Test|seven_seg_decoder:inst2
+x[0] => Decoder0.IN3
+x[1] => Decoder0.IN2
+x[2] => Decoder0.IN1
+x[3] => Decoder0.IN0
+Y[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

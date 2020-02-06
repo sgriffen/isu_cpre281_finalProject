@@ -1,0 +1,53 @@
+|M5C_ACL_Test
+Out[0] <= Mod5_Counter_ACL:inst.5Counter_Out[0]
+Out[1] <= Mod5_Counter_ACL:inst.5Counter_Out[1]
+Out[2] <= Mod5_Counter_ACL:inst.5Counter_Out[2]
+Clock => Mod5_Counter_ACL:inst.Clock
+Count => Mod5_Counter_ACL:inst.Count_Start
+CLRN => Mod5_Counter_ACL:inst.CLRN
+
+
+|M5C_ACL_Test|Mod5_Counter_ACL:inst
+5Counter_Out[0] <= Output_Logic_Mod5_Counter_ACL:inst9.Z[0]
+5Counter_Out[1] <= Output_Logic_Mod5_Counter_ACL:inst9.Z[1]
+5Counter_Out[2] <= Output_Logic_Mod5_Counter_ACL:inst9.Z[2]
+CLRN => inst6.ACLR
+CLRN => inst3.ACLR
+CLRN => inst2.ACLR
+Clock => inst6.CLK
+Clock => inst3.CLK
+Clock => inst2.CLK
+Count_Start => Input_Logic_Mod5_Counter_ACL:inst.w
+
+
+|M5C_ACL_Test|Mod5_Counter_ACL:inst|Output_Logic_Mod5_Counter_ACL:inst9
+y[0] => Z[0].DATAIN
+y[1] => Z[1].DATAIN
+y[2] => Z[2].DATAIN
+Z[0] <= y[0].DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= y[1].DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= y[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|M5C_ACL_Test|Mod5_Counter_ACL:inst|Input_Logic_Mod5_Counter_ACL:inst
+w => X.IN0
+w => X.IN0
+w => X.IN0
+w => X.IN0
+w => X.IN0
+y[0] => X.IN1
+y[0] => X.IN1
+y[0] => X.IN1
+y[0] => X.IN0
+y[0] => X.IN1
+y[1] => X.IN1
+y[1] => X.IN1
+y[1] => X.IN1
+y[1] => X.IN1
+y[2] => X.IN1
+y[2] => X.IN1
+X[0] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[1] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[2] <= X.DB_MAX_OUTPUT_PORT_TYPE
+
+

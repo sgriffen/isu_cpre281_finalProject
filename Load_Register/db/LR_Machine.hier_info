@@ -1,0 +1,26 @@
+|LR_Machine
+Out <> Output_Logic:inst4.Z
+Clock => inst1.CLK
+In[0] => Input_Logic:inst.x[0]
+In[1] => Input_Logic:inst.x[1]
+In[2] => Input_Logic:inst.x[2]
+In[3] => Input_Logic:inst.x[3]
+
+
+|LR_Machine|Output_Logic:inst4
+y => Z.DATAIN
+Z <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LR_Machine|Input_Logic:inst
+x[0] => W.IN0
+x[0] => W.IN1
+x[1] => W.IN0
+x[2] => W.IN0
+x[3] => W.IN1
+y => W.IN1
+y => W.IN1
+y => W.IN1
+W <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+

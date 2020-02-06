@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Dec 05 20:55:18 2018
+Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+Revision Name : TLCF_Test
+Top-level Entity Name : TLCF_Test
+Family : Cyclone IV E
+Total logic elements : 100
+    Total combinational functions : 100
+    Dedicated logic registers : 16
+Total registers : 16
+Total pins : 49
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

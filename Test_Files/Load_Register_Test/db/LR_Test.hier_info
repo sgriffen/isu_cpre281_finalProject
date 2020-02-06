@@ -1,0 +1,40 @@
+|LR_Test
+Accepted <= LR_Machine:inst.Accepted
+In[0] => LR_Machine:inst.In[0]
+In[1] => LR_Machine:inst.In[1]
+In[2] => LR_Machine:inst.In[2]
+In[3] => LR_Machine:inst.In[3]
+Out[0] <= LR_Machine:inst.Out[0]
+Out[1] <= LR_Machine:inst.Out[1]
+Out[2] <= LR_Machine:inst.Out[2]
+Out[3] <= LR_Machine:inst.Out[3]
+
+
+|LR_Test|LR_Machine:inst
+Accepted <= Logic_LR:inst.W
+In[0] => Logic_LR:inst.x[0]
+In[1] => Logic_LR:inst.x[1]
+In[2] => Logic_LR:inst.x[2]
+In[3] => Logic_LR:inst.x[3]
+Out[0] <= Logic_LR:inst.Z[0]
+Out[1] <= Logic_LR:inst.Z[1]
+Out[2] <= Logic_LR:inst.Z[2]
+Out[3] <= Logic_LR:inst.Z[3]
+
+
+|LR_Test|LR_Machine:inst|Logic_LR:inst
+x[0] => W.IN1
+x[0] => Z.IN1
+x[1] => W.IN1
+x[1] => Z.IN1
+x[2] => W.IN0
+x[2] => Z.IN1
+x[3] => W.IN1
+x[3] => Z.IN1
+W <= W.DB_MAX_OUTPUT_PORT_TYPE
+Z[0] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[3] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Nov 22 22:00:17 2018
+Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+Revision Name : TGC_Test
+Top-level Entity Name : TGC_Test
+Family : Cyclone IV E
+Total logic elements : 7
+    Total combinational functions : 7
+    Dedicated logic registers : 2
+Total registers : 2
+Total pins : 6
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

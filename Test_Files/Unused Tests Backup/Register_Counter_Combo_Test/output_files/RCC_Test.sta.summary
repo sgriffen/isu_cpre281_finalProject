@@ -1,0 +1,161 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'switch_debouncer:inst4|inst2'
+Slack : -5.422
+TNS   : -100.163
+
+Type  : Slow 1200mV 85C Model Setup 'Counter_Control[0]'
+Slack : -4.396
+TNS   : -52.947
+
+Type  : Slow 1200mV 85C Model Setup 'switch_debouncer:inst4|clock_divider_1024:inst|inst10'
+Slack : -2.529
+TNS   : -7.247
+
+Type  : Slow 1200mV 85C Model Setup 'Board_Clock'
+Slack : -2.443
+TNS   : -7.500
+
+Type  : Slow 1200mV 85C Model Hold 'Counter_Control[0]'
+Slack : -1.597
+TNS   : -7.297
+
+Type  : Slow 1200mV 85C Model Hold 'switch_debouncer:inst4|inst2'
+Slack : 0.364
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Board_Clock'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'switch_debouncer:inst4|clock_divider_1024:inst|inst10'
+Slack : 0.405
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Board_Clock'
+Slack : -3.000
+TNS   : -15.850
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Counter_Control[0]'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'switch_debouncer:inst4|inst2'
+Slack : -1.285
+TNS   : -41.120
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'switch_debouncer:inst4|clock_divider_1024:inst|inst10'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'switch_debouncer:inst4|clock_divider_1024:inst1|inst10'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 0C Model Setup 'switch_debouncer:inst4|inst2'
+Slack : -4.922
+TNS   : -91.713
+
+Type  : Slow 1200mV 0C Model Setup 'Counter_Control[0]'
+Slack : -4.114
+TNS   : -48.427
+
+Type  : Slow 1200mV 0C Model Setup 'switch_debouncer:inst4|clock_divider_1024:inst|inst10'
+Slack : -2.228
+TNS   : -5.748
+
+Type  : Slow 1200mV 0C Model Setup 'Board_Clock'
+Slack : -2.136
+TNS   : -5.914
+
+Type  : Slow 1200mV 0C Model Hold 'Counter_Control[0]'
+Slack : -1.500
+TNS   : -6.702
+
+Type  : Slow 1200mV 0C Model Hold 'switch_debouncer:inst4|inst2'
+Slack : 0.313
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Board_Clock'
+Slack : 0.354
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'switch_debouncer:inst4|clock_divider_1024:inst|inst10'
+Slack : 0.357
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Board_Clock'
+Slack : -3.000
+TNS   : -15.850
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Counter_Control[0]'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'switch_debouncer:inst4|inst2'
+Slack : -1.285
+TNS   : -41.120
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'switch_debouncer:inst4|clock_divider_1024:inst|inst10'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'switch_debouncer:inst4|clock_divider_1024:inst1|inst10'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Fast 1200mV 0C Model Setup 'Counter_Control[0]'
+Slack : -2.508
+TNS   : -29.417
+
+Type  : Fast 1200mV 0C Model Setup 'switch_debouncer:inst4|inst2'
+Slack : -2.150
+TNS   : -34.145
+
+Type  : Fast 1200mV 0C Model Setup 'switch_debouncer:inst4|clock_divider_1024:inst|inst10'
+Slack : -0.736
+TNS   : -0.765
+
+Type  : Fast 1200mV 0C Model Setup 'Board_Clock'
+Slack : -0.729
+TNS   : -0.765
+
+Type  : Fast 1200mV 0C Model Hold 'Counter_Control[0]'
+Slack : -0.864
+TNS   : -4.704
+
+Type  : Fast 1200mV 0C Model Hold 'switch_debouncer:inst4|inst2'
+Slack : 0.034
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Board_Clock'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'switch_debouncer:inst4|clock_divider_1024:inst|inst10'
+Slack : 0.183
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Board_Clock'
+Slack : -3.000
+TNS   : -13.620
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Counter_Control[0]'
+Slack : -3.000
+TNS   : -8.168
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'switch_debouncer:inst4|inst2'
+Slack : -1.000
+TNS   : -32.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'switch_debouncer:inst4|clock_divider_1024:inst|inst10'
+Slack : -1.000
+TNS   : -10.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'switch_debouncer:inst4|clock_divider_1024:inst1|inst10'
+Slack : -1.000
+TNS   : -1.000
+
+------------------------------------------------------------

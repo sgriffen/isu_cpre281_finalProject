@@ -1,0 +1,114 @@
+|TLC_Mk1_Test
+Out[0] <= seven_seg_decoder:inst2.Y[0]
+Out[1] <= seven_seg_decoder:inst2.Y[1]
+Out[2] <= seven_seg_decoder:inst2.Y[2]
+Out[3] <= seven_seg_decoder:inst2.Y[3]
+Out[4] <= seven_seg_decoder:inst2.Y[4]
+Out[5] <= seven_seg_decoder:inst2.Y[5]
+Out[6] <= seven_seg_decoder:inst2.Y[6]
+Clock => TLC_Mk1:inst.Clock
+In => TLC_Mk1:inst.In
+
+
+|TLC_Mk1_Test|seven_seg_decoder:inst2
+x[0] => Decoder0.IN3
+x[1] => Decoder0.IN2
+x[2] => Decoder0.IN1
+x[3] => Decoder0.IN0
+Y[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLC_Mk1_Test|TLC_Mk1:inst
+Out[0] <= Output_Logic:State_Output.Z[0]
+Out[1] <= Output_Logic:State_Output.Z[1]
+Out[2] <= Output_Logic:State_Output.Z[2]
+Out[3] <= Output_Logic:State_Output.Z[3]
+Clock => DFF0.CLK
+Clock => DFF1.CLK
+Clock => DFF2.CLK
+Clock => DFF3.CLK
+In => Input_Logic:inst.w
+
+
+|TLC_Mk1_Test|TLC_Mk1:inst|Output_Logic:State_Output
+y[0] => Z[0].DATAIN
+y[1] => Z[1].DATAIN
+y[2] => Z[2].DATAIN
+y[3] => Z[3].DATAIN
+Z[0] <= y[0].DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= y[1].DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= y[2].DB_MAX_OUTPUT_PORT_TYPE
+Z[3] <= y[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLC_Mk1_Test|TLC_Mk1:inst|Input_Logic:inst
+w => X.IN0
+w => X.IN0
+w => X.IN0
+w => X.IN0
+w => X.IN0
+w => X.IN0
+w => X.IN0
+w => X.IN0
+w => X.IN0
+y[0] => X.IN0
+y[0] => X.IN1
+y[0] => X.IN1
+y[0] => X.IN1
+y[0] => X.IN1
+y[0] => X.IN1
+y[0] => X.IN1
+y[0] => X.IN1
+y[0] => X.IN1
+y[0] => X.IN1
+y[0] => X.IN1
+y[0] => X.IN1
+y[0] => X.IN1
+y[0] => X.IN1
+y[0] => X.IN0
+y[0] => X.IN0
+y[0] => X.IN0
+y[1] => X.IN0
+y[1] => X.IN1
+y[1] => X.IN0
+y[1] => X.IN1
+y[1] => X.IN1
+y[1] => X.IN1
+y[1] => X.IN1
+y[1] => X.IN1
+y[1] => X.IN1
+y[1] => X.IN1
+y[1] => X.IN1
+y[1] => X.IN1
+y[1] => X.IN0
+y[1] => X.IN1
+y[1] => X.IN1
+y[1] => X.IN1
+y[2] => X.IN0
+y[2] => X.IN1
+y[2] => X.IN1
+y[2] => X.IN1
+y[2] => X.IN1
+y[2] => X.IN1
+y[2] => X.IN1
+y[2] => X.IN1
+y[2] => X.IN1
+y[3] => X.IN1
+y[3] => X.IN1
+y[3] => X.IN1
+y[3] => X.IN1
+y[3] => X.IN1
+y[3] => X.IN1
+y[3] => X.IN1
+X[0] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[1] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[2] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[3] <= X.DB_MAX_OUTPUT_PORT_TYPE
+
+

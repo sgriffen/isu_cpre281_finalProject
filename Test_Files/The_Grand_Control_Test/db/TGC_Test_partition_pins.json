@@ -1,0 +1,33 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "X_Sel",
+					"strict" : false
+				},
+				{
+					"name" : "Y_Sel",
+					"strict" : false
+				},
+				{
+					"name" : "Z_Sel",
+					"strict" : false
+				},
+				{
+					"name" : "Mode_Select",
+					"strict" : false
+				},
+				{
+					"name" : "Clock",
+					"strict" : false
+				},
+				{
+					"name" : "Register_Load_Done",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,60 @@
+|TGC_Test
+X_Sel <= O[0].DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst2.IN0
+Mode_Select => TGC_Machine:inst.Mode_Select
+Register_Load_Done => TGC_Machine:inst.IRL_Out
+Y_Sel <= O[1].DB_MAX_OUTPUT_PORT_TYPE
+Z_Sel <= O[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TGC_Test|Mux_3to1_TGC:inst1
+sel[0] => Mux0.IN5
+sel[0] => Mux1.IN5
+sel[0] => Mux2.IN5
+sel[0] => Mux3.IN5
+sel[1] => Mux0.IN4
+sel[1] => Mux1.IN4
+sel[1] => Mux2.IN4
+sel[1] => Mux3.IN4
+x => ~NO_FANOUT~
+y => ~NO_FANOUT~
+z => ~NO_FANOUT~
+Out[0] <= Out[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= Out[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= Out[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TGC_Test|TGC_Machine:inst
+TGC_Chooseth[0] <= Output_Logic_TGC:inst7.Z[0]
+TGC_Chooseth[1] <= Output_Logic_TGC:inst7.Z[1]
+Clock => inst3.CLK
+Clock => inst2.CLK
+Mode_Select => Input_Logic_TGC:inst.Mode
+IRL_Out => Input_Logic_TGC:inst.IRL
+
+
+|TGC_Test|TGC_Machine:inst|Output_Logic_TGC:inst7
+y[0] => Z[0].DATAIN
+y[1] => Z[1].DATAIN
+Z[0] <= y[0].DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= y[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TGC_Test|TGC_Machine:inst|Input_Logic_TGC:inst
+Mode => X.IN0
+Mode => X.IN0
+Mode => X.IN0
+Mode => X.IN0
+Mode => X.IN0
+IRL => X.IN1
+IRL => X.IN0
+y[0] => X.IN1
+y[0] => X.IN1
+y[0] => X.IN1
+y[1] => X.IN1
+y[1] => X.IN1
+y[1] => X.IN1
+X[0] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[1] <= X.DB_MAX_OUTPUT_PORT_TYPE
+
+

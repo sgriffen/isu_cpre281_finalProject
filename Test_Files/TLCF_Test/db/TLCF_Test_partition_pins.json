@@ -1,0 +1,205 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Out0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Out0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Out0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Out0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Out0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Out0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Out0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Out1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Out1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Out1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Out1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Out1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Out1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Out1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Out2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Out2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Out2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Out2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Out2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Out2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Out2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Out3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Out3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Out3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Out3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Out3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Out3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Out3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Out4[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Out4[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Out4[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Out4[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Out4[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Out4[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Out4[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter_Capacity[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter_Capacity[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter_Capacity[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter_Capacity[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter_Select[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter_Select[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter_Select[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter_Select[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter_Control",
+					"strict" : false
+				},
+				{
+					"name" : "ACL_Selection[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ACL_Selection[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ACL_Selection[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ACL_Selection[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Clock",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

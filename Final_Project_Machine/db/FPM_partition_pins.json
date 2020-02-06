@@ -1,0 +1,225 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "IRL_Done",
+					"strict" : false
+				},
+				{
+					"name" : "Clock_Pulse",
+					"strict" : false
+				},
+				{
+					"name" : "ACL_Selection[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ACL_Selection[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ACL_Selection[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ACL_Selection[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Capacity[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Capacity[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Capacity[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Capacity[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Capacity[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Capacity[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Capacity[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Register_Selected[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Register_Selected[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Register_Selected[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Register_Selected[0]",
+					"strict" : false
+				},
+				{
+					"name" : "State[1]",
+					"strict" : false
+				},
+				{
+					"name" : "State[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Mode_Select",
+					"strict" : false
+				},
+				{
+					"name" : "Control_Switches[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Control_Switches[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Control_Switches[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Control_Switches[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Clock",
+					"strict" : false
+				},
+				{
+					"name" : "Control_Button",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

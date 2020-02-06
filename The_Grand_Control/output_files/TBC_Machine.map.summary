@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Nov 22 00:01:11 2018
+Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+Revision Name : TBC_Machine
+Top-level Entity Name : TGC_Machine
+Family : Cyclone IV E
+Total logic elements : 2
+    Total combinational functions : 2
+    Dedicated logic registers : 2
+Total registers : 2
+Total pins : 5
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

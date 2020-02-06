@@ -1,0 +1,113 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 272 192)
+	(text "Control_Mux_IRL_4bRL_TLCF_C" (rect 5 0 153 12)(font "Arial" ))
+	(text "inst" (rect 8 160 20 172)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "mode" (rect 0 0 22 12)(font "Arial" ))
+		(text "mode" (rect 21 27 43 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "dual_switches[3..0]" (rect 0 0 74 12)(font "Arial" ))
+		(text "dual_switches[3..0]" (rect 21 43 95 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "irl_reg_select[3..0]" (rect 0 0 73 12)(font "Arial" ))
+		(text "irl_reg_select[3..0]" (rect 21 59 94 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "clock" (rect 0 0 20 12)(font "Arial" ))
+		(text "clock" (rect 21 75 41 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
+	)
+	(port
+		(pt 256 32)
+		(output)
+		(text "IRL_Selection[3..0]" (rect 0 0 76 12)(font "Arial" ))
+		(text "IRL_Selection[3..0]" (rect 159 27 235 39)(font "Arial" ))
+		(line (pt 256 32)(pt 240 32)(line_width 3))
+	)
+	(port
+		(pt 256 48)
+		(output)
+		(text "IRL_Clock" (rect 0 0 44 12)(font "Arial" ))
+		(text "IRL_Clock" (rect 191 43 235 55)(font "Arial" ))
+		(line (pt 256 48)(pt 240 48)(line_width 1))
+	)
+	(port
+		(pt 256 64)
+		(output)
+		(text "RL_Selection[3..0]" (rect 0 0 74 12)(font "Arial" ))
+		(text "RL_Selection[3..0]" (rect 161 59 235 71)(font "Arial" ))
+		(line (pt 256 64)(pt 240 64)(line_width 3))
+	)
+	(port
+		(pt 256 80)
+		(output)
+		(text "RL_Load_En" (rect 0 0 57 12)(font "Arial" ))
+		(text "RL_Load_En" (rect 178 75 235 87)(font "Arial" ))
+		(line (pt 256 80)(pt 240 80)(line_width 1))
+	)
+	(port
+		(pt 256 96)
+		(output)
+		(text "RL_Clock" (rect 0 0 42 12)(font "Arial" ))
+		(text "RL_Clock" (rect 193 91 235 103)(font "Arial" ))
+		(line (pt 256 96)(pt 240 96)(line_width 1))
+	)
+	(port
+		(pt 256 112)
+		(output)
+		(text "TLCF_En" (rect 0 0 42 12)(font "Arial" ))
+		(text "TLCF_En" (rect 193 107 235 119)(font "Arial" ))
+		(line (pt 256 112)(pt 240 112)(line_width 1))
+	)
+	(port
+		(pt 256 128)
+		(output)
+		(text "TLCF_Select[3..0]" (rect 0 0 74 12)(font "Arial" ))
+		(text "TLCF_Select[3..0]" (rect 161 123 235 135)(font "Arial" ))
+		(line (pt 256 128)(pt 240 128)(line_width 3))
+	)
+	(port
+		(pt 256 144)
+		(output)
+		(text "TLCF_Clock" (rect 0 0 53 12)(font "Arial" ))
+		(text "TLCF_Clock" (rect 182 139 235 151)(font "Arial" ))
+		(line (pt 256 144)(pt 240 144)(line_width 1))
+	)
+	(drawing
+		(rectangle (rect 16 16 240 160)(line_width 1))
+	)
+)

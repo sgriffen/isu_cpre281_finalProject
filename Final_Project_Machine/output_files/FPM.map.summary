@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Dec 06 00:14:14 2018
+Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+Revision Name : FPM
+Top-level Entity Name : FPM
+Family : Cyclone IV E
+Total logic elements : 329
+    Total combinational functions : 313
+    Dedicated logic registers : 127
+Total registers : 127
+Total pins : 54
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

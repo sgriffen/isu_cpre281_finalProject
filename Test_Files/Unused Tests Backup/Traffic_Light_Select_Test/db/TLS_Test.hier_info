@@ -1,0 +1,65 @@
+|TLS_Test
+0 <= Y[0].DB_MAX_OUTPUT_PORT_TYPE
+Clock => TLS_Machine:inst.Clock
+Select[0] => TLS_Machine:inst.Register_Select[0]
+Select[1] => TLS_Machine:inst.Register_Select[1]
+Select[2] => TLS_Machine:inst.Register_Select[2]
+Select[3] => TLS_Machine:inst.Register_Select[3]
+1 <= Y[1].DB_MAX_OUTPUT_PORT_TYPE
+2 <= Y[2].DB_MAX_OUTPUT_PORT_TYPE
+3 <= Y[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLS_Test|Register_Selected:inst1
+x[0] => Y.IN0
+x[0] => Y.IN0
+x[0] => Y.IN0
+x[0] => Y.IN0
+x[1] => Y.IN1
+x[1] => Y.IN1
+x[1] => Y.IN1
+x[1] => Y.IN1
+Y[0] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLS_Test|TLS_Machine:inst
+Selected_Register[0] <= Output_Logic_TLS:inst5.Z[0]
+Selected_Register[1] <= Output_Logic_TLS:inst5.Z[1]
+Clock => inst3.CLK
+Clock => inst2.CLK
+Register_Select[0] => Priority_Encoder_4to2_TLS:inst6.w[0]
+Register_Select[1] => Priority_Encoder_4to2_TLS:inst6.w[1]
+Register_Select[2] => Priority_Encoder_4to2_TLS:inst6.w[2]
+Register_Select[3] => Priority_Encoder_4to2_TLS:inst6.w[3]
+
+
+|TLS_Test|TLS_Machine:inst|Output_Logic_TLS:inst5
+y[0] => Z[0].DATAIN
+y[1] => Z[1].DATAIN
+Z[0] <= y[0].DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= y[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLS_Test|TLS_Machine:inst|Input_Logic_TLS:inst
+w[0] => X[0].DATAIN
+w[1] => X[1].DATAIN
+y[0] => ~NO_FANOUT~
+y[1] => ~NO_FANOUT~
+X[0] <= w[0].DB_MAX_OUTPUT_PORT_TYPE
+X[1] <= w[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLS_Test|TLS_Machine:inst|Priority_Encoder_4to2_TLS:inst6
+w[0] => ~NO_FANOUT~
+w[1] => Z.IN0
+w[2] => Z.IN0
+w[2] => Z.IN1
+w[3] => Z.IN1
+w[3] => Z.IN1
+Z[0] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,65 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Register_Selected[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Register_Selected[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Register_Selected[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Register_Selected[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Register_Select[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Register_Select[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Register_Select[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Register_Input[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Clock",
+					"strict" : false
+				},
+				{
+					"name" : "CLRN",
+					"strict" : false
+				},
+				{
+					"name" : "Register_Load_Enable",
+					"strict" : false
+				},
+				{
+					"name" : "Register_Input[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Register_Input[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Register_Input[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,29 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "TBC_Chooseth[1]",
+					"strict" : false
+				},
+				{
+					"name" : "TBC_Chooseth[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Mode_Select",
+					"strict" : false
+				},
+				{
+					"name" : "Clock",
+					"strict" : false
+				},
+				{
+					"name" : "IRL_Out",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
